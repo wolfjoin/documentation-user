@@ -2,142 +2,105 @@
 The Accounting behind Odoo
 ==========================
 
-This page summarises the way Odoo deals with typical accounts and
-transactions.
+本页概述了Odoo处理典型账户和交易的方式。
 
-Double-entry bookkeeping
+复试记账
 ========================
 
-Odoo automatically creates all the behind-the-scenes journal entries
-for each of your accounting transactions: customer invoices, point of
-sale order, expenses, inventory moves, etc.
+Odoo自动创建您的每个会计交易的所有幕后日记帐分录：客户发票，销售点订单，费用，库存移动等。
 
-Odoo uses the rules of double-entry bookkeeping system: all journal
-entries are automatically balanced (sum of debits = sum of credits).
+Odoo使用复试记账系统的规则：所有日记帐分录自动平衡（借方金额=贷方金额）。
 
 .. seealso::
 
-	`Understand Odoo's accounting transactions per document <https://odoo.com/documentation/functional/accounting.html>`__
+	`了解Odoo每笔交易的会计分录 <https://odoo.com/documentation/functional/accounting.html>`__
 
-Accrual and Cash Basis Methods
+应计和现金基础方法
 ==============================
 
-Odoo support both accrual and cash basis reporting. This allows you to
-report income / expense at the time transactions occur (i.e., accrual basis), or when
-payment is made or received (i.e., cash basis).
+Odoo支持应计和现金基础报告。这样，您可以在交易发生时（即权责发生制）或收到付款（即现金基础）时报告收入/费用。
 
-Multi-companies
+多公司
 ===============
 
-Odoo allows to manage several companies within the same database. Each
-company has its own chart of accounts and rules. You can get
-consolidation reports following your consolidation rules.
+Odoo允许管理同一数据库中的几家公司。每个公司都有自己的账目和规则。您可以根据合并规则获取合并报表。
 
-Users can access several companies but always work in one company at a
-time.
+用户可以访问几家公司，同一时间只能在一家公司操作。
 
-Multi-currencies
+多币种
 ================
 
-Every transaction is recorded in the default currency of the
-company. For transactions occurring in another currency, Odoo stores
-both the value in the currency of the company and the value in the
-currency of the transaction. Odoo can generate currencies gains and
-losses after the reconciliation of the journal items.
+每笔交易均以公司的默认货币记录。对于以另一货币发生的交易，
+Odoo将该价值以该公司的货币和该交易货币的价值存储。
+Odoo可以在日记项目对账后产生货币损益。
 
-Currency rates are updated once a day using a yahoo.com online
-web-service.
+货币汇率每天更新一次，使用yahoo.com在线网络服务。
 
-International Standards
+国际标准
 =======================
 
-Odoo accounting support more than 50 countries. The Odoo core
-accounting implement accounting standards that is common to all
-countries and specific modules exists per country for the
-specificities of the country like the chart of accounts, taxes, or
-bank interfaces.
+Odoo会计支持50多个国家。Odoo核心会计实施所有国家共同的会计准则，
+具体模块存在于国家特定的国家/地区，如图表，税收或银行接口。
 
-In particular, Odoo's core accounting engine supports:
+特别是Odoo的核心会计引擎支持：
 
-* Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
-  countries including Ireland, Canada, Australia, and New Zealand)
-  where cost of good sold are reported when products are
-  sold/delivered.
-* European accounting where expenses are accounted at the supplier
-  bill.
-* Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
+* Anglo-Saxon，盎格鲁 - 撒克逊会计（美国，英国，以及其他英语国家，包括爱尔兰，加拿大，
+澳大利亚和新西兰），在出售/交付产品时报告出售成本。
+* 欧洲会计处理费用在供应商账单中计算。
+* Storno Storno会计（意大利），其中退款发票具有负信用/借记，而不是恢复原始分录项目。
 
-Odoo also have modules to comply with IFRS rules.
+Odoo还有符合IFRS规则的模块。
 
-Accounts Receivable & Payable
+应收账款和应付款
 =============================
 
-By default, Odoo uses a single account for all account
-receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don't need
-to.
+默认情况下，Odoo对所有应收账款条目使用单一帐户，对于所有应付帐款项目使用一个帐户。
+您可以为每个客户/供应商创建单独的帐户，但您不需要。
 
-As transactions are associated to customers or suppliers, you get
-reports to perform analysis per customer/supplier such as the customer
-statement, revenues per customers, aged receivable/payables, ...
+由于交易与客户或供应商相关联，您可以获得每个客户/供应商进行分析的报告，
+例如客户报表，每个客户的收入，应收账款/应付账款，...
 
-Wide range of financial reports
+广泛的财务报告
 ===============================
 
-In Odoo, you can generate financial reports in real time. Odoo's
-reports range from basic accounting reports to advanced management
-reports. Odoo's reports include:
+在Odoo，您可以实时生成财务报告。Odoo的报告从基本会计报告到高级管理报告。
+Odoo的报告包括：
 
-* Performance reports (such as Profit and Loss, Budget Variance)
-* Position reports (such as Balance Sheet, Aged Payables, Aged
-  Receivables)
-* Cash reports (such as Bank Summary)
-* Detail reports (such as Trial Balance and General Ledger)
-* Management reports (such as Budgets, Executive Summary)
+* 绩效报告（如损益，预算差额）
+* 财务报告（如资产负债表，应付账款，应收账款）
+* 现金报表（如银行汇总）
+* 详细报告（如试算表和总帐）
+* 管理报告（如预算，执行摘要）
 
-Odoo's report engine allows you to customize your own report based on
-your own formulae.
+Odoo的报告引擎允许您根据自己的公式自定义自己的报告。
 
-Import bank feeds automatically
+自动导入银行对账单
 ===============================
 
-Bank reconciliation is a process that matches your bank statement
-lines, as supplied by the bank, to your accounting transactions in the
-general ledger. Odoo makes bank reconciliation easy by frequently
-importing bank statement lines from your bank directly into your Odoo
-account. This means you can have a daily view of your cashflow without
-having to log into your online banking or wait for your paper bank
-statements.
+银行对账是一种将银行提供的银行对账单与您的总帐中的会计交易相匹配的流程。
+Odoo通过从您的银行直接将银行对账单行直接输入到您的Odoo帐户，使银行对帐变得容易。
+这意味着您可以每天查看您的现金流量，而无需登录网上银行或等待您的纸质银行对账单。
 
-Odoo speeds up bank reconciliation by matching most of your imported
-bank statement lines to your accounting transactions. Odoo also
-remembers how you've treated other bank statement lines and provides
-suggested general ledger transactions.
+Odoo通过将大多数导入的银行对账单行与您的会计交易相匹配来加快银行对帐。
+Odoo还记得您如何处理其他银行对账单并提供建议的总帐交易。
 
-Calculates the tax you owe your tax authority
+计算应缴税款
 =============================================
 
-Odoo totals all your accounting transactions for your tax period and
-uses these totals to calculate your tax obligation. You can then check
-your sales tax by running Odoo's Tax Report.
+Odoo在您的税期内总计所有会计交易，并使用这些总计来计算您的税务义务。
+然后，您可以通过运行Odoo的税务报告来检查您的销售税。
 
-Inventory Valuation
+存货估值
 ===================
 
-Odoo support both periodic (manual) and perpetual (automated)
-inventory valuations. The available methods are standard price,
-average price, LIFO (for countries allowing it) and FIFO.
+Odoo支持定期（手动）和永久（自动）库存评估。可用的方法是标准价格，平均价格，LIFO（允许国家）和FIFO。
 
 .. seealso::
 
-	`View impact of the valuation method on your transactions <https://odoo.com/documentation/functional/valuation.html>`__
+	`查看估值方法对您交易的影响 <https://odoo.com/documentation/functional/valuation.html>`__
 
-Easy retained earnings
+轻松留存收益
 ======================
 
-Retained earnings is the portion of income retained by your
-business. Odoo automatically calculates your current year earnings in
-real time so no year-end journal or rollover is required.  This is
-calculated by reporting the profit and loss balance to your balance
-sheet report automatically.
+留存收益是您的业务保留的收入部分。Odoo实时自动计算当前年度收益，因此不需要年终期刊或翻转。
+这是通过自动向您的资产负债表报告汇报损益表计算的。
