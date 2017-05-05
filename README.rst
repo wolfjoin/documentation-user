@@ -16,7 +16,7 @@ Odoo用户使用说明
   查看各个平台本地安装方法 `the sphinx documentation <http://sphinx-doc.org/install.html>`_
   
 * `git <http://www.git-scm.com>`_ 
-* `git <http://www.git-scm.com>`
+* `git <http://www.git-scm.com>`_
 * clone this repository using git, then at the root of the repository,
   in a console,
 
