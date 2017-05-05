@@ -1,21 +1,22 @@
 ===========================
-End-user Odoo documentation
+Odoo用户使用说明
 ===========================
 
-Building requirements:
+创建环境要求:
 
 * Python 2.7
-* recent `Sphinx <http://sphinx-doc.org>`_ (at least Sphinx 1.2)
+* 最新的 `Sphinx <http://sphinx-doc.org>`_ (至少 Sphinx 1.2)
 
-  you can check if Sphinx is installed by trying to launch
+  您可以通过尝试启动来检查是否安装了Sphinx
 
   .. code-block:: console
 
      $ sphinx-build --version
 
-  See `the sphinx documentation <http://sphinx-doc.org/install.html>`_
-  for local installation instructions.
-* `git <http://www.git-scm.com>`_
+  查看各个平台本地安装方法 `the sphinx documentation <http://sphinx-doc.org/install.html>`_
+  
+* `git <http://www.git-scm.com>`_ 
+* git <http://www.git-scm.com>
 * clone this repository using git, then at the root of the repository,
   in a console,
 
