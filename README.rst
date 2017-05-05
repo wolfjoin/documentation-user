@@ -30,7 +30,8 @@ Odoo用户使用说明
 
 对于简单版（打字错误，只需添加不带标记的文本段落），可以直接使用Github Web界面。
 
-对于更复杂的版本，要添加图像或高级指令，请在本地编辑。如果在构建文档时首先出现警告或错误，请勿提交。rST对空格和换行符非常敏感（特别是缺少换行符）。这有点烦人，但不难学习。
+对于更复杂的版本，要添加图像或高级指令，请在本地编辑。如果在构建文档时首先出现警告或错误，请勿提交。
+rST对空格和换行符非常敏感（特别是缺少换行符）。这有点烦人，但不难学习。
 
 问题可以像往常一样在存储库的错误跟踪器上报告。
 
@@ -91,20 +92,17 @@ Odoo用户使用说明
 
 
 
-Importing existing documents
+导入现有文档
 ============================
 
-For documents which already exist in an other format or in Google
-docs, it's possible to get a head-start by converting the existing
-document using `Pandoc <http://pandoc.org>`_. The main issue is that
-anything but trivial original documents will need fixing up (possibly
-lots of it) to get *good* rST (or possibly working rST at all).
+对于已经以其他格式或Google文档存在的文档，
+可以通过使用`Pandoc <http://pandoc.org>`_转换现有文档来开始.
+主要问题是除了微不足道的原始文档需要修改来适应rST.
 
-Example::
+
+例子::
 
   pandoc -f docx -t rst path/to/document.docx -o new_doc.rst --extract-media=.
 
-will convert ``path/to/document.docx`` to ``new_doc.rst`` and export
-all images to ``./media`` (and link them from the document). While
-there are issues with the exported document, it's much more convenient
-than manually re-typing the original.
+将 ``path/to/document.docx`` 转换 成``new_doc.rst`` 并且导出所有图像到 ``./media`` (从文件链接他们). 
+虽然导出的文档有问题，但是比手动重新输入原件更方便。
