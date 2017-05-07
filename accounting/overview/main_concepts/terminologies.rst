@@ -1,101 +1,57 @@
 ========================
-Accounting Terminologies
+会计术语
 ========================
 
 .. glossary::
 
-   Journal
+   日记账
 
-     A journal is like a folder in which you record all transactions
-     of the same type: all the statements of a bank account, all
-     customer invoices, all supplier bills. It's used to organize
-     similar transactions together.
+     账簿就像一个文件夹, 将相同类型的所有交易都记录在里面:所有银行科目的记录,所有客户发票,供应商账单。它用于归类类似的交易。
 
-   Payment Terms
+   付款条款
 
-     Payment terms describe how and when a customer invoice (or
-     supplier bill) should be paid over the time. Example: 30% direct
-     payment, balance due in two months.
+     付款条件用于客户发票(或供应商发票)应支付的时间和方式。例如:直接支付30%,在两个月内支付余款。
 
-   Bank Reconciliation
+   银行调节
 
-     Bank reconciliation is the process of matching transactions from your bank 
-     records with existing journal items or creating new journal items on the
-     fly. It is a process of verification to ensure that your bank and your 
-     records in Odoo say the same thing.
+     银行核销的过程其实就是将银行交易和已存在的分录核销。它是一个验证的过程,以确保银行和Odoo的记录相匹配。
 
-   Reconciliation
+   调节
 
-     Journal items reconciliation is the process of linking several
-     journal items together like an invoice and a payment. This allows you
-     to mark invoices as paid. It is also useful when comparing values of 
-     'goods received not invoiced' and 'goods shipped not billed' accounts.
+     分录的核销是多个分录匹配的过程, 就如发票和付款。这可以将发票标记为已付. 这也可用于标注'商品已收但未开票'和'货已发但未开票'。
 
-   Deposit Ticket
+   存款单
 
-     Deposit tickets group several payment orders (usually checks)
-     that are deposited together at the bank at the same time. This 
-     allows an easy reconciliation with the bank statement line if 
-     the line has one line per deposit.
+     存单组是指银行同时收到多笔付款(通常是支票)。如果每行一个存单的话, 核销就很容易了。
 
-   Journal Entry
+   日记账分录
 
-     A journal entry is an accounting transaction,
-     usually related to a financial document: invoice, payment,
-     receipt, etc. A journal entry always consists of at least two
-     lines, described here as journal items, which credit or debit 
-     specific accounts. The sum of the credits of all journal items 
-     of a journal entry must be equal to the sum of their debits 
-     for the entry to be valid.
+     分录是一个会计事务,通常涉及:发票,付款,收据,等。会计凭证至少包含两行,就是两条分录,分别为借贷科目。借贷之和必须平。
 
-   Journal Item
+   日记账项目
 
-     A line of a journal entry, with a monetary debit or credit
-     associated with a specific account.
+     分录的行, 借方或贷方与科目相关联。
 
-   Analytic Accounts
+   分析账户
 
-     Sometimes called **Cost Accounts**, are
-     accounts that are not part of the chart of accounts and that
-     allow you to track costs and revenues. Analytic accounts are usually
-     grouped by projects, departments, etc. for analysis of a company's 
-     expenditures. Every journal item is posted in a regular account 
-     in the chart of account and can be posted to an analytic account 
-     for the purpose of reporting or analysis.
+     有时称为 **成本账户**, ，不是会计记录的一部分，并允许您跟踪成本和收入。分析账户通常按项目，部门等分组，以分析公司的支出。每个日记账项目都会发布在会计记录的常规帐户中，并可以发布到分析账户以进行报告或分析。
 
-   Analytic Entries
+   分析分录
 
-     Costs or revenues posted to analytic accounts,
-     usually related to journal entries.
+     分析账户的成本或收入通常与日记帐分录有关。
 
-   Sales Receipt
+   销售收据
 
-     A receipt or other slip of paper issued by a store
-     or other vendor describing the details of a purchase (amount, 
-     date, department, etc.). Sales receipt are usually used
-     instead of invoices if the sale is paid in cash in a store.
+     商店或其他供应商发行的收据或其他单据，说明购买细节（金额，日期，部门等）。销售收据通常用于代替发票，如果销售是以现金支付在商店。
 
-   Fixed Assets
+   固定资产
 
-     Property owned by the company, usually with a useful life greater 
-     than one reporting period. Odoo Asset management is used to manage
-     the depreciation / amortization of the asset over the time. Typical 
-     examples would be capital equipment, vehicles, and real estate.
+     通常资产的使用寿命大于一个会计期间。Odoo资产管理用来管理资产的折旧/摊销的时间。典型的例子是资本设备、车辆和房地产。
 
-   Deferred Revenues
+   递延收入
 
-     Are used to recognize revenues for sales of 
-     services that are provided over a long period of time. If you
-     sell a 3 year maintenance contract, you can use the deferred
-     revenue mechanism to recognize 1/36 of the revenue every month 
-     until the contract expires, rather than taking it all initially 
-     or at the end.
+     用于确定长期提供的服务的销售收入。如果您出售3年维护合同，您可以使用递延收入机制来确认每月收入的1/36，直到合同到期，而不是全部或最后一次。
 
-   Fiscal Position
+   财政状况
 
-     Define the taxes that should be applied for a
-     specific customer/vendor or invoice. Example: If some customers
-     benefit from specific taxes (government, construction companies,
-     EU companies that are VAT subjected,…), you can assign a fiscal
-     position to them and the right tax will be selected according to
-     the products they buy.
+     定义应适用于特定客户/供应商或发票的税金。示例：如果某些客户受益于特定税收（政府，建筑公司，欧盟增值税公司，...），您可以向他们分配财政状况，并根据他们购买的产品选择正确的税收。
