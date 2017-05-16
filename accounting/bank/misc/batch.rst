@@ -1,146 +1,116 @@
 =======================================
-How to manage batch deposits of checks?
+如果管理支票的批量存款?（付费企业版功能）
 =======================================
 
-When your company's collections group receives checks from customers
-they will often place this money into their bank account in batches. As
-this money has been received in a physical form, someone in your company
-must manually bring the checks to the bank.
+当你们公司集中从客户收到支票后, 他们往往会把这些钱批次地放到银行账户。
+这钱已经以一个物理形式收到了, 你的公司的人必须手动把支票登记到银行。
 
-The bank will ask for a deposit ticket (also referred to as deposit
-slip) to be filled-in with the details of the checks or cash to be
-included in the transactions.
+银行将要求填写一张存款单，交易包括的支票详情以及现金。
 
-The bank statement will reflect the total amount that was deposited and
-the reference to the deposit ticket, not the individual checks.
+银行对账单将反映总计和存款单的参考信息, 而不是个人支票。
 
-Odoo assists you to prepare and print your deposit tickets, and later on
-reconcile them with your bank statement easily.
+Odoo帮助您准备和打印你的存款单, 之后与银行对账单调节就很容易了。
 
-Configuration
+配置
 =============
 
-Install the batch deposit feature
+安装批量存款功能
 ---------------------------------
 
-In order to use the batch deposit feature, you need the module **Batch
-Deposit** to be installed.
+为了使用批处理存款功能, 你需要安装模块 批量存款 **Batch Deposit** .
 
 .. note::
 
-    Usually, this module is automatically
-    installed if checks are widely used in your country.
+    通常, 如果支票在你的国家被广泛使用, 这个模块是自动安装的。
 
-To verify that the **Batch Deposit** feature is installed, go to the
-:menuselection:`Configuration --> Settings` menu of the accounting application.
-Check the feature: **Allow batch deposit**.
+验证 批量存款 功能是否安装, 去
+:menuselection:`Configuration --> Settings` 检查功能 :  **Allow batch deposit**.
 
 .. image:: media/batch01.png
    :align: center
 
-Activate the feature on your bank accounts
+在银行账户激活该功能
 ------------------------------------------
 
-Once you have installed this feature, Odoo automatically activate bank
-deposits on your main bank accounts.
+一旦你已经安装了这个特性, Odoo将自动激活你的银行账户内的存款功能。
 
-To control which bank account can do batch deposit and which can not, go
-to the journal that you defined to pay your checks, usually called
-'Checks' or 'Bank' (see :doc:`../../receivables/customer_payments/check`,
-in the Accounting apps, :menuselection:`Configuration --> Accounting --> Journals`.
+哪个银行账户可以做批处理存款, 哪些不能, 这个控制可以去账内定义, 通常被称为“支票" 或“银行 "(see :doc:`../../receivables/customer_payments/check`,
+, 会计应用程序 :menuselection:`Configuration --> Accounting --> Journals`.
 
-In **Advanced Settings** tab, in section **Miscellaneous**, set Debit Method to
-**Batch Deposit**.
+在 高级设置  **Advanced Settings** 页卡, 杂项 **Miscellaneous** 部分, 设置借记方式为 批量存款 **Batch Deposit** 。
 
 .. image:: media/batch02.png
    :align: center
 
-If you check **Batch Deposit** in your debit method field, it means that
-payments created using this Journal (called Payment method when you want
-to make or receive a payment) will be applicable for the creation of
-Batch Deposits afterwards.
+如果你在借记方式中检查 **Batch Deposit**  , 这意味着付款时使用这个账
+(当收款或是付款时称为支付方式), 将适用于之后的存款批处理。
 
-From checks received to the bank
+从收到支票到银行
 ================================
 
-Receive customer checks
+收到客户支票
 -----------------------
 
-Once your record checks received, record them on the bank account on
-which you plan to deposit them. Once you select the bank account (or
-check journal is you configured Odoo that way), Odoo proposes you to use
-a batch deposit. Select this option if you plan to deposit the check to
-your bank.
+一旦你将登记收到的支票, 作为保证金登记在银行账上。一旦你选择的银行账户(或支票账户), 
+Odoo建议您使用批处理。选择这个选项, 如果你计划批处理。
 
 .. image:: media/batch03.png
    :align: center
 
-In the memo field, you can set the reference of the check.
+在备忘录字段, 你可以设置支票的参考。
 
 .. note::
 
-    payments can be registered from the menu :menuselection:`Sales --> Payments`,
-    or directly on the related invoice, using the **Register Payment** button.
+    可在此菜单中登记付款 : :menuselection:`Sales --> 或直接在相关发票上登记, 使用 **Register Payment** button.
 
-Prepare a batch deposit
+预备批量存款
 -----------------------
 
-From the Accounting application, go to the menu :menuselection:`Sales --> Batch Deposit`,
-and create a new **Batch Deposit**.
+从会计程序, 进入菜单  :menuselection:`Sales --> Batch Deposit`,
+ , 并创建一个新的 **Batch Deposit**.
 
 .. image:: media/batch04.png
    :align: center
 
-Select the bank, then select the payments (checks) you want to add in
-this deposit. By default, Odoo proposes you all the checks that have not
-been deposit yet. That way, you can verify that you do not forget or
-lost a check.
+选择银行, 然后选择你想要添加的付款(支票)。
+默认情况下, Odoo建议你保存所有的支票。这样, 您就可以确认你不要忘记或丢失支票。
 
 .. image:: media/batch05.png
    :align: center
 
-You can then print the batch deposit, which will be very useful
-to prepare the deposit slip that the bank usually requires to complete.
+然后你可以打印批存款, 这将是非常有用的, 银行通常需要。
 
-Reconciling the Deposit with the Bank Statement
+使用银行对账单调节存款
 -----------------------------------------------
 
-When you process the bank statement reconciliation you will see the
-deposit ticket number referenced in the statement. When the reconciliation
-process is run, the user will be able to select the batch deposit that
-matches with the bank statement line.
+当调节银行对账单时, 对账单中将会看到存款单的号码。
+核销运行时, 用户将能够选择匹配的批处理存款。
 
 .. image:: media/batch06.png
    :align: center
 
-If you select a batch deposit, Odoo will automatically fills all the
-checks contained in this deposit for the matching. (2 checks were in
-this batch deposit the example below)
+如果您选择一批存款, Odoo将自动填充所匹配的支票存款。
+(下面的例子中有2账支票是作为批处理的)
 
 .. image:: media/batch07.png
    :align: center
 
-Troubleshooting
+排查
 ===============
 
-I don't see the batch deposit link on bank statements?
+在银行对帐单上没有此明细行？
 ------------------------------------------------------
 
-If you don't have a batch deposit link in your bank statement, there
-could be two reasons:
+如果在银行对账单中没有批存款链接, 可能是两个原因 :
 
-- After having installed the batch deposit features, you need to reload
-  the page so that the browser is aware of this new feature. Just
-  click the reload button of your browser.
+- 安装批存款功能后, 您需要重新加载页面,   
+  这样浏览器知道这个新特性。点击浏览器的刷新按钮。
+  
+- 你的银行账户内没有创建批处理存款。
 
-- You do not have a batch deposit created for this bank account.
-
-What happens if a check was refused?
+假如支票被拒绝会发生什么?
 ------------------------------------
 
-If you have a smaller amount in your bank statement than the actual
-amount in your batch deposit, it probably means that one of your check
-has been refused.
+如果银行对账单的金额小于实际批存款的金额, 它可能意味着你的某一张支票已经被拒绝了。
 
-In this case, click on the line related to this check to remove it from
-the bank statement matching.
+在这种情况下, 在银行对账单中, 点击相应的行并删除.

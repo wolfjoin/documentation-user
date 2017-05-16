@@ -1,5 +1,5 @@
 ==========================================
-How to accept paypal payments on invoices?
+如何接受PayPal付款？
 ==========================================
 
 The "Paypal Payment Acquirer" module allows you to accept payments via

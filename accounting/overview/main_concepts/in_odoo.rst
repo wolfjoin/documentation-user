@@ -11,7 +11,7 @@ Odoo自动创建您的每个会计交易的所有幕后日记帐分录：客户�
 
 Odoo使用复试记账系统的规则：所有日记帐分录自动平衡（借方金额=贷方金额）。
 
-.. 参见::
+.. seealso::
 
 	`了解Odoo每笔交易的会计分录 <https://odoo.com/documentation/functional/accounting.html>`__
 

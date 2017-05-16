@@ -1,77 +1,65 @@
 =================================================
-How to register credit card payments on invoices?
+如何在发票上登记信用卡付款？
 =================================================
 
-There are two ways to handle payments received by credit cards. Odoo
-support both approaches so that you can use the one that better fits
-your habits.
+处理信用卡收到的付款方式有两种。
+Odoo支持这两种方法，以便您可以使用更适合您习惯的方法。
 
-1. **Undeposited Funds** (mostly used in european countries): once you
-   receive the credit card payment authorization, you record a
-   payment by credit card on the invoice (using a Credit card
-   journal and posted on the Undeposited Fund account). Then, once
-   the credit card payments arrives in your bank account, move money
-   from Undeposited Funds to your bank account.
+1. **未支付的资金** （主要用于欧洲国家）：一旦您收到信用卡付款授权，您将通过信用卡在发票上
+   记录付款（使用信用卡分录并发布在未存款资金账户上）。
+   然后，一旦信用卡付款到达您的银行帐户，将资金从未存款资金转入您的银行帐户。
 
-2. **One journal entry only** (mostly used in the U.S.): once your
-   receive the credit card payment, you record a payment on your
-   bank, paid by credit card, without going through the Undeposited
-   Funds. Once you process your bank statement, you do the matching
-   with your bank feed and the credit card payment, without creating
-   a dedicated journal entry .
+2. **日记帐单** (主要用于美国): 
+   一旦您收到信用卡付款，您将在银行记录付款，以信用卡支付，而无需通过未存款基金。
+   处理银行对账单后，您可以与您的银行对账单和信用卡付款进行匹配，
+   而无需创建专门的日记帐分录。
 
-We recommend the first approach as it is more accurate (your bank
-account balance is accurate, taking into accounts credit cards that have
-not been cashed yet). Both approaches require the same effort.
+我们推荐第一种方法，因为它更准确（您的银行帐户余额是准确的，记入尚未兑现的信用卡）。
+这两种方法都需要相同的努力。
 
-If you use eCommerce and an automated payment gateway, you will only
-need to take care of the bank reconciliation part as paid invoice will
-be automatically recorded in the right journal. You will use the second
-approach.
+如果您使用电子商务和自动支付网关，您只需要处理银行对账部分，
+因为付款发票将自动记录在正确的日记帐上。你将使用第二种方法。
 
-Even if the first method is cleaner, Odoo support the second approach
-because some accountants are used to it (*QuickBooks* and *Peachtree*
+即使第一个方法更干净，Odoo仍支持第二种方法, 因为一些会计已习惯使用(*QuickBooks* and *Peachtree*
 users).
 
-Option 1: Undeposited Funds
+选项 1 : 未缴存的资金
 ===========================
 
-Configuration
+配置
 -------------
 
-On the Accounting module, go to :menuselection:`Configuration --> Journals --> Create`
+在会计模块上，转到 :menuselection:`配置 --> 分类账(日记账) --> 创建`
 
-Create a Journal called 'Credit card payments' with the following data:
+使用以下数据创建名为“信用卡付款”的日记帐：
 
--  **Journal Name**: Credit card
--  **Default debit account**: Credit cards
--  **Default credit account**: Credit cards
+-  **账簿名称**: 信用卡
+-  **默认借方账户**: 信用卡
+-  **默认贷方账户**: 信用卡
 
-Once it's done, don't forget to set the "Credit cards" account as "Allow
-Reconciliation".
+完成后, 请别忘了将"信用卡"科目设为"允许调节"。
+点击修改箭头快捷方式，或者通过会计科目查找修改。
 
 .. image:: ./media/credit01.png
   :align: center
 
-From credit card payments to bank statements
+从信用卡付款到银行对账单
 --------------------------------------------
 
-The first way to handle credit cards is to create a credit card journal.
-Thus, credit cards become a payment method in itself and you will record
-two transactions.
+第一种处理信用卡的方法是创建一个信用卡的账。
+因此，信用卡本身成为一种付款方式，你将记录两个交易。
 
-Once you receive a customer credit card payment, go to the related
-invoice and click on Register Payment. Fill in the information about the
-payment:
+一旦你收到客户的信用卡付款，去相关的发票，
+然后点击 **登记付款** 。填写付款的信息：
 
--  **Payment method**: Credit card
+-  **付款方式**: 信用卡
 
--  **Memo**: write the invoice reference
+-  **备注**: 写入发票参考
 
 .. image:: ./media/credit02.png
   :align: center
 
-This operation will produce the following journal entry:
+此操作将会产生如下会计分录：
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
@@ -81,11 +69,9 @@ This operation will produce the following journal entry:
 | Credit Cards         |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
 
-The invoice is marked as paid as soon as you record the credit card
-payment.
+登记付款后, 发票会标记为已付。
 
-Then, once you get the bank statements, you will match this statement
-with the credit card that is in the 'Credit card' account.
+然后，一旦拿到银行对账单，在'信用卡'科目内将对账单和付款核对
 
 +----------------+-------------------+----------+----------+
 | Account        | Statement Match   | Debit    | Credit   |
@@ -95,47 +81,38 @@ with the credit card that is in the 'Credit card' account.
 | Bank           |                   | 100.00   |          |
 +----------------+-------------------+----------+----------+
 
-If you use this approach to manage credit cards payments, you get the
-list of credit cards payments that have not been cashed in the "Credit
-card" account (accessible, for example, from the general ledger).
+如果你用这种方法来管理信用卡付款，
+在** 信用卡** 科目内会看到未到款清单(访问，例如，从总账)。
 
 .. note::
 
-	Both methods will produce the same data in your accounting at the end of the
-	process. But, if you have credit cards that have not been cashed, this one
-	is cleaner because those credit cards have not been reported yet on your bank
-	account.
+	这两种方法会产生相同的数据。但是，如果付款未到账，这个方法更清楚, 因为这些付款还未登入银行账户。
 
-Option 2: One journal entry only
+选项2: 仅一笔日记账（分类账）分录
 ================================
 
-Configuration
+配置
 -------------
 
-There is nothing to configure if you plan to manage your credit cards
-using this method.
+如果使用这个方法管理付款，不需要配置。
 
-From credit card payments to bank statements
+从信用卡付款到银行对账单
 --------------------------------------------
 
-Once you receive a customer credit card payment, go to the related
-invoice and click on Register Payment. Fill in the information about the
-payment:
+一旦你收到客户的信用卡付款，去相关的发票，
+然后点击 **登记付款** 。填写付款的信息：
 
--  **Payment method**: the bank that will be used for the deposit
+-  **付款方式**: 将用于存款的银行
 
--  **Memo**: write the credit card transaction number
+-  **备注**: 写信用卡交易号码
 
 .. image:: ./media/credit03.png
   :align: center
 
-The invoice is marked as paid as soon as the credit card payment has
-been recorded. Once you receive the bank statements, you will do the
-matching with the statement and this actual payment (technically: point
-this payment and relate it to the statement line).
+当付款登记后, 发票会到已支付状态. 一旦收到银行对账单，
+将对账单和实际付款核对。(从技术上讲：点此付款，并将其对账单上的行关联)
 
-With this approach, you will get the following journal entry in your
-books:
+此操作将会产生如下会计分录：
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
@@ -147,16 +124,10 @@ books:
 
 .. tip::
 
-	You may also record the payment directly without going on the customer
-	invoice, using the top menu :menuselection:`Sales --> Payments`. This method may be more
-	convenient if you have a lot of credit cards to record in a batch but you
-	will have to reconcile entries afterwards (matching payments with invoices).
+	不去客户发票, 也可直接登记收款，使用菜单 :menuselection:`Sales --> Payments`  这种方法可能会更方便，如果要批量录入的话，但后面必须进行核销(发票和收款核销).
 
-If you use this approach to manage received credit cards, you can use
-the report "Bank Reconciliation Report" to verify which credit cards
-have been received or paid by the bank (this report is available from
-the "More" option from the Accounting dashboard on the related bank
-account).
+如果您使用这种方法来管理收到的付款，您可使用**银行余额调节表**来核实银行已收到或由银行支付的付款。
+（此报告可从“会计仪表板”的“银行” “更多”选项中获取相关银行账户）。
 
 .. image:: ./media/credit04.png
   :align: center

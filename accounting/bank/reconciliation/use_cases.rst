@@ -1,113 +1,98 @@
 =============================================
-Use cases in the bank reconciliation process?
+银行对账过程中的使用案例？
 =============================================
 
-Overview
+概述
 ========
 
-Linking your bank statements with your accounting can be a lot of work.
-You need to find invoices back, relate payments and that amount of
-administration can cast a lot of time. Luckily, with Odoo you can very
-easily link your invoices or any other payment with your bank
-statements.
+将账户链接到银行对账单的工作量比较大。你需要找到发票, 相关的付款, 这需要很多的时间。
+幸运的是, 使用Odoo, 您可以很容易地将发票或是付款链接到相关的银行对账单。
 
-Two reconciliation processes exist in Odoo.
+odoo中存在2种对账过程.
 
-1. We can directly register a payment on the invoices
-2. We can reconcile open invoices with bank statements
+1. 能在发票上直接登记付款
+2. 我们可以用银行对账单调整销售发票
 
-Configuration
+配置
 =============
 
-No special configuration is necessary to register invoices. All we need
-to do is install the accounting app.
+登记发票不需要特殊设置。我们只需安装会计应用就可以了。
 
 .. image:: media/use01.png
    :align: center
 
-User cases
+使用案例
 ==========
 
-Case 1: Payments registration
+案例1 : 付款登记
 -----------------------------
 
-We received the payment proof for our invoice of 2100 euros issued to
-Smith & Co.
+我们收到付款证明, 是史密斯公司的2100欧元。
 
-We start at our issued Invoice of 2100 euros for Smith & Co. Because the
-sold product is a service we demand an immediate payment. Our accountant
-only handles the bank statements at the end of week, so we have to mark
-the invoice as paid so we can remember we can start the service with our
-customer.
+我们开了张2100欧元的发票给史密斯公司。因为我们出售的产品是服务, 
+要求立即付款。而我们的会计只在周末处理银行对账单, 所以我们在发票上做标记为支付, 
+就可以为我们的客户提供服务。
 
-Our customer send us a payment confirmation. We can thus register a
-payment and mark the invoice as paid.
+我们的客户发给我们付款凭证。我们可以登记付款, 相关的发票为已付。
 
 .. image:: media/use02.png
    :align: center
 
-By clicking on **register payment,** we are telling Odoo that our
-customer paid the Invoice. We thus have to specify the amount and the
-payment method
+通过点击  **付款登记 register payment,**  我们告诉Odoo, 客户已支付。
+我们因此需要指定金额和支付方式
 
 .. image:: media/use03.png
    :align: center
 
-We can always find the payment back from the Invoice by clicking on the
-:menuselection:`Info --> Open Payment`.
+我们可以找到付款信息, 通过单击发票上
+:menuselection:`信息Info --> 开启付款Open Payment`.
 
 .. image:: media/use04.png
    :align: center
 
-The invoice has been paid and **the reconciliation has been done
-automatically.**
+发票已经支付, 自动调节已完成 **the reconciliation has been done
+automatically**。
 
-Case 2: Bank statements reconciliations
+案例2 : 银行对账单对账
 ---------------------------------------
 
-We start at our issued Invoice of 3000 euros for Smith & Co. Let's also
-assume that other Invoices are open for different customers.
+我们开始已开给Smith & Co的3000欧元的发票。让我们也假定其他不同客户的发票未付款。
 
 .. image:: media/use05.png
    :align: center
 
-We receive our bank statement and not only the invoice of Smith & Co has
-been paid, the one of Buzz of 92 euros as well.
+们收到银行对账单, 不仅是史密斯公司的款已支付, Buzz的92欧元也已支付。
 
-**Import** or **Create** the bank statements. Please refer to the
-documents from the Bank Feeds section.
+**导入Import** or **创建Create** 银行对账单. 请参阅“银行对账单”部分的文件。
 
 .. image:: media/use06.png
    :align: center
 
-On the dashboard, click on **Reconcile # Items**
+在仪表板, 点击 调节# 项 **Reconcile # Items**
 
 .. image:: media/use07.png
    :align: center
 
-If everything was right (correct partner name, right amount) odoo will
-do the reconciliations **automatically**.
+如果一切是正确的(正确的业务伙伴名字, 金额正确), odoo会 自动(automatically) 调节。 **automatically**.
 
 .. image:: media/use08.png
    :align: center
 
-If some issues are found, you will need to take **manual actions**.
+如果发现某些问题, 需要执行 手工操作 **manual actions**.
 
-For example, if the partner is missing from your bank statement, just
-fill it in :
+例如, 如果在银行对账单中缺少业务伙伴, 请填写 :
 
 .. image:: media/use09.png
    :align: center
 
-If the payment is done with a down payment, just check if it is all
-right and validate all related payments :
+如果用首付完成了付款, 只检查它是否正确并验证所有相关的付款 :
 
 .. image:: media/use10.png
    :align: center
 
 .. tip::
 
-	Hit CTRL-Enter to reconcile all the balanced items in the sheet.
+	点击CTRL-Enter, 调节表格中的所有项。
 
 .. seealso::
 

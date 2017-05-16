@@ -1,70 +1,56 @@
 =================================================
-How to synchronize your PayPal account with Odoo?
+在Odoo如何同步你的PayPal账户?（付费企业版，中国不适用）
 =================================================
 
-With Odoo, you can synchronize your PayPal account. That way, you don't
-have to record all your PayPal transaction in your favorite accounting
-software. The synchronization is done every 4 hours, and you can start
-reconciling PayPal payments in just a click.
+使用Odoo, 可以同步你的PayPal账户。
+这样, 你不需要在你喜爱的会计软件里记录所有你的PayPal交易了。
+每4小时同步完成, 您点击一下就可以开始调节PayPal支付了。
 
-Configuration
+配置
 =============
 
-Install the account_yodlee module
+安装 account_yodlee 模块
 ----------------------------------
 
-Start by installing the **account_yodlee** module, if it is not already
-installed. To do that, got the the menu 
-:menuselection:`Accounting --> Configuration --> Settings` of the
-accounting application. In the section **Bank & Cash**, set the option **Bank
-Interface - Sync your bank feeds automatically**.
+首先请安装 account_yodlee 模块,如果尚未安装。要做到这一点,到菜单 
+:menuselection:`Accounting --> Configuration --> Settings` 。
+在 银行和现金 这部分,设置选项 **Bank Interface - Sync your bank feeds automatically**.
 
 .. image:: media/paypal01.png
     :align: center
 
-Click on the apply button once it's done.
+完成后点击使用按钮
 
-Setup your PayPal account
+设置你的PayPal帐户
 -------------------------
 
-A PayPal account in Odoo is managed like a bank account. To setup your
-PayPal account, use the menu :menuselection:`Configuration --> Bank Accounts`.
-Create a new bank account and name it **PayPal**. In the bank field, you can set
-**PayPal**.
+在Odoo, PayPal账户的管理就像一个银行账户。设置你的PayPal账户, 使用菜单
+ :menuselection:`Configuration --> Bank Accounts`.
+创建一个新的银行账户并命名为 **PayPal**. 在银行领域, 可以设置 **PayPal**.
 
 .. image:: media/paypal02.png
     :align: center
 
-Once the PayPal account is created, go back to the **Accounting** dashboard
-and click on the **Synchronize** button. In the dialog, choose **PayPal** as
-the online institution and click on the configure button.
+一旦创建PayPal帐户, 回到 **Accounting** 仪表板, 点击 **Synchronize** button. 
+在对话框中, 选择  **PayPal** 作为在线机构和点击配置按钮。
 
 .. image:: media/paypal03.png
     :align: center
 
-Then, you will have to provide your credentials to connect to PayPal.
+然后, 你必须提供连接到PayPal的凭证。
 
 .. note::
 
-	Your Paypal **must be in English** (if it is not the case you must change
-	the langage of your Paypal account) and if you use a Paypal business account
-	you must switch back to the old interface in order for it to work with
-	Online feeds (you can switch from new to old interface in your Paypal account).
+	你的Paypal  **must be in English**  (如果它不是这样, 你必须改变你的Paypal账户), 如果你使用Paypal业务帐户必须切换回旧的接口才能使用在线提交(从新老界面可以切换你的Paypal账户)。
 
-	If you don't do this you will get a message either saying to put Paypal in
-	English or that the site is not supported.
+	如果你不这样做, 你会得到一个消息, 要么说把Paypal切换成英文要么不支持该网站。
 
-If you configured your Paypal account correctly you should get to the next step
-of the Online feeds configuration. There you will have a screen with a date to
-fetch transaction from and a list of account to choose. You must choose the
-**Paypal balance** account.
+如果你正确地配置您的Paypal帐户, 你应到下一步的在线提交配置。有一个屏幕显示获取交易的日期和供选择账户的列表。你必须选择 Paypal balance 帐户。
 
 Once everything is done, you should see your PayPal transactions right
 in Odoo and you can start reconciling your payments.
 
-Enjoy a full integration! You don't need to record transaction manually
-anymore.
+一切都完成之后, 在Odoo中, 你应该看得到你的PayPal交易, 你可以开始调节你的付款了。
 
 .. note::
-    You only have to provide your credentials the first time. Once
-    done, Odoo will synchronize with PayPal every 4 hours automatically.
+    你只需在第一次提供你的凭证。一旦完成, Odoo将与PayPal 每4个小时自动同步。

@@ -1,58 +1,50 @@
 ==================================
-How to setup and use payment terms
+如何设置和使用支付条款
 ==================================
 
-Payment terms define the conditions to pay an invoice. They apply on
-both customer invoices and supplier bills.
+付款条件定义支付发票的条件。它们适用于客户发票和供应商账单。
 
-Example, for a specific invoice:
+例如，对于特定发票：
 
--  Pay 50% within 10 days
+-  例如，对于特定发票：
 
--  Pay the remaining balance within 30 days
+-  在30天内支付剩余余额
 
-.. note::   Payment terms are different from invoicing in several areas. If,
-            for a specific order, you invoice the customer in two parts, that's not
-            a payment term but invoice conditions.
+.. note::   付款条件与几个地区的发票不同。
+			如果对于特定订单，您以两部分的形式向客户开具发票，
+			这不是付款条件，而是发票条件
 
-Configuration
+配置
 =============
 
-Configure your usual payment terms from the Configuration menu of the
-Account application. The description of the payment term is the one that
-appear on the invoice or the sale order.
+会计应用程序的配置菜单中配置常用付款条件。
+付款条件的描述是出现在发票或销售订单上的说明。
 
-A payment term may have one line (ex: 21 days) or several lines (10%
-within 3 days and the balance within 21 days). If you create a payment
-term with several lines, be sure the latest one is the balance. (avoid
-doing 50% in 10 days and 50% in 21 days because, with the rounding, it
-may not do exactly 100%)
+付款期限可以有一行（例如：21天）或几行（3天内10％，21天内余额）。
+如果您创建了几行付款条款，请确保后的是余额。
+（避免在10天内做50％，21天内为50％，因为四舍五入可能不会完全达到100％）
 
 .. todo:: screenshot payment term forms, after QDP have commited the change
           planned on this object
 
-Using Payment Terms
+使用付款条款
 ===================
 
-Payment terms for customers
+客户付款条件
 ---------------------------
 
-Payment terms can be set on:
+付款条件可以设置在：
 
-- **a customer**: to apply this payment term automatically on new
-  sale orders or invoices for this customer. Set payment terms on
-  customers if you grant this payment term for all future orders of
-  this customer.
+- **客户**: 自动将此付款期限应用于该客户的新销售订单或发票。
+如果您为该客户的所有未来订单授予此付款期限，请在客户上设置付款条件。
 
-- **a quotation**: to apply this payment term on all invoices
-  created from this quotation or sale order, but not on other
-  quotations
+- **报价**: 将此付款条件应用于从此报价或销售订单创建的所有发票，
+但不适用于其他报价单
 
-- **an invoice**: to apply the payment term on this invoice only
+- **发票**: 仅在此发票上应用付款条件
 
-If an invoice has a payment term, the journal entry related to the
-invoice is different. Without payment term or tax, an invoice of $100
-will produce this journal entry:
+如果发票有付款期限，与发票相关的日记账分录不同。
+没有付款期限或税款，100美元的发票将产生此日记帐分录：
 
 +----------------------+------------+---------+----------+
 | Account              | Due date   | Debit   | Credit   |
@@ -62,9 +54,8 @@ will produce this journal entry:
 | Income               |            |         | 100      |
 +----------------------+------------+---------+----------+
 
-If you do an invoice the 1st of January with a payment term of 10%
-within 3 days and the balance within 30 days, you get the following
-journal entry:
+如果您在1月1日发票，3天内的付款期限为10％，
+余额在30天内，您将收到以下日记帐：
 
 +----------------------+------------+---------+----------+
 | Account              | Due date   | Debit   | Credit   |
@@ -76,20 +67,17 @@ journal entry:
 | Income               |            |         | 100      |
 +----------------------+------------+---------+----------+
 
-In the customer statement, you will see two lines with different due
-dates.
+在客户报表中，您将看到两行不同的到期日。
 
-Payment terms for vendor bills
+供应商账单的付款条件
 ------------------------------
 
-The easiest way to manage payment terms for vendor bills is to record a
-due date on the bill. You don't need to assign a payment term, just the
-due date is enough.
+管理供应商账单的付款条件的最简单方法是在账单上记录到期日期。
+您不需要分配付款条件，只是到期日期就足够了。
 
-But if you need to manage vendor terms with several installments, you
-can still use payment terms, exactly like in customer invoices. If you
-set a payment term on the vendor bill, you don't need to set a due date.
-The exact due date for all installments will be automatically created.
+但是，如果您需要分期管理供应商条款，您仍然可以使用付款条款，就像客户发票一样。
+如果您在供应商账单上设置付款条件，则不需要设置到期日。
+所有分期付款的确切到期日将自动创建。
 
 .. seealso:: 
 

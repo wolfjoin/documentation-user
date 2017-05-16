@@ -1,131 +1,95 @@
 =============
-Pay with SEPA
+使用SEPA
 =============
 
-SEPA, the Single Euro Payments Area, is a payment-integration initiative
-of the European union for simplification of bank transfers denominated
-in EURO. SEPA allows you to send payment orders to your bank to automate
-bank wire transfer.
+SEPA,是唯一欧元付款地, 是欧洲联盟为简化以欧元计价的银行转帐支付一体化计划。
+SEPA允许您向银行发送付款订单以自动银行电汇。
 
-SEPA is supported by the banks of the 28 EU member states as well as
-Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
+SEPA得到28个欧盟成员国银行的支持, 以及冰岛、挪威、瑞士、安道尔、摩纳哥和圣马力诺。
 
-With Odoo, once you decide to pay a vendor, you can select to pay the
-bill with SEPA. Then, at the end of the day, the manager can generate
-the SEPA file containing all bank wire transfers and send it to the
-bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
-specifications. This is a well-defined standard that makes consensus
-among banks.
+如付款给供应商,你可以选择用SEPA付账。然后,在一天结束的时候,经理可以生成SEPA文件, 
+文件包含所有银行电汇, 然后发给银行。SEPA含支付'PAIN.001.001.03'备注。
+这是一个银行间通用的标准。
 
-Once the payments are processed by your bank, you can directly import
-the account statement inside Odoo. The bank reconciliation process will
-seamlessly match the SEPA orders you sent to your bank with actual bank
-statements.
+一旦银行处理完支付单据,你可以直接将银行对账单导入Odoo。
+Odoo将SEPA 付款单和银行对账单核销。
 
-Configuration
+配置
 =============
 
-Install the required module
+安装必须的模块
 ---------------------------
 
-To pay suppliers with SEPA, you must install the **SEPA Credit Transfer**
-module. This module handle the process of generating SEPA files based on
-Odoo payments.
+要向SEPA支付供应商，您必须安装 **用SEPA付款SEPA Credit Transfer**模块。该模块处理基于Odoo付款生成SEPA文件的过程。
 
 .. note::
 
-	According to your country and the chart of account you use, this module may
-	be installed by default.
+	根据所在国家和所用科目表,这个模块会默认安装。
 
-Activate SEPA payment methods on banks
+激活银行SEPA付款方法
 --------------------------------------
 
-In order to allow payments by SEPA, you must activate the payment method
-on related bank journals. From the accounting dashboard (the screen you
-get when you enter the accounting application), click on "More" on your
-bank account and select the "Settings" option.
+如用SEPA支付,必须激活银行账内的付款方法。会计仪表板(进入会计应用程序的界面),在银行科目上点击“更多”,并选择“设置”选项。
 
-To activate SEPA, click the **Advanced Settings** tab and, in the **Payment
-Methods** part of the **Miscellaneous** section, check the box **Sepa Credit
-Transfer**.
+要激活SEPA，请单击“ 高级设置”选项卡，然后在“ 杂项” 部分的“ 付款方法”部分中，选中“ Sepa Credit Transfer ”框。
 
-Make sure to specify the IBAN account number (domestic account number
-won't work with SEPA) and the BIC (bank identifier code) on your bank
-journal.
+确保在银行日记帐上指定IBAN帐号（国内帐号不能与SEPA一起使用）和BIC（银行识别码）。
 
 .. note::
 
-	By default, the payments you send using SEPA will use your company name as
-	initiating party name. This is what appears on the recipient's bank statement
-	in the **payment from** field. You can customize it in your company settings,
-	in the tab **Configuration**, under the **SEPA** section.
+	默认情况下，您使用SEPA发送的付款将使用您的公司名称作为发起方名称。这是收款人的银行对账单上显示的付款方式。你可以自定义你的公司设置，请在选项卡配置，根据国家环保总局部分。
 
 .. image:: ./media/sepa01.png
   :align: center
 
-Pay with SEPA
+用SEPA支付
 =============
 
-Register your payments
+登记付款
 ----------------------
 
-You can register a payment that is not related to a supplier bill. To do
-so, use the top menu :menuselection:`Purchases --> Payments`. Register your
-payment and select a payment method by Sepa Credit Transfer.
+您可以注册与供应商帐单无关的付款。为此，请使用顶部菜单购买‣付款。注册您的付款，并选择通过Sepa Credit Transfer的付款方式。
 
-If it's the first time you pay this vendor, you will have to fill in the
-Recipient Bank Account field with, at least, the bank name, IBAN and BIC
-(Bank Identifier Code). Odoo will automatically verify the IBAN format.
+如果这是您第一次支付该供应商，您将必须至少填写银行名称IBAN和BIC（银行识别码）。Odoo将自动验证IBAN格式。
 
-For future payments to this vendor, Odoo will propose you automatically
-the bank accounts but you will be able to select another one or create a
-new one.
+对于未来向该供应商的付款，Odoo将自动向您提供银行帐户，但您将能够选择另一个或创建新的帐户。
 
-If you pay a specific supplier bill, put the reference of the bill in
-the **memo** field.
+如果你付出了特定供应商的法案，把该法案的参考在 **备注** 字段中。
 
 .. image:: ./media/sepa02.png
   :align: center
 
-Once your payment is registered, don't forget to Confirm it. You can
-also pay vendor bills from the bill directly using the Register Payment
-button on top of a vendor bill. The form is the same, but the payment is
-directly linked to the bill and will be automatically reconciled to it.
+付款登记后,别忘了确认。你也可以直接在发票上登记付款。形式是相同的,但是付款是直接与账单链接并自动核销。
 
-Generate SEPA files
+生成SEPA 文件
 -------------------
 
-From your accounting dashboard, you should see if there are SEPA files
-to generate for every bank account.
+在会计仪表板,您可看到是否有银行账户生成的SEPA文件。
 
 .. image:: ./media/sepa03.png
   :align: center
 
-Click on the link to check all the payments that are ready to transfer
-via SEPA. Then, select all the payments you want to send (or check the
-top box to select all payment at once) and click on :menuselection:`More -->
+点击链接，查看准备通过SEPA传输的所有付款。然后，选择您要发送的所有付款（或者选中顶盒一次选择所有付款），然后点击更多‣下载SEPA Payments :menuselection:`More -->
 Download SEPA Payments`.
 
 .. image:: ./media/sepa04.png
   :align: center
 
-Troubleshooting
+故障排查
 ===============
 
-The bank refuses my SEPA file
+银行拒绝我的SEPA文件
 -----------------------------
 
-Ask your bank if they support **PAIN.001.001.03 SEPA Credit Transfers**. If
-they don't, or cannot provide relevant informations, please forward the
-error message to your Odoo partner.
+您的银行是否支持PAIN.001.001.03 SEPA信用转账。如果他们没有或不能提供相关信息，请将错误信息转发给您的Odoo合作伙伴。
 
-There is no Bank Identifier Code recorded for bank account ...
+该银行账号没有银行识别码……
 --------------------------------------------------------------
 
-In order to send a SEPA payment, the recipient must be identified by a
-valid IBAN and BIC. If this message appear, you probably encoded an IBAN
-account for the partner you are paying but forgot to fill in the BIC
-field.
+用SEPA支付,收款人必须有有效的IBAN和BIC。如果这个提示出现,
+你可能填写了IBAN但忘了填写BIC。
+
+
 
 .. seealso::
 

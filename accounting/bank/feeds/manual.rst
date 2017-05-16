@@ -1,95 +1,87 @@
 =================================
-Register bank statements manually
+手工登记银行对账单
 =================================
 
-Overview
+概述
 ========
 
-With Odoo, you can import your bank statements, synchronize with your
-bank but also register your bank statements manually.
+通过Odoo, 你可以导入你的银行对账单并与你的银行同步，
+当然你也可以手动创建你的银行对账单。
 
-Configuration
+配置
 =============
 
-No special configuration is necessary to register invoices. All you need
-to do is install the accounting app.
+登记发票不需要任何特殊配置。所有您需要做的就是安装会计应用。
 
 .. image:: media/manual01.png
    :align: center
 
-Register bank statements manually
+手工登记银行对账单
 =================================
 
-Create your Bank Statements
+创建银行对账单
 ---------------------------
 
-In the Dashboard, click on the button **New Statement** related to the
-bank journal. If some reconciliations need to be done, the New Statement
-link will be found underneath.
+在仪表板中, 点击相关银行账目的按钮 **新对账单** 。如果某些调节需要完成, 
+新的对账单链接将会出现在下面。
 
 .. image:: media/manual02.png
    :align: center
 
-Just fill in the fields according the the information written on your
-bank statement. The reference can be filled in manually or you can leave
-it empty. We recommend to fill in the partner to ease the reconciliation
-process.
+只需在你的银行对账单中填写字段的信息。参考信息可以手动填写或者不填。
+我们建议填写合作伙伴来简化调节进程。
 
-The difference between the starting balance and the ending balance
-should be equal to the computed balance.
+期初余额和期末余额之间的差异该等于计算的余额。
 
 .. image:: media/manual03.png
    :align: center
 
-When you are done, click on **Save**.
+做完这些后, 点击 保存 .
 
-Reconcile your Bank Statements
+调节银行对账单
 ------------------------------
 
-You can choose to directly reconcile the statement by clicking on the
-button |manual04|
+您可以选择直接调节对账单, 通过单击按钮“调节” |manual04|
 
 .. |manual04| image:: media/manual04.png
 
-You can also start the reconciliation process from the dashboard by
-clicking on **Reconcile # Items**.
+你也可以在仪表板上开始调节进程, 通过点击"调节#项目" **Reconcile # Items**.
 
 .. image:: media/manual05.png
    :align: center
 
-Click on **Validate** to reconcile your bank statement. If the partner
-is missing, Odoo will ask you to **select a partner**.
+Click onto reconcile your bank statement. If the partner
+is missing, Odoo will ask you to.
+点击 验证 **Validate** 调节你的银行对账单。如果没有业务伙伴信息, 
+Odoo会让你选择一个业务伙伴 **select a partner**。
 
 .. image:: media/manual06.png
    :align: center
 
 .. tip::
 
-		Hit CTRL-Enter to reconcile all the balanced items on the sheets.
+		按ctrl + enter调节表格里所有平衡过的项。
 
-Close Bank Statements from the reconciliation
+从调节关闭银行对账单
 ---------------------------------------------
 
-If the balance is correct, you can directly close the statement from the
-reconciliation by clicking on |manual07|.
+如果余额正确, 你可以直接关闭调节, 点击调节 |manual07|.
 
 .. |manual07| image:: media/manual07.png
 
-Otherwise, click on |manual08| to open the statement and correct the
-issue.
+否则, 单击 |manual08| 打开对账单并纠正这个问题。
 
 .. |manual08| image:: media/manual08.png
 
-Close Bank Statements
+关闭银行对账单
 ---------------------
 
-On the accounting dashboard, click on the More button of your bank
-journal, then click on Bank Statements.
+在会计仪表板, 点击银行账的更多按钮, 然后点击银行对账单。
 
 .. image:: media/manual09.png
    :align: center
 
-To close the bank statement, just click on **Validate**.
+关闭银行对账单, 只需点击 **验证** 。
 
 .. image:: media/manual10.png
    :align: center

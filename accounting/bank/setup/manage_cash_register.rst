@@ -1,5 +1,5 @@
 ==============================
-How to manage a cash register?
+如何管理现金出纳？
 ==============================
 
 The cash register is a journal to register receivings and payments transactions.
@@ -11,50 +11,46 @@ Configuration
 .. image:: ./media/journal.png
    :align: center
 
-1. Configure the Cash journal in :menuselection:`Accounting --> Configuration --> 
+1. 在会计‣配置‣日记账中配置现金日记帐。 :menuselection:`Accounting --> Configuration --> 
    Journals`.
 
-2. In the tab Journal Entries, the Default Debit and Credit Account can be
-   configured as well as the currency of the journal
+2. 在“日记帐分录”选项卡中，可以配置默认借方科目和贷方科目为现金科目
 
 
 .. demo:fields:: account.action_account_journal_form
 
 
-Usage
+用法
 =====
 
-How to register cash payments?
+如何登记现金付款？
 ------------------------------
 
-To register a cash payment specific to another customer, you should follow
-these steps:
+要登记客户的现金支付, 你应该遵循以下步骤 :
 
-1. Go to :menuselection:`Accounting --> Dashboard --> Cash --> Register
+1. 转到会计‣仪表板‣现金‣新建交易 :menuselection:`Accounting --> Dashboard --> Cash --> Register
    Transactions`
 
-2. Fill in the start and ending balance
+2. 填写开始和结束的金额
 
-3. Register the transactions, specifying the customers linked to the transaction
+3. 提交交易，指定与交易相关联的客户
 
-Put money in
+把钱放入
 ------------
 
-Put money in is used to placed your cash manually before starting your
-transactions. From the Register Transactions window, go to :menuselection:`More
+把钱放入, 在交易开始前用于手动放置你的现金。从登记交易窗口, 去 :menuselection:`More
 --> Put money in`
 
 .. image:: ./media/put-money-in.png
    :align: center
 
-Take money out
+拿钱出来
 --------------
 
-Take money out is used to collect/get yor your cash manually after
-ending all your transactions. From the Register Transaction windows, go to :menuselection:`More
+把钱拿出, 是在所有的交易结束后, 收集你的现金。在登记交易窗口, 去 :menuselection:`More
 --> Take money out`
 
 .. image:: ./media/put-money-out.png
    :align: center
 
-The transactions will be added to the current cash payment registration.
+该交易将被添加到当前的现金支付登记。

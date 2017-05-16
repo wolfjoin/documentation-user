@@ -1,121 +1,102 @@
 ============================
-How to setup cash discounts?
+如何设置现金折扣？
 ============================
 
-Cash discounts are an incentive (usually a small percentage) that you
-offer to customers in return for paying a bill owed before the scheduled
-due date. If used properly, cash discounts improve the Days Sales
-Outstanding aspect of a business's cash conversion cycle.
+现金折扣是一种激励(通常是一个小的比例)，如客户在欠款到期日之前支付账款所享受的折扣。
+如果使用得当，现金折扣提高了一个企业的现金转换周期。
 
-For example, a typical cash discount would be: you offer a 2% discount
-on an invoice due in 30 days if the customer were to pay within the
-first 5 days of receiving the invoice.
+例如，一个典型的现金折扣是：提供了一个2%的折扣，到期日为30天，
+如果客户在收到发票后5天内支付可享受折扣。
 
-Configuration
+配置
 =============
 
-Payment terms
+付款条款
 -------------
 
-In order to manage cash discounts, we will use the payment terms
-concept of Odoo (From the Accounting module, go to :menuselection:`Configuration -->
-Management --> Payment terms --> Create`).
+为了管理现金折扣，我们将使用Odoo的付款条件概念 (从会计模块, 到 :menuselection:`配置 -->
+管理 --> 付款条款 --> 创建`).
 
-Let's start with the above example: a 2% discount on an invoice due in
-30 days if the customer were to pay within the first 5 days.
+ODOO社区版,在会计配置 -->管理 --> 付款条款 --> 创建
 
-A typical payment term of 30 days would have only one installment:
-balance in 30 days. But, in order to configure the cash discount, you
-can configure the payment term with two installments:
+让我们开始上面的例子：2%折扣，如果客户在开票后5天内支付,账期为30天。
 
--  98% within 5 days
--  balance within 30 days
+
+付款期限为30天，只设置一条：余额在30天支付。
+但是，为了配置现金折扣，您可以配置两个部分：
+
+-  5天之内 98%
+-  余额 30 天
 
 .. image:: ./media/discount01.png
    :align: center
 
-To make it clear that it's not a payment term but a cash discount, don't
-forget to set a clear description that will appear on the invoice:
-Invoice is due within 30 days, but you can benefit from a 2% cash
-discount if you pay within 5 days.
+这不是一个付款条件，而是现金折扣，不要忘了在发票上做一个明确的描述：
+发票账期是30天，但如果你在5天内支付, 可享受2%的现金折扣。
 
-Bank reconciliation model
+银行对账模型
 -------------------------
 
-In order to speed up the bank reconciliation process, we can create a
-model of entry for all cash discounts. To do that, from the Accounting
-application dashboard, click on the "More" link on the bank and choose
-the option "Reconciliation Models".
+为了加快银行核销进程，可以建立一个现金折扣的模型。要做到这一点，在会计应用程序的仪表板，在银行上击“更多”的链接，并选择“核销模型”(核销也叫调节）。
 
 .. image:: ./media/discount02.png
    :align: center
 
-Create a new model for cash discounts as follow:
+为现金折扣创建如下类型：
 
--  **Button Label**: Cash Discount
--  **Account**: Cash Discount (according to your country)
--  **Amount Type**: Percentage
--  **Amount**: 100%
--  **Taxes**: depending on your country, you may put a tax on the cash
-       discount if taxes have to be deduced
+-  **按钮标签**: 现金折扣
+-  **科目**: 现金折扣 (根据所在国家)
+-  **金额类型**: 百分比
+-  **金额**: 100%
+-  **税金**: 根据您的国家，您可以对现金缴税
+       必须扣除税款的折扣
 
 .. image:: ./media/discount03.png
    :align: center
 
 .. tip::
 	
-	Even if it's a 2% cash discount, set a 100% amount on the reconciliation model
-	as it means 100% of the remaining balance (the 2%). You can use the same
-	reconciliation model for all your cash discount. No need to create a model
-	per payment term.
+即使2%的现金折扣，设置核销模式，意味着100%的剩余余额(2%)。核销模型可用于所有的现金折扣。没必要每个付款条款创建一个模型。
 
-Creating an invoice with a cash discount
+创建带有现金折扣的发票
 ========================================
 
-When you create a customer invoice, set the right payment term "30 days,
-2% cash discount" right after having selected the customer.
+当创建一张客户发票，选择客户后设置正确的付款条款“30天，2%现金折扣”。
 
 .. image:: ./media/discount04.png
    :align: center
 
-Once the invoice is validated, Odoo will automatically split the account
-receivable part of the journal entry with two installments having a
-different due date: 98% within 5 days, 2% within 30 days.
+一旦发票确认后，Odoo将自动将应收账款按不同到期日分成2部分：
+98% 5天，2% 30天。
 
 .. image:: ./media/discount05.png
    :align: center
 
-Payment
+付款
 =======
 
-Paying the invoice with a cash discount
+支付带有现金折扣的发票
 ---------------------------------------
 
-If the customer pays with a cash discount, when processing the bank
-statement, you will match the payment (98%) with the related line in the
-journal entry.
+如果客户使用现金折扣，当处理银行对账单时，将付款(98%)与凭证中的相关行关联。
 
 .. image:: ./media/discount06.png
    :align: center
 
-As you can see in the above screenshot, when selecting the customer, you
-also see the 2% remaining of 3$. If you want to accept the cash discount
-(if the customer paid within the 5 days), you can click on this line
-with 2%, click on "Open Balance", and select your "Cash Discount"
-reconciliation model. That way, the invoice is marked as fully paid.
+如上图所示，当您选择客户时，您还会看到3 $剩余的2％。
+如果您想接受现金折扣（如果客户在5天内付款），您可以点击此行2％的3 $，
+点击灰色 创建销账 这行，
+然后选择“现金折扣”对账模式。保存并新建。
+点击调节，这样，发票就被标记为已付款。
 
 .. note::
 
-	from now on, matching the remaining 2% has to be done manually. In the future,
-	we plan to automate the reconciliation of the 2% if the 98% are paid on time.
+	从现在起，剩下的2%必须手动完成匹配。在未来，我们计划自动核销2%，如果98%是按时支付。
 
-Paying the invoice in full
+全额付款
 --------------------------
 
-If the customer pays the invoice fully, without benefiting from the cash
-discount, you will reconcile the payment (in full) with the two lines
-from the invoice (98% and 2%). Just click on the two lines to match them
-with the payment.
+如果客户全额支付，没有使用现金折扣，将付款(完全)与发票的两行(98%和2%)核销。只需点击这两行，与付款核销。
 
 .. image:: ./media/discount07.png
    :align: center

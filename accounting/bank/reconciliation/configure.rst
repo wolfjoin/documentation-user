@@ -1,64 +1,52 @@
 ==========================
-Configure model of entries
+配置分录模型
 ==========================
 
-Overview
+概述
 ========
 
-In Odoo you have the possibility to pre-fill some accounting entries in
-order to easily reconcile recurrent entries such as bank fees.
+在Odoo中你可以预设一些会计分录, 这样在计提例如银行费用这些经常性会计分录的时候就省事多了。
 
-We will take the following example to illustrate the concept : Every
-month my company receives a bank fee cost, which depends of our bank
-account current balance. This fee is thus variable.
+我们将下面的例子来说明这一概念 :每个月, 我公司收到银行费用成本, 
+这取决于我们的银行账户当前余额。这个费用是变量。
 
-Create Reconciliation Models
+创建对账模型
 ============================
 
-First, we need to configure two model reconciliation entries. To do so,
-go to the accounting application dashboard. On your bank journal, click
-on :menuselection:`More --> Reconciliation Models`.
+首先, 我们需要配置两个调节分录。为此, 会计应用程序仪表盘。在银行账点击 :menuselection:`更多More --> 调节模型Reconciliation Models`.
 
 .. image:: media/configure01.png
    :align: center
 
-We want to be able to book our bank fees easily. Our bank deducts fees
-depending on our balance, meaning that it can vary every month.
+我们希望能够轻松地预订我们的银行手续费。我们银行根据我们的余额扣除费用，这意味着每月可能会有所不同。
 
-We create a button Label called Bank fees, select the correct account to
-book those fees. Moreover we also need to specify that the amount type
-is "Percentage of balance" with an Amount of 100%. This parameter will
-tell Odoo to take the entire fee into account.
+我们创建一个名为银行费用的按钮标签, 选择正确的科目记录这些费用。此外我们还需要指定类型是" 余额百分比Percentage of balance", 比例为100%。这个参数将告诉Odoo考虑整个费用。
 
 .. image:: media/configure02.png
    :align: center
 
-Save your changes when you are done.
+当完成时保存变更。
 
 .. note::
 
-	If the amount of your bank fee is fixed, you can as well select **Fixed**
-	under amount type and specify the amount in the amount tap.
+	如果你的银行费用是固定的, 也可以选择 **固定的(Fixed)** 以及定义金额。
 
 .. seealso::
 
-	You can also use this functionality to handle discounts. Please refer to
+	您还可以使用此功能来处理折扣。请参阅
 	:doc:`../../receivables/customer_invoices/cash_discounts`
 
-Register your payments based on a reconciliation model
+基于对账模型登记付款
 ======================================================
 
-Register your payment by importing your bank statements that will be
-impacted by the payment of the bank fee.
+通过导入你的银行对账单来登记付款, 这会影响银行的支付费用。
 
-When doing the reconciliation, you can select an open balance and click
-the **Reconciliation Model** button (in this case, **Bank Fees**) to get all
-the relevant data instantly.
+进行调节时, 您可以选择一个未清的余额, 点击 **调节模型Reconciliation Model**  按钮(在这种情况下,  **银行费用Bank Fees**) 立即获得所有相关的数据。
 
 .. image:: media/configure03.png
    :align: center
 
-Finally, click on **Reconcile** to finish the process.
+最后, 点击 **调节Reconcile** 完成过程.
 
 .. seealso::
 

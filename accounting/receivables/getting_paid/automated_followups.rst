@@ -1,17 +1,14 @@
 ==========================================================
-How to automate customer follow-ups with plans?
+如何自动有计划地跟进客户？
 ==========================================================
 
-With the Odoo Accounting application, you get a dynamic aged receivable
-report, customer statements and you can easily send them to customers.
+在会计应用，你会得到一个动态的应收款报表，客户对账表，可发送给客户。
 
-If you want to go further in the automation of the credit collection
-process, you can use follow-up plans. They will help you automate all
-the steps to get paid, by triggering them at the right time: send
-customer statements by emails, send regular letter (through the Docsaway
-integration), create a task to manually call the customer, etc...
+如果你想进一步自动化信用收集，可使用跟踪计划。他们会帮助你自动完成收款
+所有的步骤：将客户对账单电子邮件给客户，定期发封信(通过Docsaway集成)，
+创建一个任务，手动打电话给客户，等等...
 
-Here is an example of a plan:
+这里是一项计划的例子 :
 
 +--------------------------+--------------------------+-------------------+
 | When?                    | What?                    | Who?              |
@@ -27,145 +24,123 @@ Here is an example of a plan:
 | 60 days after due date   | Formal notice            | Bailiff           |
 +--------------------------+--------------------------+-------------------+
 
-Configuration
+配置
 =============
 
-Install Reminder Module
+安装提醒模块
 -----------------------
 
-You must start by activating the feature, using the menu 
-:menuselection:`Configuration --> Settings` of the Accounting application. 
-From the settings screen, activate the feature **Enable payment follow-up management**.
+你必须先激活功能，使用菜单 
+:menuselection:`Configuration --> Settings` 从设置界面，激活功能 **启用付款催收管理 Enable payment follow-up management**(付费企业版）.
 
 .. image:: ./media/automated_followups01.png
   :align: center
 
-Define Payment Follow-ups Levels
+定义付款追踪等级
 --------------------------------
 
-To automate customer follow ups, you must configure your follow–up
-levels using the menu :menuselection:`Accounting --> Configuration --> Payment Follow-ups`.
-You should define one and only one follow-up plan per company.
+自动化的跟进客户，必须配置, 菜单 :menuselection:`Accounting --> Configuration --> 启用付款催收管理Payment Follow-ups`.
+应该定义一个公司，每个公司只有一个跟进计划。
 
-The levels of follow-up are relative to the due date; when no payment
-term is specified, the invoice date will be considered as the due date.
+跟进关联到期日；当没有付款条款时，发票日期将视为到期日。
 
-For each level, you should define the number of days and create a note
-which will automatically be added into the reminder letter.
+对于每一个级别，应定义天数，并创建一个将自动添加到提醒函中的说明
 
 .. image:: ./media/automated_followups04.png
   :align: center
 
-Odoo defines several actions for every reminder:
+Odoo为每个提醒定义了几个行动 :
 
--  **Manual Action:** assign a responsible that will have to call the customer
--  **Send an Email:** send an email to customer using the provided text
--  **Send a Letter:** send a letter by regular mail, using the provided note
+-  **手动操作:** 分配负责人，必须打电话给客户
+-  **发送电子邮件:** 使用提供的文本发送电子邮件给客户
+-  **发一封信:** 使用提供的备注通过普通邮件发信
 
 .. image:: ./media/automated_followups02.png
   :align: center
 
 .. Note:: 
-    As you need to provide a number of days relative to the due date,
-    you can use a negative number. As an example, if an invoice is issued
-    the January 1st but the due date is January 20, if you set a reminder 3
-    days before the due date, the customer may receive an email in January
-    17.
+    当您需要提供相对于到期日的几天时，您可以使用负数。例如，如果发出发票是1月1日，
+    但到期日为1月20日，如果您在到期日期前3天设置提醒，客户可能会在1月17日收到一封
+    电子邮件。
 
-Doing your weekly follow-ups
+每周做的跟进工作
 ============================
 
-Once everything is setup, Odoo will prepare follow-up letters and emails
-automatically for you. All you have to do is to the menu 
+一旦一切设置好，Odoo将自动发送跟进信件和邮件。必须的设置, 在菜单:
 :menuselection:`Sales --> Customers Statement` in the accounting application.
 
 .. image:: ./media/automated_followups09.png
   :align: center
 
-Odoo will automatically propose you actions based on the follow-up plan
-you defined, invoices to pay and payment received.
+Odoo会基于定义的跟踪计划自动建议后续行动，收支款项。
 
-You can use this menu every day, once a week or once a month. You do not
-risk to send two times the same reminder to your customer. Odoo only
-proposes you the action you have to do. If you do it every day, you will
-have a few calls to do per day. If you do it once a month, you will have
-much more work once you do it.
+你可每天，每周或每月一次使用这个菜单。你不用担心发送多次提醒给客户。
+Odoo只会提醒必做的工作。如果你每天都这样做，你每天都会有几个电话。
+如果你一个月做一次，工作会囤积得比较多。
 
-It's up to you to organize the way you want to work. But it's a good
-practice to reconcile your bank statements before launching the
-follow-ups. That way, all paid invoices will be reconciled and you will
-not send a follow-up letter to a customer that already paid his invoice.
+由你来决定工作的方式。但运行跟踪行动前, 请先将银行对账单核销。
+这样，所有的支付发票将被核销，以免给已付款的客户发送催款信。
 
-From a customer follow-up proposition, you can:
+通过客户跟进提议, 你可以:
 
--  Get the customer information to contact him
+-  取得客户的联系方式并联系他
 
--  Drill down to the customer information form by clicking on its name
+-  点击名字，下拉客户信息表
 
--  Change the text (or the email or letter) and adapt to the customer
+-  更改文本(或电子邮件或信)使之适应客户
 
--  Change the colored dot to mark the customer as being a good, normal
-   or bad debtor
+-  更改彩色点标记客户为好、一般或差债务人
 
--  Log a note is you called the customer
+-  将你联系过客户的相关信息记录一下
 
--  Exclude some invoices from the statement table (litigation)
+-  对账单不含这些发票(诉讼)
 
--  Send an email with the statement
+-  发送一份账单邮件
 
--  Print a letter, or send a regular mail (if you installed the Docsaway
-   integration)
+-  打印一封信, 或发送定期邮件 (如果您安装了 Docsaway 集成)
 
--  Plan the next reminder (but it's better to keep in automatic mode so that Odoo
-   will stick to the follow-up plan of the company)
+-  计划下次提醒(但最好在自动模式下，Odoo将自动进行公司的跟踪计划)
 
--  Drill down to an invoice
+-  深入一张发票
 
--  Change the expected payment date of an invoice (thus, impacting the
-   next time Odoo will propose you to send a reminder)
+-  更改发票的预期的付款日期 (因此, 影响下一次 Odoo 建议您发送提醒的时间)
 
 .. note::
-    You can force a customer statement, even if Odoo do not proposes
-    you to do it, because it's not the right date yet. To do this, you
-    should go to the Aged Receivable report (in the report menu of the
-    Accounting application). From this report, you can click on a customer
-    to get to his customer statement.
+    你可以查看客户对账单，即使Odoo因为未到日期没有建议你这样做。要做到这一点，
+    去应收账龄表(在会计应用程序下的报表菜单)。从这份报告中，你可以点击一个客户,
+     可看到客户对账单。
 
-How to exclude an invoice from auto follow up?
+如何从自动催款里面排除发票？
 ===============================================
 
-To see all **overdue invoices** or **on need of action**,
+查看所有 **逾期发票** or **需要的行动 on need of action**,
 
-Go to :menuselection:`Accounting --> Sales --> Customers Statement`
+转到菜单 :menuselection:`会计Accounting --> 销售Sales --> 客户对账单Customers Statement`
 
 .. image:: ./media/automated_followups05.png
   :align: center
 
-Exclude a specific invoice for a specific date
+排除特定日期的特定发票
 ------------------------------------------------
 
-Odoo can exclude an invoice from follow-ups actions for specific date by
-clicking on **Log a Note**, then choose one of the ready options (*one week*, 
-*two weeks*, *one month*, *two months*), So Odoo will calculate the
-required date according to the current date.
+Odoo可以通过点击 **Log a Note**来排除特定日期后续行动的发票，然后选择一个可用选项
+（一周， 两周，一个月，两个月），所以Odoo将根据当前日期。
 
 .. image:: ./media/automated_followups03.png
   :align: center
 
-Another way to achieve it is the following: click on the required invoice, 
-then choose **Change expected payment date/note**, then enter a new payment date and note.
+另一种方法也可以实现：点击所需的发票，然后选择**更改预期的付款日期/说明**，然后输入一个新的付款日期和说明。
 
 .. image:: ./media/automated_followups07.png
   :align: center
 
-Exclude a specific invoice forever
+永久的排除特定的发票
 -----------------------------------
 
-Odoo can exclude an invoice for a specific customer by clicking on
-the checkbox **Excluded**
+Odoo可以通过点击“已排除 ”复选框来排除特定客户的发票
 
 .. note::
-    If you click on **History**, you can see all follow ups actions.
+    如果您点击 **历史记录History**, 您可以查看所有跟进操作。
 
 .. image:: ./media/automated_followups06.png
   :align: center

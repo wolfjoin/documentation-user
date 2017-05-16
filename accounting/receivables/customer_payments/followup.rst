@@ -1,163 +1,130 @@
 =================================================
-How to get paid and organize customer follow-ups?
+如何收款以及管理客户回款？
 =================================================
 
-Getting paid and organizing customer reminders is always a difficult
-task, however it is critical for the health of the company to stay
-diligent about outstanding receivables. Fortunately, Odoo provides the
-right tools to track receivables, automate customer statements, and
-measure your performance.
+催款和提醒客户付款一直是一项艰巨的任务，然而，它是对公司的健康运行又至关重要的。
+幸运的是，Odoo提供此项功能来跟踪应收账款、自动更新客户往来账户报表，并评价客户情况。
 
-Customer follow-ups: A step by step guide
+客户跟踪：每步的操作指南
 =========================================
 
-Cleaning up outstanding payments
+清理未付款项
 --------------------------------
 
-If you have any unreconciled transactions in your bank account, you will
-need to process them first before you begin analyzing your customers
-statements. This ensures that you have recorded all of the latest
-customer payments before sending out reminders to any customers with
-outstanding balances.
+如果您的银行帐户中有任何未对帐的交易，则在开始分析客户报表之前，
+您需要先处理它们。这样可以确保您已经记录了所有最新的客户付款，
+然后向未付余额的客户发送提醒。
 
 .. image:: ./media/followup01.png
   :align: center
 
-Checking the Aged Receivables report
+核对应收款项账龄表
 ------------------------------------
 
-After you have reconciled all of your bank accounts, you can then
-generate an accurate Aged Receivables Report from the Reports menu. This
-report will display all of the customers and their outstanding balances
-on open invoices.
+核销所有的银行科目后，就可以得到准确的应收账龄表。
+报表显示所有的客户及未清余额。
 
 .. image:: ./media/followup02.png
   :align: center
 
-The report displays this information in time increments to better paint
-a picture of the outstanding balances your customers hold and for how
-long they have held these outstanding balances. You can then
-appropriately focus your efforts on the appropriate customers.
+报告显示客户的未清余额及欠账时间。然后，你可以适当地集中催讨款项。
 
-You can then select any of the customers on this list and Odoo will open
-up their invoice details in the form of the Customer Follow-Up letter,
-also known as the **Customer Statement**.
+你可以选择清单上的任何一个客户，Odoo将把发票明细放入催款信，也被称为 **客户声明** 。
+
+(ODOO10社区版无此功能，也无法筛选客户，只能打印所有的客户)
 
 .. image:: ./media/followup03.png
   :align: center
 
-From the customer statement, you can:
+通过客户对账表, 你可以:
 
-- Change and customize the message that is sent to the customer
+- 更改和自定义发送给客户的信息
 
-- Send a reminder email to the customer
+- 发送提醒邮件给客户
 
-- Send a printed reminder letter to the customer
+- 发送打印的提示信的客户
 
-- Send automated printed reminders by utilizing our Docsaway
-  integration
+- 通过使用我们的Docsaway集成发送自动打印提醒
 
-- Zoom in on the different open invoices or payments
+- 放大不同的未清发票或付款
 
-- Remove an invoice or payment from the report (in case of conflict)
+- 从报告中删除发票或付款(如有冲突)
 
-- Log any call notes made to the customer
+- 记录客户的所有通话记录
 
-- Schedule your next follow up task to stay on top of customer payments
-  (e.g. call back in 15 days if not payments are made)
+- 安排你的下一个任务，保持客户付款的最优先级别
+(例如，如果没有付款，请在15天内回电)
 
-You can set reminders for when you would like to next contact the
-particular customer. Selecting **Manual** will open up the follow up
-scheduling tool, while selecting **Auto** will automatically recommend that
-you contact the customer 15 days from then if the customer has not yet
-paid for the invoice. Installing the **Follow-Up Plans** module will allow
-you to define automated actions and intervals to send reminders.
+如果几天前你已经向客户发出了一个提醒，在屏幕的顶部将出现一个警告信息，
+提醒你不用再发提醒，因为最近刚发送了一个提醒。每一次登录日志，
+Odoo将自动设置一个提醒日期，除非你用屏幕的右上方提醒按钮选择手动设置。
 
 .. image:: ./media/followup04.png
   :align: center
 
-If you have already sent out a reminder to a customer a few days ago, a
-warning message will appear at the top of the screen, reminding you that
-you should not send another reminder so soon since one was already sent
-recently. Every time you log a note, Odoo will automatically set the
-next reminder date, unless you choose to manually set it by selecting
-the next reminder button at the top right of the screen.
+当您计划下一次联系这个客户,可以设置提醒. 选择**手动**将打开后续的安排，
+同时选择***自动**将自动建议您15天后联系客户，从那时起计算，
+如果客户仍未支付发票。
+安装**跟踪计划**模块将允许定义自动操作和设置发送提醒的时间间隔
 
 .. tip::
 	
-	You can also specify the expected payment date on an invoice line directly,
-	therefore defining the next reminder in case the invoice has not been paid.
+	您也可以直接在发票上指定预期的付款日期，如发票没有被支付，定义下一个提醒。
 
-Sending customer statements
+发送客户对账单
 ---------------------------
 
-Send your customers reminders in batches in the menu :menuselection:`Sales -->
+分批发送您的客户提醒,菜单 :menuselection:`Sales -->
 Customer Statements`.
 
-Here Odoo will open all the statements awaiting to be processed, which
-is determined by the last reminder they received. You can choose to
-process them one by one, send multiple letters or emails in batches, or
-set a next action date for the next time they'll be contacted.
+这将打开所有待处理报表，这些都已确认发出提醒。你可以选择一个一个处理，
+发送批量发送信或电子邮件，或设置下一个联系时间。
 
 .. note::
 
-	If an invoice has not yet been paid, Odoo will remind you to contact at
-	particular customer based after their next action date.
+	如果发票尚未支付，Odoo将提醒你设置联系提醒日期。
 
-You can access the customer statement report daily and Odoo will only
-display the customers you need to contact on any given day. This is
-based on:
+您可以每天查看客户对账单, 报表将只显示指定日期。这可基于：
 
-- Customers you have not yet received a payment from
+- 未付款客户
 
-- Customers that have not been reminded over the last X days ("X" being
-  defined as the overdue date of the invoice after the first
-  reminder, then the next action date set at every reminder)
+- 在最后的X天, 没有提醒客户(“X”被定义为第一次提醒后发票的逾期日期，
+下一次的设置为以后的每一个提醒)
 
-Setting up your dunning process
+设置你的催款过程
 -------------------------------
 
-The **Payment Follow-up Management** module allows you to define
-reminder plans. After installing it from the **Apps** menu, go to the
-**Follow-up Levels** menu in the accounting configuration to set up your
-dunning process.
+付款后续管理模块（Payment Follow-up Management）允许您定义提醒计划。
+ 在**应用程序**菜单中安装，去**跟进水平**菜单设置催款过程。
 
-Some Examples are:
+举一些例子：
 
-- **Email**: 3 days before overdue date
+- **Email**: 逾期日期前3天
 
-- **Email+Letter**: at the overdue date
+- **Email+Letter**: 逾期日期
 
-- **Email+Call**: 15 days after the overdue date
+- **Email+Call**: 逾期日期后15天
 
-- **Email+Letter**: 60 days after the overdue date
+- **Email+Letter**: 逾期日期后60天
 
 .. image:: ./media/followup05.png
   :align: center
 
-Thanks to this module, you can send every email and letters in batches
-for all your customers at once. The next reminder will automatically be
-computed based on your configured follow-up plan.
+感谢这个模块，您可以一次发送所有客户的每一封电子邮件和信件。
+下一个提醒将根据您配置的后续计划自动计算。
 
-The module will also add a red/green dot on each customer, this will
-allow you to easily mark customer status's with the following options:
-"Good Debtor, Normal Debtor, or bad debtors.
+该模块还将在每个客户身上添加一个红/绿点，这样您就可以轻松地将客户状态标记为以下选项：“好债务人，正常债务人”或“坏债务人”。
 
 .. image:: ./media/followup06.png
   :align: center
 
-DSO: Measuring your performance
+DSO: 衡量你的表现
 ===============================
 
-The DSO (Days of Outstanding Sales) is a measure of the average number
-of days that a company takes to collect revenue after a sale has been
-made. DSO is calculated by dividing the amount of accounts receivable
-during a given period by the total value of credit sales during the same
-period, and multiplying the result by the number of days in the period
-measured.
+DSO（未出售天数）是衡量公司在销售后收取收入的平均天数。DSO的计算方法是将
+给定期间的应收账款金额除以同期的信用销售总额，并将结果乘以测量期间的天数。
 
-You can get the DSO of your company from the Executive Summary report
-under Reporting (check the KPI average debtors days).
+您可以从报告中的执行摘要报告（查看KPI平均债务人天数）获取贵公司的DSO。
 
 .. image:: ./media/followup07.png
   :align: center

@@ -1,49 +1,42 @@
 ==================================
-How to modify a validated invoice?
+如何修改验证过的发票？
 ==================================
 
-In most accounting legislation over the word, it's not allowed to modify
-an invoice that is validated and sent to the customer. However, you
-sometimes need to change an invoice for different reasons: the sale has
-changed, the made a mistake while recording the invoice, etc.
+在大多数会计法规中，不允许修改经过验证并发送给客户的发票。但是，您有时需要更改发票，原因有所不同：销售发生变化，记录发票时发生错误等。
 
-Thus, the right way to modify an invoice is to:
+因此，修改发票的正确方法是：
 
-1. Refund the original invoice
-2. Create a new invoice
+1. 退还原始发票
+2. 创建新的发票
 
-Odoo's refund mechanism helps you handle the whole process in just a few
-clicks.
+Odoo的退款机制可以帮助您轻松处理整个流程。
 
-Modify an invoice
+修改发票
 =================
 
-If your invoice is still in draft, you can modify it the way you want.
-However, if your invoice is validated, you can not change it anymore. If
-you need to modify it, the right operations to do are:
+如果您的发票仍在草稿中，您可以按照您想要的方式进行修改。
+但是，如果您的发票已验证，则不能再更改。如果你需要修改它，正确的操作是：
 
-1. Refund the original invoice;
-2. Reconcile the original invoice with the refund to void them;
-3. Create a new draft invoice, a copy of the original;
-4. Validate the new invoice.
+1. 退还原发票;
+2. 将原来的发票和红冲发票核销；
+3. 创建一个新的草稿发票, 通过复制原始发票;
+4. 确认新发票
 
-All those steps are automated by Odoo. All you have to do is to click on
-the Refund button on an invoice.
+所有这些步骤都是Odoo自动完成的。你所要做的就是点击发票上的退款按钮。
 
 .. image:: ./media/modify01.png
   :align: center
 
-In the refund dialog, select the option "Modify: create a refund,
-reconcile and create a draft invoice". Once you click on the "Create
-Refund" button, Odoo will void your existing invoice and create a new
-draft invoice that is a duplicate of the original one.
+在退款对话框中，选择“修改：创建退款，调节并创建发票”选项。
+一旦您点击“创建退款”按钮，Odoo将使您现有的发票失效，
+并创建一个与原始发票重复的新的发票。
 
-Edit this new draft invoice and validate it when it's correct.
+编辑新的发票，并在正确的时候进行验证。
 
 .. note::
 
-	if you already sent the original invoice to your customer, you should send
-	the new invoice and the refund to the customer so that he gets all the documents.
+	如果您已将原始发票发送给客户，则应将新发票和退款发送给客户，
+	以便他获取所有文件。
 
 .. seealso::
 	

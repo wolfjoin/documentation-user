@@ -2,124 +2,90 @@
 What are the different ways to record a payment?
 ================================================
 
-In Odoo, a payment can either be linked directly to an invoice or be a
-stand alone record for use on a later date:
+在Odoo，付款可以直接与发票相关联，也可以作为独立记录在以后使用：
 
-- If a payment is linked to an invoice, it reduces the amount due of
-  the invoice. You can have multiple payments linked to the same
-  invoice.
+- 如果付款与发票相关联，则会减少发票金额。您可以将多个付款链接到相同的发票。
 
-- If a payment is not linked to an invoice, the customer has an
-  outstanding credit with your company, or your company as an
-  outstanding balance with a vendor. You can use this outstanding
-  credit/debit to pay future invoices or bills.
+- 如果一个付款不关联发票，客户有一个未清付款，
+或您的公司向客户采购有欠款。您可以使用这个未清的款项用来支付未来的发票或票据
 
-Paying an invoice
+支付发票
 =================
 
-If you register a payment on a customer invoice or a vendor bill, the
-payment is automatically reconciled with the invoice reducing the amount
-due.
+如果你在客户或供应商发票帐单上登记付款，付款将自动与发票未清余额核销。
 
 .. image:: ./media/recording01.png
   :align: center
 
-The green icon near the payment line will display more information about
-the payment. From there you can choose to open the journal entry or
-reconcile the payment.
+支付行旁边的绿色图标将显示更多关于付款的信息。
+从那里你可以选择打开凭证或核销付款。
 
 .. note::
 
-	If you unreconcile a payment, it is still registered in your books but not
-	linked to the specific invoice any longer. If you unreconcile a payment in a
-	different currency, Odoo will create a journal entry to reverse the Currency
-	Exchange Loss/Gain posted at the time of reconciliation.
+	如果付款未核销，它已入账但未与发票关联。如果外币的付款未核销，当核销时, Odoo将创建汇兑损益的凭证。
 
-Payments not tied to an invoice
+付款没有绑定到发票
 ===============================
 
-Registering a payment
+登记付款
 ---------------------
 
-In the Accounting application, you can create a new payment from the
-Sales menu (register a customer payment) or the Purchases menu (pay a
-vendor). If you use these menus, the payment is not linked to an
-invoice, but can easily be reconciled on an invoice later on.
+在会计应用程序中，可在销售菜单中创建一个新的付款(登记一个客户付款)或采购菜单(支付供应商)。如果您使用这些菜单，付款不会关联到发票，但以后可以很容易地核销。
 
 .. image:: ./media/recording02.png
   :align: center
 
-When registering a new payment, you must select a customer or vendor,
-the payment method, and the amount of the payment. The currency of the
-transaction is defined by the payment method. If the payment refers to a
-document (sale order, purchase order or invoice), set the reference of
-this document in the memo field.
+当登记一个新的付款时，必须选择一个客户或供应商，付款方法，和付款金额。
+该交易的货币是由付款方法定。如果付款涉及文件(销售订单，采购订单或发票)，将本文档的参考设置在备注栏中。
 
-Once confirmed, a journal entry will be posted reflecting the
-transaction just made in the accounting application.
+一旦确认，凭证将自动过账。一旦确认，凭证将自动过账。
 
-Reconciling invoice payments
+调节发票与付款
 ----------------------------
 
-The easiest way of reconciling a payment with an invoice is to do so on
-the invoice directly.
+直接在发票上登记付款是将付款和发票核销的最简单的方式。
 
-When validating a new invoice, Odoo will warn you that an outstanding
-payment for this customer or vendor is available. In this case, you can
-reconcile this payment to the invoice near the totals at the bottom,
-under "Outstanding Payments".
+当确认一个新的发票，Odoo会提醒你这个客户或供应商可用的款项。
+在这种情况下，您可以将此付款与发票总额核销，“未支付款项”。
 
 .. image:: ./media/recording03.png
   :align: center
 
-Reconciling all your outstanding payments and invoices
+调节所有未付款项和发票
 ------------------------------------------------------
 
-If you want to reconcile all outstanding payments and invoices at once
-(instead of doing so one by one), you can use the batch reconciliation
-feature within Odoo.
+如果你想一次性将所有未付款和发票核销(而不是一个一个核销)，你可使用批处理核销的功能。
 
-The batch reconciliation feature is available from the dashboard on the
-Customer Invoices card and the Vendor Bills card for reconciling
-Accounts Receivable and Payable, respectively.
+在客户发票和供应商发票的仪表盘上有批处理功能, 可将应收和应付分别核销.
+
 
 .. image:: ./media/recording04.png
   :align: center
 
-The payments matching tool will open all unreconciled customers or
-vendors and will give you the opportunity to process them all one by
-one, doing the matching of all their payments and invoices at once.
+付款匹配工具将打开所有未核销的客户或供应商，可以一个个处理，也可一次性处理。
 
 .. image:: ./media/recording05.png
   :align: center
 
-During the reconciliation, if the sum of the debits and credits do not
-match, it means there is still a remaining balance that either needs to
-be reconciled at a later date, or needs to be written off directly.
+核销中，如果一笔交易的借方和贷方金额不匹配，这意味着仍有余额，余额下次核销，或者把余额销掉。
 
-Transferring money from one bank account to another
+在银行账户之间转移钱
 ===================================================
 
-Just like making a customer or vendor payment, you transfer cash
-internally between your bank accounts from the dashboard or from the
-menus up top.
+现金的内部转移就像客户或供应商的付款，
+从仪表板或从菜单顶部的银行账户之间转移。
 
 .. image:: ./media/recording06.png
   :align: center
 
-This will take you to the same screen you have for receiving and making
-payments.
+你有收到款项或付款,在同一个界面处理.
 
 .. image:: ./media/recording07.png
   :align: center
 
 .. note::
 
-	When making an internal transfer from one bank account to another, select
-	the bank you want to apply the transfer from in the dashboard, and in the
-	register payments screen, you select the transfer to account. Do not go
-	through this process again in the other bank account or else you will end up
-	with two journal entries for the same transaction.
+	内部银行转款，在仪表板上选择转出的银行，并在付款界面，选择转入的帐户。不需要在另一个银行账户中重复操作，否则将重复交易。
 
 
 .. seealso::

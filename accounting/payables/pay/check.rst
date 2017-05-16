@@ -1,77 +1,67 @@
 =============
-Pay by Checks
+使用支票支付
 =============
 
-Once you decide to pay a supplier bill, you can select to pay by check.
-Then, at the end of the day, the manager can print all checks by batch.
-Finally, the bank reconciliation process will match the checks you sent
-to suppliers with actual bank statements.
+当支付供应商账单时,你可选择用支票来支付。然后,在一天结束的时候,
+可批量打印所有支票。最后,银行将支付的支票和银行对账单核销。
 
-Configuration
+配置
 =============
 
-Install the required module
+安装必须的模块
 ---------------------------
 
-To record supplier payments by checks, you must install the **Check
-Writing** module. This module handle the process of recording checks in
-Odoo. Others modules are necessary to print checks, according to the
-country. As an example, the **U.S. Check Printing** module is required to
-print U.S. checks.
+用支票来付款,必须安装* 支票填写 模块 **Check Writing** module.
+这个模块登记支票处理。其他模块用来打印支票, 国家不同也不同。
+举个例子,美国 支票打印模块根据美国的支票来设计。 **U.S. Check Printing**
 
 .. note::
 
-	According to your country and the chart of account you use, those
-	modules may be installed by default. (example: United States users have
-	nothing to install, it's configured by default).
+	根据所在国家和所使用的科目表,这些模块可默认安装。(例如:美国用户不用安装,已默认配置)。
 
-Activate checks payment methods
+激活支票付款方式
 -------------------------------
 
-In order to allow payments by checks, you must activate the payment
-method on related bank journals. From the accounting dashboard (the
-screen you get when you enter the accounting application), click on your bank
-account on :menuselection:`More --> Settings` option. On the
-**Payment Method** field, set **Check**.
+如需用支票支付,必须在银行账上激活付款方式。从会计仪表板(进入会计应用程序的界面),点击你的银行账户，点击更多‣设置选项: :menuselection:`More --> Settings` 。
+在 付款方式字段中，设置支票。
 
 .. image:: ./media/check01.png
   :align: center
 
-Compatible check stationery for printing checks
+打印支票的兼容支票纸张
 ===============================================
 
-United States
+美国
 -------------
 
-For the United States, Odoo supports by default the check formats of:
+对于美国, Odoo默认支持支票格式 :
 
 - **Quickbooks & Quicken**: check on top, stubs in the middle and bottom
 - **Peachtree**: check in the middle, stubs on top and bottom
 - **ADP**: check in the bottom, and stubs on the top.
 
-It is also possible to customize your own check format through customizations.
+也可以通过自定义自定义您自己的检查格式。
 
-Pay a supplier bill with a check
+用支票支付供应商账单
 ================================
 
-Paying a supplier with a check is done in three steps:
+用支票支付采购发票, 需要三个步骤:
 
-1. registering a payment you'd like to do on the bill
-2. printing checks in batch for all registered payments
-3. reconcile bank statements
+1. 在账单上登记付款
+2. 批量打印所有的已登记付款
+3. 调节银行对账单
 
-Register a payment by check
+用支票登记付款
 ---------------------------
 
-To register a payment on a bill, open any supplier bill from the menu
-:menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is
-validated, you can register a payment. Set the **Payment Method** to **Check**
-and validate the payment dialog.
+如需在账单上登记付款,在此点开发票
+:menuselection:`Purchases --> Supplier Bills`. 一旦采购发票审核,可登记付款。在对话框内, 将 **支付方式**设置为 **支票**
+
 
 .. image:: ./media/check02.png
   :align: center
 
-Explanation of the fields of the payment screen:
+付款界面字段的解释 :
 
 .. demo:fields:: account.action_account_payments
 
@@ -81,57 +71,42 @@ Explanation of the fields of the payment screen:
 
 .. _PrintChecks:
 
-Print checks
+打印检查
 ------------
 
-From the accounting dashboard, on your bank account, you should see a
-link "X checks to print". Click on this link and you will get the list
-of all checks that are not printed yet. From this screen, you can print
-all checks in batch or review them one by one.
+从会计仪表盘,银行账户,可看到一个链接“X支票打印”"X checks to print"。
+点击这个链接,会得到所有未打印的支票清单。从这个界面,可批量打印或是逐个检查。
 
-If you want to review every payment one by one before printing the
-check, open on the payment and click on **Print Check** if you accept it. A dialog
-will ask you the number of the check. It automatically proposes you the
-next number, but you can change it if it does not match your next check
-number.
+如果你想在打印前查看每笔付款,打开支付界面,点击* 打印支票 [UNKNOWN NODE problematic]。对话框会问你检查的编号。它会自动提出你下一个编号,但是,如果编号不匹配, 可修改。
 
-To print all checks in batch, select all payments from the list view and
-Print Check from the top "print" menu.
+如需批量打印,从列表中选择所有支票, 点击顶部“打印”菜单。
 
 .. image:: ./media/check03.png
   :align: center
 
 .. _ReconicleBankStatements:
 
-Reconcile Bank Statements
+调节银行对账单
 -------------------------
 
-Once you process your bank statement, when the check is credited from
-your bank account, Odoo will propose you automatically to match it with
-the payment. This will mark the payment as **Reconciled**.
+当处理银行对账单时,支票已从银行账户支出,Odoo将自动与付款匹配。这标志着付款 **调节** .
 
 .. tip::
 
-	to review checks that have not been credited, open the list of
-	payments and filter on the Sent state. Review those payments that have a
-	date more than 2 weeks ago.
+	检查尚未记入的支票，打开付款清单并在发送状态下进行过滤。查看超过2周前的日期的付款。
 
-Pay anything with a check
+用支票支付任何东西
 =========================
 
-You can register a payment that is not related to a supplier bill. To do
-so, use the top menu :menuselection:`Purchases --> Payments`. Register your
-payment and select a payment method by check.
+可登记与发票没有关系的付款。使用顶部菜单购买‣付款。: :menuselection:`Purchases --> Payments`. 
+登记付款, 选择付款方式。
 
-If you pay a specific supplier bill, put the reference of the bill in
-the **Memo** field.
+如果您支付特定的供应商账单，请将账单的引用放在 **备注** 字段中。
 
 .. image:: ./media/check04.png
   :align: center
 
-Once your payment by check is registered, don't forget to **Confirm** it.
-Once confirmed, you can use **Print Check** directly or follow the preceding
-flow to print checks in batch:
+一旦您通过支票支付付款，请不要忘记确认。一旦 **确认**，您可以直接使用 **打印支票** 或按照上述流程批量打印支票：
 
 -  `Print checks <PrintChecks_>`_
 

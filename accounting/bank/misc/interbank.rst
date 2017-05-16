@@ -1,133 +1,108 @@
 ========================================================
-How to do a bank wire transfer from one bank to another?
+如何用电汇从一个银行转移到另一个银行?
 ========================================================
 
-A company might have several bank accounts or cash registers. Within
-odoo it is possible to handle internal transfers of money with only a
-couple of clicks.
+一个公司可能有几个银行账号或现金账号。使用odoo, 内部转移钱只是几个点击就可解决了。
 
-We will take the following example to illustrate. My company has two
-bank accounts and I want to transfer 50.000 euros from one of our bank
-accounts to the another one.
+我们用下面的例子来说明。我公司有两个银行账户, 
+我想把50.000欧元从我们的银行账户转移到另一个。
 
-Configuration
+配置
 =============
 
-Check your Chart of Accounts and default transfer account
+检查科目表以及默认转账账户
 ---------------------------------------------------------
 
-To handle internal transfers you need a transfer account in your charts
-of account. Odoo will generate an account automatically based on the
-country of your chart of account. To parameter your chart of account and
-check the default transfer account go into your the accounting module,
-select :menuselection:`Configuration --> Settings`.
+处理内部转移你需要在科目表中需要一个转移科目。Odoo将自动生成一个帐户基于你国家的
+科目表。参数科目表, 在会计模块中检查默认的转账科目, 
+选择 :menuselection:`Configuration --> Settings`.
 
-Your chart of accounts will be pre-installed depending on the country
-specified during your registration, it cannot be changed.
+当你注册时, 会根据你的国家信息, 预设科目表, 它不能被改变。
 
 .. image:: media/interbank04.png
    :align: center
 
-The default transfer account will automatically be generated as well
-depending on your country's legislation. If necessary it can be modified
-from the same page.
+自动生成默认的转移帐户取决于你们国家的立法。如果有必要, 可以修改相同的页面。
 
 .. image:: media/interbank05.png
    :align: center
 
-Create a second bank account / Journal
+创建第二银行账户/日记账
 --------------------------------------
 
-Before we can register an internal transfer we need to add a new bank to
-our accounting dashboard. To do so enter the accounting module, click on
-:menuselection:`Configuration --> Bank Accounts`. Create a new bank account. You should
-fill in the **Account Number**. You can also create and edit your bank to
-specify your bank's details.
+在我们可以注册一个内部转让之前, 我们需要在会计仪表板上添加一个新的银行账户。
+进入会计模块,点击 :menuselection:`Configuration --> Bank Accounts`. 
+创建一个新的银行账户。你应该填写银行账户 **Account Number**. 
+您还可以创建和编辑你的银行详细信息。
 
 .. image:: media/interbank03.png
    :align: center
 
-By saving the changes you now have 2 bank accounts.
+通过保存更改, 你现在有2个银行账户。
 
 .. image:: media/interbank06.png
    :align: center
 
-Register an internal transfer from one bank to another.
+登记一个从一个银行到另外一个银行的内部转账。
 =======================================================
 
-We will now transfer 50.000 euros from our **Bank** to our **Bank BE57 0633
-9533 1498** account.
+现在我们将把50.000欧元从我们的 **Bank** 转到 **Bank BE57 0633 9533 1498**  账户。
 
-Log an internal transfer
+记录内部转账
 ------------------------
 
-The first step is to register the internal paiement. To do so, go into
-your accounting dashboard. click on the **more** button of one of your banks
-and select :menuselection:`New --> Internal transfer`. 
+第一步是登记内部转账. 为此, 进入你的会计仪表板。点击的 **更多--新建--内部转账**  :menuselection:`New --> Internal transfer`. 
 
 .. image:: media/interbank01.png
    :align: center
 
-Create a new payment. The payment type will automatically be set to
-internal transfer. Select the **Bank** you want to transfer to, specify the
-**Amount** and add a **Memo** if you wish.
+创建一个新的付款。付款类型将自动设置为内部转让。选择您想要转移的 **银行** 输入金额 和添加一个备注 (如果你需要)。
 
 .. note::
-    The memo is important if you wish to automatically reconcile (`see <Reconcile_>`_).
+    如果你想自动调节，备注是很重要的 (`see <Reconcile_>`_).
 
 .. image:: media/interbank02.png
    :align: center
 
-Save and confirm the changes to register the payment.
+保存并确认变更以登记付款。
 
-In terms of accounting the money is now booked in the transfer account.
-We'll need to import bank statements to book the money in the final
-accounts.
+在会计方面, 钱现在登记在转移账户。我们需要导入银行对账单, 将钱登记在最终的账户.
 
 .. _Reconcile:
 
-Import bank statements and reconcile
+导入银行对账单并调节
 ------------------------------------
 
-Note that the bank balance computed by Odoo is different that the last
-statement of your bank.
+注意, 银行余额在Odoo的计算与银行最新的对账单是不同的.
 
 .. image:: media/interbank11.png
    :align: center
 
-That is because we did not import the bank statement confirming the
-departure and arrival of the money. It's thus necessary to import your
-bank statement and reconcile the payment with the correct bank statement
-line. Once you receive your bank statements click the **new statement**
-button of the corresponding bank to import them.
+这是因为我们没有导入银行对账单来确认付出和收到的钱。因此需要导入你的银行对账单, 将付款和正确的银行对账单行调节。一旦你收到银行对账单点, 在相应的银行点击新对账单 **new statement** 导入
 
 .. image:: media/interbank07.png
    :align: center
 
-Fill in your **Transactions line**. Once done, Odoo will display a **Computed
-Balance**. that computed balance is the theorical end balance of your
-bank account. If it's corresponding to the bank statement, it means that no errors were
-made. Fill in the **Ending balance** and click on the **Reconcile** button.
+填上 **交易行 Transactions line**。一旦完成, Odoo将显示 **计算余额 Computed Balance** .
+计算的余额是理论上你的账户的余额。如果与银行对账单一致, 就意味着没有错误。填写 结算余额 ,
+然后点击 调节 按钮。
 
 .. image:: media/interbank10.png
    :align: center
 
-The following window will open:
+下列窗口将会打开 :
 
 .. image:: media/interbank09.png
    :align: center
 
-You need to choose counterparts for the paiement. Select the correct
-bank statement line corresponding to the paiement and click on the 
-**reconcile** button. Close the statement to finish the transaction
+你需要为paiement选择同行。选择正确的银行对账单对应paiement, 点击 **调节** 按钮。
+关闭对账单来完成这项交易.
 
 .. image:: media/interbank08.png
    :align: center
 
-The same steps will need to be repeated once you receive your second
-bank statement. Note that if you specify the correct amount, and the
-same memo in both bank statement and payment transaction then the
-reconciliation will happen automatically.
+一旦你收到第二个银行对账单, 需要重复相同的步骤。注意, 如果指定了正确的金额, 
+在银行对账单和付款事务有相同的备忘录, 调节就会自动发生。
 
 .. image:: media/interbank12.png
    :align: center

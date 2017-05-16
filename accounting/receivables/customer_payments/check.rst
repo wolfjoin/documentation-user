@@ -1,68 +1,64 @@
 ============================================
-How to register customer payments by checks?
+如何用支票登记客户付款？
 ============================================
 
-There are two ways to handle payments received by checks. Odoo support
-both approaches so that you can use the one that better fits your
-habits.
+通过支票收到的付款有两种方法。
+Odoo支持这两种方法，以便您可以使用更适合您习惯的方法。
 
-1. **Undeposited Funds:** 
+1. **未支付的资金:** 
    once you receive the check, you record a payment
    by check on the invoice. (using a Check journal and posted on the
    Undeposited Fund account) Then, once the check arrives in your
    bank account, move money from Undeposited Funds to your bank
    account.
+   收到支票后，您可以通过支票在发票上记录付款。
+   （使用支票日记账同时登记到未达资金会计科目）
+   然后，一旦支票到达您的银行帐户，将资金从未达资金会计科目转入您的银行帐户。
 
-2. **One journal entry only:** 
-   once your receive the check, you record a
-   payment on your bank, paid by check, without going through the
-   **Undeposited Funds**. Once you process your bank statement, you do
-   the matching with your bank feed and the check payment, without
-   creating a dedicated journal entry.
+2. **一个日记账:** 
+   只要您收到支票，您就可以在银行登记使用支票支付，无需通过 **未达资金科目** 。
+   处理您的银行对账单后，您可以与您的银行对账单和支票付款相匹配，
+   而无需创建专门的日记账分录。
 
-We recommend the first approach as it is more accurate (your bank
-account balance is accurate, taking into accounts checks that have not
-been cashed yet). Both approaches require the same effort.
+我们建议使用第一种方法, 更准确(你的银行帐户余额是准确的，
+应考虑到有些支票还没有兑现)。这两种方法工作量差不多。
 
-Even if the first method is cleaner, Odoo support the second approach
-because some accountants are used to it (quickbooks and peachtree
+即使第一个方法更干净，Odoo仍支持第二种方法, 
+因为一些会计已习惯使用(指导书和其他用户) (quickbooks and peachtree
 users).
 
 .. Note:: 
-  You may have a look at the *Deposit Ticket feature* if you deposit
-  several checks to your bank accounts in batch.
+  您可以看一看 **存款票据功能** , 如果你将支票批量存入银行。
 
-Option 1: Undeposited Funds
+
+选项1 : 未缴存的资金
 ===========================
 
-Configuration
+配置
 -------------
 
--  Create a journal **Checks**
+-  创建一个分类账 **支票**
 
--  Set **Undeposited Checks** as a defaut credit/debit account
+-  设置 **未支付支票会计科目** 为默认借/贷会计科目
 
--  Set the bank account related to this journal as **Allow Reconciliation**
+-  将该分类账有关的银行科目设置“允许调节"
 
-From check payments to bank statements
+从支票付款到银行对账单
 --------------------------------------
 
-The first way to handle checks is to create a check journal. Thus,
-checks become a payment method in itself and you will record two
-transactions.
+第一种处理支票的方法是创建一个支票凭证。因此，支票本身成为一种付款方式，你将记录两个交易。
 
-Once you receive a customer check, go to the related invoice and click
-on **Register Payment**. Fill in the information about the payment:
 
--  Payment method: Check Journal (that you configured with the debit and
-   credit default accounts as **Undeposited Funds**)
+一旦你收到客户的支票，去相关的发票，然后点击 **登记付款** 。填写付款的信息：
 
--  Memo: write the Check number
+-  付款方式：检查日记帐（您使用借方和信用违约帐户配置为 未存款资金（Undeposited Fund））
+
+-  备注：写支票号码
 
 .. image:: ./media/check02.png
   :align: center
 
-This operation will produce the following journal entry:
+此操作将产生以下日志条目：
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
@@ -72,10 +68,9 @@ This operation will produce the following journal entry:
 | Undeposited Funds    |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
 
-The invoice is marked as paid as soon as you record the check.
+记录支票后，发票将被标记为已付款。
 
-Then, once you get the bank statements, you will match this statement
-with the check that is in Undeposited Funds.
+然后，一旦您收到银行对账单，您就可以将该报表与未结算资金中的支票相匹配。
 
 +---------------------+-------------------+----------+----------+
 | Account             | Statement Match   | Debit    | Credit   |
@@ -86,46 +81,37 @@ with the check that is in Undeposited Funds.
 +---------------------+-------------------+----------+----------+
 
 
-If you use this approach to manage received checks, you get the list of
-checks that have not been cashed in the **Undeposit Funds** account
-(accessible, for example, from the general ledger).
+如果您使用这种方法来管理收到的支票，您将获得 未达款项科目（Undeposit Funds)  未兑现的支票清单（例如，可从总帐中进行访问）。
 
 .. Note:: 
-    Both methods will produce the same data in your accounting at the
-    end of the process. But, if you have checks that have not been cashed,
-    this one is cleaner because those checks have not been reported yet on
-    your bank account.
+    两种方法将在过程结束时在您的会计中产生相同的数据。但是，如果您没有兑现支票，那么这个清单是因为这些支票尚未在您的银行帐户上报告。
 
-Option 2: One journal entry only
+选项2：仅一个日记帐分录
 ================================
 
-Configuration
+配置
 -------------
 
-These is nothing to configure if you plan to manage your checks using
-this method.
+如果您打算使用此方法管理您的支票，则无需进行配置。
 
-From check payments to bank statements
+从支票付款到银行对账单
 --------------------------------------
 
-Once you receive a customer check, go to the related invoice and click
-on **Register Payment**. Fill in the information about the payment:
+收到客户支票后，请到相关发票上点击 **登记付款** 。填写有关付款的信息：
 
--  **Payment method:** the bank that will be used for the deposit
+-  **付款方式：** 将用于存款的银行
 
--  Memo: write the check number
+-  **备注** : 写支票号码
 
 .. image:: ./media/check03.png
   :align: center
 
-The invoice is marked as paid as soon as you record the check.
+写支票号码
 
-Once you will receive the bank statements, you will do the matching with
-the statement and this actual payment. (technically: point this payment
-and relate it to the statement line)
+一旦您收到银行对账单，您将与该账单和实际付款相符。
+（技术上：指出这笔款项并将其与账单行相关联）
 
-With this approach, you will get the following journal entry in your
-books:
+此操作将会产生如下会计分录
 
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
@@ -136,16 +122,11 @@ books:
 +----------------------+-------------------+----------+----------+
 
 .. tip:: 
-    You may also record the payment directly without going on the
-    customer invoice, using the menu :menuselection:`Sales --> Payments`. This method may
-    be more convenient if you have a lot of checks to record in a batch but
-    you will have to reconcile entries afterwards (matching payments with
-    invoices)
+       您也可以使用菜单 :menuselection:`销售 --> 付款`. 直接记录付款，而不用客户发票。如果您有大量检查来批量记录，则您可能会更方便地使用此方法，但是您将不得不在之后调整条目（使用发票进行匹配付款）
 
-If you use this approach to manage received checks, you can use the
-report **Bank Reconciliation Report** to verify which checks have been
-received or paid by the bank. (this report is available from the **More**
-option from the Accounting dashboard on the related bank account).
+
+如果您使用此方法来管理收到的支票，则可以使用“ 银行调节报告”
+来验证银行已收到或支付哪些支票。（此报告可从 会计仪表板-相关银行帐户-更多-选项中获得）。
 
 .. image:: ./media/check01.png
   :align: center

@@ -1,7 +1,7 @@
 :banner: banners/accounting.jpg
 
 ==========
-Accounting
+会计
 ==========
 
 .. toctree::

@@ -1,46 +1,37 @@
 ================================
-How to setup a new bank account?
+如何设置一个新的银行账户？
 ================================
 
-In Odoo, you can manage multiple bank accounts. In this page, you will
-be guided in the creation, modification or deletion of a bank or a
-credit card account.
+在Odoo，您可以管理多个银行帐户。在此页面中，将引导您创建，修改或删除银行或信用卡账户。
 
-Edit a bank account
+编辑银行帐户
 --------------------
 
-To ease the process, a bank account is already there. We suggest you to 
-edit it first before filling your own bank information. 
+为了简化这一过程, 银行账户已经存在。我们建议你在填写银行信息前先编辑它。
 
-Go to :menuselection:`Accounting --> Configuration --> Bank
-Accounts` and click on the **Bank** item. Edit it. 
+ :menuselection:`Accounting --> Configuration --> Bank
+Accounts` 转到会计‣配置‣银行账户，然后单击银行项目。编辑它
 
 .. image:: media/image04.png
    :align: center
 
 .. note::
 
-    Odoo will detect the bank account type (e.g. IBAN) to allow some payment 
-    method like SEPA
+    Odoo将检测银行账户类型(例如 IBAN), 允许类似于SEPA等的支付方式
 
 
-Create a bank account
+创建银行账户
 ---------------------
 
 Go to :menuselection:`Accounting --> Configuration --> Bank
-Accounts`. Click on **create** and fill in the form. You can 
-decide to show the bank account number in you intend to send documents 
-like sales orders or invoices. Select the payments methods you 
-support with this bank account. 
+Accounts`. Click on **create** 转到会计‣配置‣银行账户。点击 创建 和填写表格。你可以决定在文件上显示银行帐号, 就如销售订单或发票。选择银行账户的支付方式。
 
 .. image:: media/image06.png
    :align: center
 
 .. note::
 
-    If you are working in a multi-company environnement, you'll have to switch 
-    the company on your user preferences in order to add, edit or delete bank 
-    accounts from another company.
+    如果你在多公司环境内工作, 如你添加、编辑或删除银行账号, 需要在首选项中切换公司。
 
 .. demo:fields:: base.action_res_partner_bank_account_form
 
@@ -59,10 +50,10 @@ support with this bank account.
 
 The initial balance of a bank statement will be set to the closing balance of the previous one within the same journal automatically.
 
-Delete a bank account or credit card account
+删除银行帐户或信用卡帐户
 --------------------------------------------
 
-From the list of bank accounts, select items to delete and delete them from the action menu or go to the form and delete a single item from the action menu
+从银行账户列表中, 选择要删除的项, 从行动菜单删除它们, 或者去表单和在行动菜单中删除
 
 .. |image5| image:: media/image05.png
 	:class: btn-group

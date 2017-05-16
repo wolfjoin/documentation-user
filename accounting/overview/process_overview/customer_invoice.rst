@@ -1,59 +1,46 @@
 ==================================
-From Invoice to Payment Collection
+从发票到支付收款
 ==================================
 
-Odoo supports multiple invoicing and payment workflows, so you can
-choose and use the ones that match your business needs. Whether you want
-to accept a single payment for a single invoice, or process a payment
-spanning multiple invoices and taking discounts for early payments, you
-can do so efficiently and accurately.
+Odoo支持多个发票和支付工作流程，因此您可以选择和使用符合您业务需求的。
+无论您是要接受单一发票的单笔付款，还是处理跨多个发票的付款，
+并提早付款的折扣，您可以高效准确地进行付款。
 
-From Draft Invoice to Profit and Loss
+从草稿发票到损益
 =====================================
 
-If we pick up at the end of a typical 'order to cash' scenario, after
-the goods have been shipped, you will: issue an invoice; receive
-payment; deposit that payment at the bank; make sure the Customer
-Invoice is closed; follow up if Customers are late; and finally present
-your Income on the Profit and Loss report and show the decrease in
-Assets on the Balance Sheet report.
+如果设置'以现金订购', 货物装船后,
+您将：开发票;收到付款;存入银行;确认客户发票关闭;如果客户逾期支付，跟踪处理;最后将收入体现在损益表上, 将资产减少显示在资产负债表上。
 
-Invoicing in most countries occurs when a contractual obligation is met.
-If you ship a box to a customer, you have met the terms of the contract
-and can bill them. If your supplier sends you a shipment, they have met
-the terms of that contract and can bill you. Therefore, the terms of the
-contract is fulfilled when the box moves to or from the truck. At this
-point, Odoo supports the creation of what is called a Draft Invoice by
-Warehouse staff.
 
-Invoice creation
+在大多数国家, 合同义务发生时开具发票。如果你将一个盒子发给客户, 你需要查看合同的条款, 然后开票。如果你的供应商给你发货, 需要查看合同的条款, 然后开票。因此, 在发货前, 应将合同条款填写完整。在这一点上, Odoo支持由仓库人员开具草稿发票。
+
+
+发票创建
 ================
 
-Draft invoices can be manually generated from other documents such as
-Sales Orders, Purchase Orders,etc. Although you can create a draft
-invoice directly if you would like.
+草稿发票可以从其他文件（如销售订单，采购订单等）手动生成。
+您也可以直接创建发票草稿。
+发票必须向客户提供必要信息的，以便他们支付订购和交付的货物和服务。还必须包括及时，准确地支付发票所需的其他信息。
 
-An invoice must be provided to the customer with the necessary
-information in order for them to pay for the goods and services ordered
-and delivered. It must also include other information needed to pay the
-invoice in a timely and precise manner.
 
-Draft invoices
+
+草稿发票
 ==============
 
-The system generates invoice which are initially set to the Draft state.
-While these invoices
+系统生成的发票最初设置为“草稿”状态。而这些发票
 
-remain unvalidated, they have no accounting impact within the system.
-There is nothing to stop users from creating their own draft invoices.
 
-Let's create a customer invoice with following information:
+发票未验证审核, 不会影响会计。
+用户可以创建他们自己的草案发票, 这个没有限制。
 
-- Customer: Agrolait
-- Product: iMac
-- Quantity: 1
-- Unit Price: 100
-- Taxes: Tax 15%
+我们创建一个带有以下信息的客户发票：
+
+- 客户 : Agrolait
+- 产品 : iMac
+- 数量 : 1
+- 单价 : 100
+- 税: 15%的税
 
 .. image:: ./media/invoice01.png
    :align: center
@@ -61,50 +48,42 @@ Let's create a customer invoice with following information:
 .. image:: ./media/invoice02.png
    :align: center
 
-The document is composed of three parts:
+该文件由三部分组成：
 
--  the top of the invoice, with customer information,
--  the main body of the invoice, with detailed invoice lines,
--  the bottom of the page, with detail about the taxes, and the totals.
+-  发票顶部，客户信息，
+-  发票的主体，具有详细的发票行，
+-  页面的底部，有关税收的详细信息和总计。
 
-Open or Pro-forma invoices
+打开或者形式发票
 ==========================
 
-An invoice will usually include the quantity and price the of goods
-and/or services, the date, any parties involved, the unique invoice
-number, and any tax information.
+发票通常会包括货物和/或服务的数量和价格，日期，有关各方，
+唯一的发票号码和税务信息。
 
-"Validate" the invoice when you are ready to approve it. The invoice
-then moves from the Draft state to the Open state.
+准备批准发票时，请点击“验证”。然后，发票从“草稿”状态移动到“打开”状态。
 
-When you have validated an invoice, Odoo gives it a unique number from a
-defined, and modifiable, sequence.
+当您验证了发票时，Odoo会从定义的和可修改的序列中提供唯一的号码。
 
 .. image:: ./media/invoice03.png
    :align: center
 
-Accounting entries corresponding to this invoice are automatically
-generated when you validate the invoice. You can see the details by
-clicking on the entry in the Journal Entry field in the "Other Info"
-tab.
+验证发票时会自动生成与此发票相对应的会计记录。您可以通过单击“其他信息”选项卡中“日记帐分录”字段中的条目来查看详细信息。
 
 .. image:: ./media/invoice04.png
    :align: center
 
-Send the invoice to customer
+发送发票给客户
 ============================
 
-After validating the customer invoice, you can directly send it to the
-customer via the 'Send by email' functionality.
+验证客户发票后，您可以通过“以邮件发送”功能直接发送给客户。
 
 .. image:: ./media/invoice05.png
    :align: center
 
-A typical journal entry generated from a validated invoice will look
-like as follows:
+从经过验证的发票产生的典型日记帐分录将如下所示：
 
 +-----------------------+---------------+----------------+-------------+--------------+
-| **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
+| **科目**           | **合作伙伴**   | **截至日期**   | **借方**   | **贷方**   |
 +=======================+===============+================+=============+==============+
 | Accounts Receivable   | Agrolait      | 01/07/2015     | 115         |              |
 +-----------------------+---------------+----------------+-------------+--------------+
@@ -113,16 +92,12 @@ like as follows:
 | Sales                 |               |                |             | 100          |
 +-----------------------+---------------+----------------+-------------+--------------+
 
-Payment
+付款
 =======
 
-In Odoo, an invoice is considered to be paid when the associated
-accounting entry has been reconciled with the payment entries. If there
-has not been a reconciliation, the invoice will remain in the Open state
-until you have entered the payment.
+在Odoo, 当会计分录与付款分录核销后, 发票会到已支付状态。如果没有核销, 发票将保持在打开状态,直到登记付款。
 
-A typical journal entry generated from a payment will look like as
-follows:
+从付款产生的典型日记帐分录将如下所示：
 
 +-----------------------+---------------+----------------+-------------+--------------+
 | **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
@@ -132,32 +107,28 @@ follows:
 | Accounts Receivable   | Agrolait      |                |             | 115          |
 +-----------------------+---------------+----------------+-------------+--------------+
 
-Receive a partial payment through the bank statement
+通过银行对账单收到部分付款
 ====================================================
 
-You can manually enter your bank statements in Odoo, or you can import
-them in from a csv file or from several other predefined formats
-according to your accounting localisation.
+您可以在Odoo手动输入银行对账单，也可以从csv文件或其他预定义的格式导入。
 
-Create a bank statement from the accounting dashboard with the related
-journal and enter an amount of $100 .
+在会计仪表板上创建一个银行对账单,输入金额100美元。
 
 .. image:: ./media/invoice06.png
    :align: center
 
-Reconcile
+调节
 =========
 
-Now let's reconcile!
+我们开始调节吧!
 
 .. image:: ./media/invoice07.png
    :align: center
 
-You can now go through every transaction and reconcile them or you can mass reconcile with instructions at the bottom.
+你可以一笔笔核销, 或者批量核销。
 
-After reconciling the items in the sheet, the related invoice will now
-display "You have outstanding payments for this customer. You can
-reconcile them to pay this invoice. "
+调节表单中的项目后，相关发票现在将显示“您有这个客户的未付款项，
+您可以调节它们来支付这张发票。”
 
 .. image:: ./media/invoice08.png
    :align: center
@@ -165,29 +136,19 @@ reconcile them to pay this invoice. "
 .. image:: ./media/invoice09.png
    :align: center
 
-Apply the payment. Below, you can see that the payment has been added to
-the invoice.
+点击“待支付款项”,跳转到下方，点击添加， 可以看到付款已经添加到发票
 
 .. image:: ./media/invoice10.png
    :align: center
 
-Payment Followup
-================
+启用付款催收管理(企业版)
+================================
 
-There's a growing trend of customers paying bills later and later.
-Therefore, collectors must make every effort to collect money and
-collect it faster.
+客户付款会越来越迟, 这个趋势会增长。因此,催款人必须尽一切努力来催款, 越快越好。
 
-Odoo will help you define your follow-up strategy. To remind customers
-to pay their outstanding invoices, you can define different actions
-depending on how severely overdue the customer is. These actions are
-bundled into follow-up levels that are triggered when the due date of an
-invoice has passed a certain number of days. If there are other overdue
-invoices for the same customer, the actions of the most overdue invoice
-will be executed.
+Odoo将帮助你定义你的跟踪策略。提醒客户支付未清款,根据客户的逾期情况, 您可以定义不同的方式。一旦逾期条件符合, 这些行动将被触发。如果这个客户还有其他未清款,逾期最长的发票将先被执行.
 
-By going to the customer record and diving into the "Overdue Payments"
-you will see the follow-up message and all overdue invoices.
+通过查看记录和“未清款项”, 可看到跟踪信息和所有逾期的发票。
 
 .. image:: ./media/invoice11.png
    :align: center
@@ -195,35 +156,29 @@ you will see the follow-up message and all overdue invoices.
 .. image:: ./media/invoice12.png
    :align: center
 
-Customer aging report:
+客户的账龄报表 :
 ----------------------
 
-The customer aging report will be an additional key tool for the
-collector to understand the customer credit issues, and to prioritize
-their work.
+客户的账龄表是另外的一种关键工具, 用于了解客户信用问题,并考虑优先级。
 
-Use the aging report to determine which customers are overdue and begin
-your collection efforts.
+账龄表用以确定逾期客户并开始收集工作。
+
 
 .. image:: ./media/invoice13.png
    :align: center
 
-Profit and loss
+损益表
 ===============
 
-The Profit and Loss statement displays your revenue and expense details.
-Ultimately, this gives you a clear image of your Net Profit and Loss. It
-is sometimes referred to as the "Income Statement" or "Statement of
-Revenues and Expenses."
+损益表显示收入和费用的明细。它将提供一个清晰的净损益清单。有时称之为“损益表”或“收入与费用的状态”。
 
 .. image:: ./media/invoice14.png
    :align: center
 
-Balance sheet
+资产负债表
 =============
 
-The balance sheet summarizes the your company's liabilities,
-assets and equity at a specific moment in time.
+资产负债表汇总了一定时期的公司负债,资产和所有者权益。
 
 .. image:: ./media/invoice15.png
    :align: center
@@ -231,6 +186,4 @@ assets and equity at a specific moment in time.
 .. image:: ./media/invoice16.png
    :align: center
 
-For example, if you manage your inventory using the perpetual accounting
-method, you should expect a decrease in account "Current Assets" once
-the material has been shipped to the customer.
+举个例子,如果你用实时的会计方法管理库存, 一旦材料发给客户, 应减少“流动资产”。

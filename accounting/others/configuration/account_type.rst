@@ -1,80 +1,70 @@
 ==================================================
-What is an account type and how do I configure it?
+怎么理解科目类型, 如何配置呢？
 ==================================================
 
-What is an account type ? 
+科目类型是什么？
 ==========================
 
-An account type is a name or code given to an account that indicates the
-account's purpose.
+账户类型是一个名称或代码, 代表科目。
 
-In Odoo, Account Types are used for information purpose, to generate
-country-specific legal reports, set the rules to close a fiscal year and
-generate opening entries.
+在Odoo, 账户类型用于信息的目的, 来生成特定国家的法律报告, 制定规则关闭一个财政年度, 生成凭证。
 
-Basically Account types categorize general account with some specific
-category according to its behaviour or purpose.
+基本账户类型根据其行为或目的, 分类一般账户和一些特定类别。
 
-Which are the account types in Odoo ?
+Odoo中有哪些科目类型？
 =====================================
 
-Odoo covers all accounting types. Therefore, you cannot create new
-account types. Just pick the one related to your account.
+Odoo涵盖所有会计类型。因此, 您不能创建新帐户类型。只选择一个与您的帐户有关的类型。
 
-+-----------------------------+
-| **List of account types**   |
-+=============================+
-| Receivable                  |
-+-----------------------------+
-| Payable                     |
-+-----------------------------+
-| Bank and Cash               |
-+-----------------------------+
-| Current Assets              |
-+-----------------------------+
-| Non-current Assets          |
-+-----------------------------+
-| Prepayments                 |
-+-----------------------------+
-| Fixed Assets                |
-+-----------------------------+
-| Current Liabilities         |
-+-----------------------------+
-| Non-current Liabilities     |
-+-----------------------------+
-| Equity                      |
-+-----------------------------+
-| Current Year Earnings       |
-+-----------------------------+
-| Other Income                |
-+-----------------------------+
-| Income                      |
-+-----------------------------+
-| Depreciation                |
-+-----------------------------+
-| Expenses                    |
-+-----------------------------+
-| Direct Costs                |
-+-----------------------------+
++--------------------------------------+
+| **科目类型 List of account types**   |
++======================================+
+| 应收 Receivable                      |
++--------------------------------------+
+| 应付 Payable                         |
++--------------------------------------+
+| 银行和现金 Bank and Cash             |
++--------------------------------------+
+| 流动资产 Current Assets              |
++--------------------------------------+
+| 非流动资产 Non-current Assets        |
++--------------------------------------+
+| 预付 Prepayments                     |
++--------------------------------------+
+| 预付 Fixed Assets                    |
++--------------------------------------+
+| 流动负债 Current Liabilities         |
++--------------------------------------+
+| 非流动负债 Non-current Liabilities   |
++--------------------------------------+
+| 权益 Equity                          |
++--------------------------------------+
+| 当年盈利 Current Year Earnings       |
++--------------------------------------+
+| 其他收入 Other Income                |
++--------------------------------------+
+| 收入 Income                          |
++--------------------------------------+
+| 折旧 Depreciation                    |
++--------------------------------------+
+| 费用 Expenses                        |
++--------------------------------------+
+| 直接成本 Direct Costs                |
++--------------------------------------+
 
-How do I configure my accounts?
+如何配置科目？
 ===============================
 
-Account types are automatically created when installing a chart of
-account. By default, Odoo provides a lot of chart of accounts, just
-install the one related to your country.
+在创建科目表时, 科目类型会自动产生。默认情况下, Odoo提供了大量的会计科目表, 
+只安装一个与你的国家有关。
 
-It will install generic accounts. But if it does not cover all your
-cases, you can create your own accounts too.
+它将安装通用账户。但是如果它不涵盖你所有的情况, 你也可以创建自己的帐户。
 
 .. note::
 
-	If you are a Saas User, your country chart of account is
-	automatically installed.
+	如果你是Saas用户, 贵国的科目表会自动安装。
 
-To create a new accounts, go to the Accounting application. Open the
-menu :menuselection:`Adviser --> Chart of Accounts`, the click on the
-**Create** button.
+要创建一个新科目, 转到会计应用模块。打开菜单顾问 -->科目表  :menuselection:`Adviser --> Chart of Accounts`, 点击 新建 按钮.
 
 .. image:: ./media/type01.png
    :align: center

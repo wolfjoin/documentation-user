@@ -1,36 +1,29 @@
 ===========================================
-How to manage a bank in a foreign currency?
+如何管理银行的外币？
 ===========================================
 
-In Odoo, every transaction is recorded in the default currency of the
-company. Reports are all based on the currency of the company. But for
-transactions occurring in another currency, Odoo stores both the value
-in the currency of the company and the value in the currency of the
-transaction.
+在Odoo，每一笔交易以公司的默认币种记录。报告都是基于公司的币种。
+对于以其他币种发生的交易, Odoo同时以公司的币种的价值，以及以交易币种的价值存储。
 
-When you have a bank account in a foreign currencies, for every
-transaction, Odoo stores two values:
+当你有一个外币的银行账户, 对于每笔交易, Odoo都保存两个值 :
 
--  The debit/credit in the currency of the company
+-  公司币别中的借方／贷方
 
--  The debit/credit in the currency of the bank account
+-  银行账户币别中的借方／贷方
 
-Currency rates are updated automatically using yahoo.com, or the
-European Central bank web-services.
+汇率会自动更新, 使用yahoo.com, 或者欧洲央行的在线服务。
 
-Configuration
+配置
 =============
 
-Activate the multi-currency feature
+激活多币种功能
 -----------------------------------
 
-In order to allow your company to work with multiple currencies, you
-should activate the multi-currency mode. In the accounting application,
-go into :menuselection:`Configuration --> Settings --> Accounting & Finance Features`
-make sure the **Allow Multi-currencies** box is ticked. Provide
-a **Currency Exchange Gain / Loss** account, then click on **Apply**.
+为了允许贵公司使用多种货币，您应该启用多种货币模式。在会计应用程序中，
+进入配置‣设置‣会计和财务功能 确保允许 **多币种** 框被勾选。
+提供货币兑换收益/损失会计科目 **Currency Exchange Gain / Loss** ，然后单击应用。
 
-Configure currencies
+配置货币
 --------------------
 
 Once the Odoo is configured to support multiple currencies, you should
@@ -38,80 +31,67 @@ activate the currencies you plan to work with. To do that, go the menu
 :menuselection:`Configuration --> Currencies`. All the currencies are created by default,
 but you should activate the ones you plan to support. (to activate a
 currency, check his active field)
+一旦Odoo配置为支持多种货币，您应该激活您计划使用的货币。请选择 配置-->多币种-->币种 启用。默认情况下都会创建所有货币，但应激活您计划支持的货币。（激活货币，移动到右上角字段显示激活，点击）
 
-After having activated the currencies, you can configure the parameters
-to automate the currency rate update. These options are also in the
-settings of the Accounting application, in the bottom of the page:
+激活货币后，您可以配置参数以自动执行货币汇率更新。这些选项也在会计应用程序的
+设置中，位于页面底部：
+
+该功能在社区版无，社区版点开币种后，导航栏有“查看货币比率”人工新建或者导入。
 
 .. image:: media/foreign01.png
    :align: center
 
-Click on the **Update Now** link to update the currency rates now.
+点击 **现在更新** 链接到目前最新的汇率。
 
-Create a new bank account
+创建银行账户
 -------------------------
 
-In the accounting application, we first go to :menuselection:`Configuration -->
-Accounting / Bank account`, and we create a new one.
+在会计应用程序中, 我们首先去配置‣会计/银行账户 :menuselection:`Configuration -->
+Accounting / Bank account`, 我们创建一个新的账户。
 
 .. image:: media/foreign02.png
    :align: center
 
-Once you save this bank account, Odoo will create all the documents for
-you:
+一旦你保存这个银行帐户，Odoo将为你创建所有的文件：
 
-- An account in the trial balance
+- 试算表的科目
 
-- A journal in your dashboard
+- 将此帐簿显示在仪表盘上
 
-- Information about the bank account in the footer of your invoices if
-  checked the box **Show in Invoices Footer**
+- 如果选择框 **在发票页脚显示** , 银行信息将在发票页脚显示
 
-Example: A vendor bill in a foreign currency
+例如 :外币的供应商账单
 ============================================
 
-Based on the above example, let's assume we receive the following bill
-from a supplier in China.
+根据上面的例子中, 我们假设我们收到中国供应商的发票。
 
-In the :menuselection:`Purchase --> Vendor Bills` , this is what you could see:
+在采购‣供应商账单中，您可以看到： :menuselection:`Purchase --> Vendor Bills` 
 
 .. image:: media/foreign03.png
    :align: center
 
-Once you are ready to pay this bill, click on register payment on the
-bill to record a payment.
+一旦你已经准备好支付这个账单, 点击登记付款记录付款。
 
 .. image:: media/foreign04.png
    :align: center
 
-That's all you have to do. Odoo will automatically post the foreign
-exchange gain or loss at the reconciliation of the payment with the
-invoice, depending if the currency rate increased or decreased between
-the invoice and the payment date.
+这是你所要做的。Odoo将在调节时, 自动将发票日和付款日的汇率差计入外汇损益。
 
-Note that you can pay a foreign bill with another currency. In such a
-case, Odoo will automatically convert between the two currencies.
+注意, 您可以用另一种货币支付外汇发票。在这种情况下, Odoo将自动完成两种货币之间的转换。
 
-Customers Statements
+客户对账单
 ====================
 
-Customers and vendor statements are managed in the currency of the
-invoice. So, the amount due by your customer (to your vendor) is always
-expressed in the currency of the invoice.
+客户和供应商的报表是用发票货币来管理的。所以, 客户(供应商)的到期金额总是用发票的货币表示。
 
-If you have several invoices with different currencies for the same
-customer, Odoo will split the customer statement by currency, as shown
-in the report below.
+如果同一客户有几个不同货币的发票, Odoo将按货币分类, 如下报告所示。
 
 .. image:: media/foreign05.png
    :align: center
 
-In the above report, the account receivable associated to Camptocamp is
-not managed in a secondary currency, which means that it keeps every
-transaction in his own currency. If you prefer, you can set the account
-receivable of this customer with a secondary currency and all his debts
-will automatically be converted in this currency.
+在上面的报告, Camptocamp相关的应收帐款没有用第二种货币管理, 这意味着, 
+每笔交易都使用自己的货币。如果你喜欢, 你可以为该客户的应收帐款设置第二种货币,
+他所有的债务将自动转换货币。
 
-In such a case, the customer statement always has only one currency. In
-general, this is not what the customer expect as he prefers to see the
-amounts in the currency of the invoices he received;
+在这种情况下, 客户对账单总是只有一种货币。一般来说, 这不是什么客户所希望的, 
+他更喜欢看到他收到发票的货币金额;

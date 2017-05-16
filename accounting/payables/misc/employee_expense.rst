@@ -1,169 +1,135 @@
 =======================================
-How to keep track of employee expenses?
+如何追踪员工费用？
 =======================================
 
-Employee expenses are charges incurred on behalf of the company. The
-company then reimburses these expenses to the employee. The receipts
-encountered most frequently are:
+员工为公司发生的费用, 可报销这些费用。最常遇到的收据:
 
-- car travel, reimbursed per unit of distance (mile or kilometer),
+- 差旅费，根据距离按照每单位进行报销(英里或者公里),
 
-- subsistence expenses, reimbursed based on the bill,
+- 生活费, 根据小票进行报销,
 
-- other purchases, such as stationery and books, destined for the
-  company but carried out by the employee.
+- 其他购买，如文具和书籍，为公司购买，但由员工执行。
 
-Configuration
+配置
 =============
 
-To manage expenses, you need to install the **Expense Tracker**
-application from the Apps module.
+要管理费用，您需要 从Apps模块安装费用跟踪 **Expense Tracker** 应用程序。
 
-You will also need to install the **Sales Management** module in order to
-re-invoice your expenses to your customers.
+您还需要安装 **销售** 模块，以便为您的客户重新开具费用。
 
-Once these applications are installed you can configure the different
-products that represent the types of expenses. To create the firsts
-products, go to the menu :menuselection:`Configuration --> Expenses Products` in the
-**Expenses** application.
+安装这些应用程序后，您可以配置代表费用类型的不同产品。要创建产品，
+进入菜单费用 -》 配置 -》费用产品。:menuselection:`Configuration --> Expenses Products` 
 
-Some examples of products can be:
+产品的一些例子可以是：
 
-1. **Travel (car)**
+1. **交通费**
 
-   - Product Type: Service
+   - 产品类型：服务
 
-   - Invoicing Policy: Invoice based on time and material
+   - 开票政策：基于时间和材料的发票
 
-   - Expense Invoice Policy: At sales price
+   - 费用开票原则 :根据销售价格
 
-   - Sale Price: 0.32
+   - 销售价 : 0.32
 
-   - Unit of Measure: Km or mile (you will need to enable the **Multiple
-     Unit of Measures** option from :menuselection:`Sales module --> Configuration`)
+   - 计量单位: 公里(Km) 或 英里(mile) (需在菜单[销售模块]-->[配置]中勾选" 多个计量单位" :menuselection:`Sales module --> Configuration`)
 
 .. image:: ./media/expense01.png
   :align: center
 
 1. **Hotel**
 
-   -  Product Type: Service
+   -  产品类型 :服务
 
-   -  Invoicing Policy: Invoice based on time and material
+   -  开票政策：基于时间和材料的发票
 
-   -  Expense Invoice Policy: At cost
+   -  费用开票原则 :基于成本
 
-   -  Unit of Measure: Unit
+   -  计量单位 :个
 
-In these examples, the first product will be an expense we reimburse to
-the employee based on the number of km he did with his own car (e.g. to
-visit a customer): 0.32€ / km. The hotel is reimbursed based on the real
-cost of the hotel.
+在这些示例中,第一个产品是用于员工报销的, 基于汽车所行驶的公里数(如拜访客户):0.32€/公里。住宿费根据实际酒店发生费用报销.
 
-Be sure that all these products have the checkbox **Can be expensed**
-checked and the invoicing policy set to **Invoice Based on time and
-material**. This invoicing policy means that, if the expense is related
-to a customer project/sale order, Odoo will re-invoice this expense to
-the customer.
+确保所有这些产品都选中复选框 **可用于费用（Can be expensed）** ，
+并将开票策略设置为 **基于时间和材料（Invoice Based on time and material）**。
+这种开票策略意味着，如果费用与客户项目/销售订单相关，Odoo将向客户重新开具此费用。
 
-Odoo support two types of expenses:
 
--  expenses paid by employee with their own money
+Odoo支持两种类型的费用：
 
--  expenses paid with a company credit card
+-  雇员自己付款的费用
 
-The expenses workflow
+-  用公司信用卡支付的费用
+
+费用报销工作流程
 =====================
 
-Record a new expense
+登记新的费用
 --------------------
 
-Every employee of the company can register their expenses from 
-:menuselection:`Expenses application --> My Expenses`. The workflow for personal
-expenses work that way:
+公司的每个员工都可以从费用申请‣我的费用中登记费用。
+:menuselection:`Expenses application --> My Expenses`. 个人费用的工作流程如此：
 
-1. an employee record his expense, and submit it to the manager
+1. 员工登记自己的费用, 然后提交给自己的经理
 
-2. the manager approve or refuse the expense
+2. 经理通过或者拒绝费用
 
-3. the accountant post journal entries
+3. 会计登录日记账分录
 
-4. the company reimburse the employee expense (the employee is like a
-   vendor, with a payable account)
+4. 公司报销员工费用 （员工就像一个供应商, 有应付款科目）
 
-5. if the expense is linked to an analytic account, the company can
-   reinvoice the customer
+5. 如果费用链接到分析帐户, 该公司可以重开发票给客户
 
-For every expense, the employee should record at least:
+每个费用, 员工至少应该登记 :
 
--  a description: that should include the reference of the ticket / bill
+-  描述 :应该包含票据／账单的号码参照
 
--  a product: the expense type
+-  一个产品 :费用类型
 
--  a price (e.g. hotel) or a quantity (e.g. reimburse km if travel with
-   his own car)
+-  价格 （例如酒店） 或数量 (例如报销自驾车里程数)
 
-Depending of the policy of the company, he might have to attach a scan
-or a photo of the expense. To do that, just a write a message in the
-bottom of the expense with the scan of the bill/ticket in attachment.
+根据公司的政策,可能需要在费用上附加扫描件或照片。如果要这样,
+就在费用单底部留言并添加附件。
 
 .. image:: ./media/expense02.png
   :align: center
 
-If the expense is linked to a customer project, you should not forget to
-set an analytic account, related to the customer project or sale order
-(you might have to activate analytic accounts in the accounting settings
-to get this feature).
+如果费用与客户项目相关联，则不应忘记设置与客户项目或销售订单相关的分析帐户
+（您必须在会计设置中激活分析帐户才能获得此功能）
 
-Once the expense is fully recorded, the employee has to click the button
-**Submit to Manager**. In some companies, employees should submit their
-expenses grouped at the end of the month, or at the end of a business
-trip.
+费用全部填写后,员工必须单击按钮 **提交给经理** 。
+在一些公司,员工应在月底或是出差结束后统一提交。
 
-An employee can submit all his expenses in batch, using the Submit
-Expenses action from the list view of expenses, or the small icons in
-the list view.
 
-Validation by the manager
+在费用列表视图中提交费用, 员工可以批量提交费用。
+
+由经理通过
 -------------------------
 
-Managers should receive an email for every expense to be approved (the
-manager of an employee is defined on the employee form). They can use
-the menu **To Approve** to check all expenses that are waiting for
-validation.
+每个费用的申请, 经理都会收到相应的待批准邮件(在员工表格中定义经理字段)。所有等待确认的单据, 经理可使用按钮 **批准** 。 
 
-The manager can:
+经理可以：
 
-- discuss on an expense to ask for more information (e.g., if a scan of
-  the bill is missing);
+- 讨论费用索要更多的信息 （例如, 单据复印件丢失）;
 
-- reject an expense;
+- 拒绝一个费用；
 
-- approve an expense.
+- 通过一个费用。
 
-Control by the accountant
+由会计控制
 -------------------------
 
-Then, all expenses that have been validated by the manager should be
-posted by the accountant. When an expense is posted, the related journal
-entry is created and posted in your accounting.
+然后,所有已由经理批准的费用将转到会计那里。当一个费用过账后, 相应的分录会自动创建并过账。
 
-If the accountant wants to create only one journal entry for a batch of
-expenses, he can post expenses in batch from the list view of all
-expenses.
+如果会计想要为一批费用创建一个日记帐分录，他可以从所有费用的
+列表视图中批量过账费用单据。
 
-Reinvoice expenses to customers
+重开发票给客户
 -------------------------------
 
-If the expense was linked to an analytic account related to a sale
-order, the sale order has a new line related to the expense. This line
-is not invoiced to the customer yet and will be included in the next
-invoice that will be send to the customer (charge travel and
-accommodations on a customer project)
+如果费用与销售订单的分析账户相关联,销售订单中有一行是这个费用。如这个费用未开票, 下次开票时可将这行开票给客户(这个项目相关的差旅费和住宿费).
 
-To invoice the customer, just click on the invoice button on his sale
-order. (or it will be done automatically at the end of the week/month if
-you invoice all your orders in batch)
+开发票给顾客, 只需单击客户销售订单的发票按钮。（如果你给所有订单整批开票,
+则会在周/月末自动完成）
 
 
 .. todo::
@@ -172,36 +138,28 @@ you invoice all your orders in batch)
 	If you want to learn more; check the documentation page :doc: ../../../sale/invoicing/service/expense
 	`*How to re-invoice expenses to your customers* <https://docs.google.com/document/d/1_6VclRWfESHfvNPZI32q5ANFi2C7cCTwkLXpbGTz6B8/edit?usp=sharing>`__
 
-Reimburse the employee
+报销员工
 ----------------------
 
-If the expense was paid with the employee's own money, the company
-should reimburse the employee. In such a case, the employee will appear
-in the aged payable balance until the company reimburse him his
-expenses.
+如果员工已支付了这个费用,公司应报销给员工。在这种情况下,在公司报销前, 员工将在应付账款账龄表中。
 
-All you have to do is to create a payment to this employee for the
-amount due.
+您只需要为该员工支付应付金额。
 
-Miscellaneous
+杂项
 =============
 
-Expenses that are not reinvoiced to customers
+未重开票给客户的费用
 ---------------------------------------------
 
-If some expenses should not be reinvoiced to customers, you have two
-options:
+如果一些费用不可以重开发票给客户, 你有两个选项 ︰
 
-1. if the decision to invoice or not is related to the product, change
-   the invoicing policy on the product:
+1. 是否开票取决于产品上的设置, 在产品上更改开票政策:
 
-   - **based on time and material**: reinvoice the customer
+   - **based on time and material**: 基于时间和材料：重新发送客户
 
-   - **based on sale orders**: do not reinvoice the customer
+   - **based on sale orders**: 根据销售订单：不要重发客户
 
-2. if you have to make an exception for one invoice that should not be
-   reinvoiced to the customer, do not set the related analytic
-   account for this invoice.
+2. 如果有个别费用, 不需要重开票给客户,这个发票不需要设置相关分析科目。
 
 .. seealso::
 

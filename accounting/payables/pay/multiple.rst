@@ -1,26 +1,24 @@
 =================================
-How to pay several bills at once?
+如何一次性支付几个账单？
 =================================
 
-Odoo provides a simple and effective way to handle several bills at
-once, with various quick or complex options. With one single process,
-anyone is able to handle bills and payment in just a few clicks.
+Odoo提供了一种简单而有效的方式，可以一次处理多个账单，并提供各种快速或复杂的选项。
+通过一个单一的过程，任何人只需点击几下即可处理帐单和付款。
 
-Pay multiple bills with one payment
+一次支付多个账单
 ===================================
 
-Record several payments
+登记一些付款
 -----------------------
 
-In the following example, we will generate some bills. You can control
-the whole process from your accounting dashboard (first screen you get
-when you open the accounting application).
+在以下示例中,我们将生成一些账单。可在会计仪表板控制整个过程(
+打开会计应用程序后的界面)。
 
 .. image:: ./media/multiple01.png
   :align: center
 
-To create a bill, open the Dashboard menu and click on **Vendor Bills**.
-In the Vendor Bills window, click on **Create**.
+要创建帐单，请打开 **仪表板** 菜单，然后单击 **供应商账单** 。
+在 **供应商账单** 窗口中，单击 **创建** 。
 
 .. image:: ./media/multiple02.png
   :align: center
@@ -28,123 +26,104 @@ In the Vendor Bills window, click on **Create**.
 Choose the vendor from which you wish to purchase the product, and click
 on Add an item to add one (or more) product(s). Click on **Save** and then
 **Validate**.
+选择供应商,并点击添加项目, 可添加一个(或更多)产品(s)。点击 **保存** , 
+然后点击 **确认** 
 
-Pay supplier bills, one after the other
+一个接一个地支付供应商账单s
 ---------------------------------------
 
 .. image:: ./media/multiple03.png
   :align: center
 
-We will now record a payment for one bill only. Open the bill, then
-click on **Register Payment**. Insert the Payment Method, Date and Amount,
-and click on **Validate**.
+我们现在将记录一笔付款。打开账单，然后点击 **登记支付** 。插入付款方式，日期和金额，然后单击 **验证**。
 
 .. image:: ./media/multiple04.png
   :align: center
 
-Once you have validated the payment, the system will automatically
-reconcile the payment with the bill, and set the bill as **Paid**. The
-system will also generate a move from the payment account and reconcile
-it with the expense transaction.
+确认支付后,系统将自动将付款和发票核销,发票将到 **已支付**状态。系统会自动生成一个凭证。
 
-Pay several bills altogether
+多个账单一块支付
 ----------------------------
 
-In order to illustrate the process thoroughly, create at least 2 more
-bills following the above standing guide. **Make sure all bills come
-from the same vendor.**
+
+为了彻底说明这个过程,按要求至少创建2张发票。**确保所有发票来自于同一个供应商** 。
 
 .. image:: ./media/multiple05.png
   :align: center
 
-In the Vendors Bills, select the new bills you have just created by
-checking the box next to each of them. In the Action menu located in the
-middle of the page, click on **Register Payment**.
+在“供应商账单”中，选中刚刚创建的新账单，方法是选中每个账单。在页面中间的 **动作** 菜单中，单击 **登记付款** 。
 
 .. image:: ./media/multiple06.png
   :align: center
 
-Insert the details of the payment. The system calculated the total
-amount for both bills, but you can modify it freely. Click on **Validate**.
+插入付款的详细信息。系统计算了两个账单的总金额，但您可以自由修改。点击 **验证** 。
 
-Record the payment, reconcile afterwards
+登记付款, 随后调节
 ----------------------------------------
 
-You can also reconcile a payment with bills after the payment has been
-recorded.
+你也可以在付款登记之后对付款进行调节。
 
-First, we need to create a payment
+首先, 我们来创建一个付款
 
-This will handle from :menuselection:`Dashboard --> Bank journal -->
+这将从仪表板处理‣银行日记‣更多选项‣付钱 :menuselection:`Dashboard --> Bank journal -->
 More Option --> Send Money`
 
 .. image:: ./media/multiple07.png
   :align: center
 
-Creating payment order with check payment method. Selecting related
-Vendor and amount which remain to pay. After filling all details, we
-will confirm the payment order which will generate payment transaction
-with the system.
+
+使用支票付款方式创建支付单。选择相关的供应商和剩余的金额。填写所有详细信息后，
+确认付款。。
 
 .. image:: ./media/multiple08.png
   :align: center
 
-As you can see, bill payment status show what is posted and what is
-remaining to reconcile.
+如你所见, 账单的状态显示什么已经过账什么还没有过账。
 
-After receiving bank statement from the bank with payment detail, you
-can reconcile the transaction from the Dashboard. It will automatically
-map the transaction amount.
+收到银行对账单后, 可在仪表板上进行核销。它会自动核对金额。
 
 .. seealso::
 	
-	For more detail on the bank reconciliation process, please read:
+	详情参见银行调节过程, 请参阅 :
 
 	* :doc:`../../bank/reconciliation/use_cases`
 
-Partial payments of several supplier bills
+多个供应商账单的部分付款
 ==========================================
 
-How to pay several supplier bills having cash discounts at once?
+如何同时支付几个有现金折扣的供应商的发票?
 ----------------------------------------------------------------
 
-You already learned how to pay bills in various way but what about
-partial payment? We are taking another example where we will do partial
-payment for various bills.
+你已经学会了如何以各种方式支付账单，但是部分付款呢？我们正在采取另一个例子，我们将对各种账单进行部分支付。
 
-We are creating multiple bills and partially pay them through bank
-statements.
+我们创建多个账单，并通过银行对账单部分支付。
 
-We are adding payment terms which allow some cash discount where vendor
-offer us early payment discount.
+我们添加付款条款，允许一些现金折扣，供应商提供我们提前支付折扣。
 
 .. image:: ./media/multiple09.png
   :align: center
 
-We are creating the following bills with the assignment of the above
-payment term.
+用以上的付款条款来创建发票。
 
 .. image:: ./media/multiple10.png
   :align: center
 
-We have created the following bills:
+我们创建了以下账单：
 
 .. image:: ./media/multiple11.png
   :align: center
 
-We will pay the invoices by creating bank statement where we will adjust
-the cash discount our vendor provided under payment terms.
+我们可通过创建银行对账单来支付款项,付款时可调整现金折扣。
 
 .. image:: ./media/multiple12.png
   :align: center
 
-Before reconciling this bank statement, we need to create one statement
-model for cash discount.
+核销银行对账单之前,需要先创建一个现金折扣模型。
 
 .. image:: ./media/multiple13.png
   :align: center
 
-Now we are going back to bank statement and opening reconcile view.
+现在我们回到银行对账单，并打开调节视图。
 
 .. seealso::
 

@@ -1,64 +1,57 @@
 =================================
-How to edit or refund an invoice?
+如何编辑或退款发票？
 =================================
-In Odoo, it's not possible to modify an invoice that has been validated
-and sent to the customer. If a mistake was made on a validated invoice,
-the legal way to handle that is to refund the invoice, reconcile it with
-the original invoice to close them and create a new invoice.
+在Odoo中，无法修改已验证并发送给客户的发票。
+如果在经过验证的发票上发生错误，则处理该方式的合法方式是退还发票，
+将其与原始发票进行调整以关闭并创建新的发票。
 
-Modifying a validated invoice
+修改已验证的发票
 =============================
 
-If you need to modify an existing invoice, use the Refund Invoice button
-on the invoice. In the refund method field, select "Modify: create a
-refund, reconcile, and create a new draft invoice".
+如果您需要修改现有发票，请使用发票上的退款发票按钮。
+在退款方式字段中，选择“修改：创建退款，调节并创建新的草稿发票”。
 
 .. image:: ./media/image04.png
    :align: center
 
-Odoo will automatically:
+Odoo会自动：
 
--  Create a refund for your invoice
--  Reconcile the refund invoice with the original invoice (marking both as Paid)
--  Create a new draft invoice you can modify
+-  创建退款发票
+-  将退票和原始发票核销(两者都到已付状态)
+-  创建一个新的发票草案可以修改
 
-Then, you can modify the draft invoice and validate it once it's correct.
+然后，您可以修改发票草案，并在正确后对其进行验证。
 
-Cancelling an invoice
+取消发票
 =====================
 
-If you need to cancel an existing invoice, use the Refund Invoice button
-on the invoice. In the refund method field, select "Cancel: create a
-refund and reconcile".
+如果您需要取消现有发票，请使用发票上的退款发票按钮。
+在退款方式字段中，选择“取消：创建退款和调节”。
 
 .. image:: ./media/image05.png
    :align: center
 
-Odoo will automatically:
+Odoo会自动 :
 
--  Create a refund for your invoice
--  Reconcile the refund invoice with the original invoice (marking both as Paid)
+-  创建退款发票
+-  将退票和原始发票核销(两者都到已付状态)
+-  如果已经调节的发票不能退款，发票需要先被去取消调节，才能退款
 
-Nothing else needs to be done. You can send the refund by regular mail or email
-to your customer, if you already sent the original invoice.
+没有其他事情需要做。如果您已经发送了原始发票，您可以通过普通邮件或电子邮件将退款发送给您的客户。
 
-Refunding part of an invoice
+退还部分发票
 ============================
 
-If you need to refund an existing invoice partially, use the Refund
-Invoice button on the invoice. In the refund method field, select
-"Create a draft refund".
+如果您需要部分退还现有发票，请使用发票上的退款发票按钮。
+在退款方式字段中，选择“创建草稿退款”。
 
 .. image:: ./media/image03.png
    :align: center
 
-Odoo will automatically create a draft refund. You may modify the refund
-(example: remove the lines you do not want to refund) and validate it.
-Then, send the refund by regular mail or email to your customer.
+Odoo将自动创建一个草稿退款。
+您可以修改退款（例如：删除您不想退款的行）并进行验证。
+然后，通过普通邮件或电子邮件将退款发送给您的客户。
 
 .. tip::
 
-	Refunding an invoice is different from refunding a payment. Usually, a
-	refund invoice is sent before the customer has done a payment. If the
-	customer has already paid, they should be reimbursed by doing a customer
-	payment refund.
+	退票不同于退款。通常情况下，在客户未付款前可退票。如果客户已付款，应退款。

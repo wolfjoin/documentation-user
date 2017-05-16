@@ -1,5 +1,5 @@
 ==========================================
-Import Coda statement files (Belgium only)
+导入Coda 对账单文件 (仅比利时)
 ==========================================
 
 CODA is a file format for bank statements in Belgium. Most Belgian

@@ -1,70 +1,59 @@
 =======================================
-How to synchronize Odoo with your bank?
+如何与银行同步odoo？（付费企业版功能，中国不支持）
 =======================================
 
-Odoo is able to synchronize directly with your bank in order to get all
-bank statements imported automatically in Odoo every 4 hours. Before
-moving forward in this tutorial, you should check if your bank is
-supported. You can find it out from the `Odoo Accounting Features <https://www.odoo.com/page/accounting-features>`__
+Odoo能够每4小时直接获得所有银行对账单并自动导入Odoo, 与你的银行同步。在做这步之前, 你应该检查你的银行是否对予支持。你可以从“Odoo会计中找到相关功能” `Odoo Accounting Features <https://www.odoo.com/page/accounting-features>`__
 
 .. image:: media/synchronize01.png
    :align: center
 
-Search for your bank name in the above page. If your bank appears in the
-proposition, it means it is supported by Odoo. The countries which are
-fully supported (meaning more than 95% of the banks) include: United
-States, Canada, New Zealand, Austria. More than 30 countries are
-partially supported, including: Colombia, India, France, Spain, etc.
+在上面的页面中寻找你银行的名字。如果你的银行出现在其中, 这意味着它受Odoo支持。
+完全支持的国家(即超过95%的银行)包括 :美国、加拿大、新西兰、奥地利。
+30多个国家部分支持, 包括: 哥伦比亚、印度、法国、西班牙等。
 
-In order to connect with the banks, Odoo uses two web-services:
+为了与银行连接, Odoo 使用两个 web-services :
 
--  Plaid: for the main banks in the U.S.
+-  Plaid：美国的主要银行
 
--  Yodlee: for all other banks
+-  Yodlee : 对于其他银行
 
-Configuration
+配置
 =============
 
-Odoo Online Users
+Odoo 在线用户
 -----------------
 
-If you we support banks of your country, the bank integration feature
-should already been installed. If it's not installed, you can manually
-install the module **account_yodlee**.
+如果我们支持你们国家的银行, 银行特性应该已经被安装集成。如果没有安装, 您可以手动安装模块 **account_yodlee**.
 
-Odoo Enterprise Users
+Odoo 企业用户
 ---------------------
 
-If you plan to use a bank interface with your Odoo Enterprise
-subscription, you don't have to do anything special, just make sure that your database is registered with your Odoo Enterprise contract.
+如果你计划使用Odoo企业版中的银行接口, 你不需要做什么特别的, 
+只是确保数据库已在Odoo企业合同注册。
+
 
 .. note::
-   you might want to check that you don't have a firewall/proxy blocking the following addresses
+   你可能需要检查一下, 没有防火墙/代理屏蔽以下地址
    
    * https://onlinesync.odoo.com/
    * https://api.plaid.com/
 
 
-Sync your bank feeds
+同步银行费用
 ====================
 
-Once the Plaid or Yodlee interface is installed, you can connect Odoo to
-your bank. To do that, click on **More** on the bank of your
-choice from the accounting dashboard. In the menu, click on Settings to
-configure this bank account.
+一旦Plaid或Yodlee接口安装后, 您可以将Odoo连接到你的银行。这样做, 
+在银行会计仪表板上点击 More 。在菜单中, 单击设置配置该银行账户。
 
 .. image:: media/synchronize02.png
    :align: center
 
-In the bank form, from the Bank Account tab, set the bank feeds option
-to **Bank Synchronization**.
+在银行界面, 从银行帐户选项卡, 设置银行选项为 **Bank Synchronization**.
 
 .. image:: media/synchronize03.png
    :align: center
 
-Once it's done, go back to your accounting dashboard. You should see a
-**Online Synchronization** button on your bank card. Click on this button
-and fill in your bank credentials.
+一旦完成, 回到你的会计仪表板。在你的银行卡上, 您应该能看到一个
+**Online Synchronization** 的按钮. 点击这个按钮, 填写你的银行凭证。
 
-Once you filled in your credentials, your bank feeds will be
-synchronized every 4 hours.
+一旦你填写了你的凭证,你的银行订阅将会每4小时进行一次同步。
