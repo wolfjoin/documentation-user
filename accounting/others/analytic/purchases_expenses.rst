@@ -1,149 +1,119 @@
 ==========================================================
-How to track costs of purchases, expenses, subcontracting?
+如何追踪采购成本, 费用, 外包合同？
 ==========================================================
 
-Overview
+概述
 ========
 
-Thanks to analytical accounting we can track costs of purchases,
-expenses and subcontracting in the accounting module.
+多亏分析会计, 我们可以跟踪采购成本, 费用和分包的会计模块。
 
-We'll take the following example. We sold a consulting package for a
-customer. The package is all inclusive meaning no extra cost can be
-added. We would however like to follow which cost were attached to this
-transaction as we need to pay for purchases, expenses, and
-subcontracting costs related to the project.
+我们将使用以下的例子。我们售了套咨询方案给客户。方案包容了所有, 意思是没有额外成本。
+我们不过想遵循需要被附加到这个交易的成本, 例如采购, 费用, 和分包成本。
 
-Configuration
+配置
 =============
 
-The following modules needs to be installed to track cost. Enter the app
-module and install the following apps:
+下面的模块需要安装跟踪成本。进入应用程序模块和安装以下程序 :
 
 +---------------------------------+---------------------------------+---------------------------------+
 | .. image:: media/purchase01.png | .. image:: media/purchase02.png | .. image:: media/purchase03.png |
 +=================================+=================================+=================================+
 +---------------------------------+---------------------------------+---------------------------------+
 
-Please note that the applications provided by these apps only allows us
-to **track** the costs. We won't be able to automatically re invoice
-those costs to our customers. To track and **re invoice costs** you
-should install the Sales management app as well.
+请注意, 这些应用程序提供的程序只允许我们 **记录track**  成本。
+我们无法向我们的客户自动重新开票。跟踪和 **将成本再开票re invoice costs** , 
+你应该安装销售管理应用程序。
 
 .. image:: media/purchase04.png
    :align: center
 
-Enable Analytical accounting
+启用分析会计
 ----------------------------
 
-Next step is to activate the analytical accounting. In the accounting
-app, select :menuselection:`Configuration --> Settings` and thick the Analytic
-accounting box.
+下一步是激活分析会计。在会计应用程序中，选择配置-->设置,选择分析会计。 :menuselection:`Configuration --> Settings` .
 
 .. image:: media/purchase05.png
    :align: center
 
-Moreover, scroll down and tick the **Analytic accounting for purchases**
-box.
+此外,向下滚动,点击 **采购分析会计Analytic accounting for purchases**.
 
 .. image:: media/purchase06.png
    :align: center
 
-Don't forget to save your changes.
+别忘了点击应用，保存您的更改。
 
-Create an Analytical account.
+创建分析账户
 =============================
 
-First of all you should create an Analytical account on which you can
-point all your expenses. Enter the accounting app, select
-:menuselection:`Configuration --> Analytic Accounts`. Create a new one. In this
-case we will call it "consulting pack" for our customer Smith&Co.
+首先, 你应该创建一个分析科目用来记录所有的费用。输入会计应用程序, 选择
+:menuselection:`Configuration --> Analytic Accounts`. 
+创建一个新的。在这种情况下, 我们将称之为“咨询包Consulting Pack" , 为我们的客户Smith&Co所创建。
 
 .. image:: media/purchase07.png
    :align: center
 
-We will point all our costs to this account to keep track of them.
+我们将在这个科目记录所有的成本, 以便跟踪。
 
-Record an expense
+记录费用
 =================
 
-We start by booking an expense. Our
-IT technician had to take a train to go see our customer. He paid for
-his ticket himself.
+我们先登记一个费用。我们的IT技术人员乘火车去看我们的客户。他自己支付机票。
 
-Create an expense product
+创建费用产品
 -------------------------
 
-We first need to create an expense product. Enter the **Expense** module,
-Click on :menuselection:`Configuration --> Expense Products`. Create a new product
-called Train ticket and set the cost price to 15.50 euros. Make sure the **Can be
-expensed** box is ticked.
+我们首先需要创建一个费用性产品。进入 **费用Expense** 模块,
+点击 :menuselection:`配置 --> 费用产品`.  创建一个新产品, 名为火车票, 设置成本价格为15.50欧元。确保 **可用于费用** 复选框勾选上（社区版，看不到该属性，默认创建就由该属性，可以到采购-产品里可以看到）.
 
 .. image:: media/purchase08.png
    :align: center
 
-Book the expense
+登记费用
 ----------------
 
-Enter the Expense module, click on :menuselection:`My expenses --> Create`. Select the
-Train ticket product and link it to the analytical account discussed
-above.
+进入费用模块, 点击 :menuselection:`我的费用 --> 待提交的费用 --> 新建`. 选择火车票产品, 将其链接到上述分析帐户。
 
 .. image:: media/purchase09.png
    :align: center
 
-Submit to manager and wait for the manager to approve and post the
-journal entries.
+提交给经理, 等待经理批准, 以及登录会计分录.
 
-Create a Purchase Order linked to the analytical account
+创建采购订单，并链接到分析账户
 ========================================================
 
-Purchase Product
+采购产品
 ----------------
 
-We also need to buy a software for our customers. In the purchase app
-create a purchase order for the software product. (please
-refer to the following document: :doc:`../../../purchase/overview/process/from_po_to_invoice`).
-Within the line we can link the product's cost with the analytical
-account. Specify the order line and select the correct analytical
-account. Confirm the sale.
+我们还需要为我们的客户买一个软件。在购买应用程序中, 创建一个软件产品的购买订单。(请参考以下文档: :doc:`../../../purchase/overview/process/from_po_to_invoice`).
+在产品行上, 我们可以将成本链接到分析账户上。指定订单行, 选择正确的分析账户。确认销售。
 
 .. image:: media/purchase10.png
    :align: center
 
-Accept the delivery and enter the invoice. Once the invoice is entered the cost
-price (**Vendor Price** field) will be booked in the analytical account.
+收货并登记发票。一旦在发票输入了成本价格 (**供应商价格** 字段) 同时将记录在分析账户。
 
-Subcontracting
+外包
 --------------
 
-The purchase module can be used in the same way as seen previously to
-handle subcontracting. if we purchase a service from another company we
-can re invoice this cost by linking the purchase order line to the
-correct analytical account. We simply need to create the correct vendors
-product.
+采购模块可以使用相同的方式, 就如之前的分包处理。如果我们从另一家公司购买服务, 
+我们可以重新开票到正确的分析账户, 通过链接采购行。我们只是需要创建正确的供应商的产品。
 
 .. note::
 
-	You can also track cost with timesheets, see: :doc:`timesheets`
+	你也可以用工时表跟踪成本, 请参阅: :doc:`timesheets`
 
-Track costs in accounting
+在会计中追踪成本
 =========================
 
-Now that everything is booked and points to the analytical account.
-Simply open it to check the costs related to that account.
+现在一切都是入账并指到分析账户。只是打开它检查科目的相关成本。
 
-Enter the accounting module, click on :menuselection:`Advisers --> Analytic Accounts
---> Open Charts`.
+进入会计模块, 点击 :menuselection:`顾问 --> 分析账户`.
 
-Select "consulting pack - Smith" and click on the cost and revenue
-button to have an overview of all cost linked to the account.
+选择“咨询包-史密斯" , 单击成本/收入按钮, 以此来查看这个科目下的所有的成本。
 
 .. image:: media/purchase11.png
    :align: center
 
 .. note::
 
-	If you would like to have the revenue as well you should
-	invoice the Consulting Pack in the Invoice menu and link the invoice
-	line to this same analytical account.
+	收入的话, 在发票菜单下开具'咨询包'的发票, 将发票行链接到分析账户。

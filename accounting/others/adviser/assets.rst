@@ -1,83 +1,66 @@
 ========================
-Manage your fixed assets
+管理固定资产
 ========================
 
-The "Assets" module allows you to keep track of your fixed assets like
-machinery, land and building. The module allows you to generate monthly
-depreciation entries automatically, get depreciation board, sell or
-dispose assets and perform reports on your company assets.
+在 " 资产"模块, 可以让你保持跟踪机械, 土地和建筑物等固定资产。
+该模块可以自动生成每月的折旧项, 获得折旧板, 出售或处置资产, 并对公司的资产产生报告。
 
-As an example, you may buy a car for $36,000 (gross value) and you plan
-to amortize it over 36 months (3 years). Every months (periodicity),
-Odoo will create a depreciation entry automatically reducing your assets
-value by $1,000 and passing $1,000 as an expense. After 3 years, this
-assets accounts for $0 (salvage value) in your balance sheet.
+举个例子, 你可以买一辆车的$ 36, 000个（总值）, 并且计划的期限平均摊销超过36个月（3年）。
+每月（周期）, Odoo将创建一个折旧分录自动降低自己的资产价值由$ 1, 000, 并通过1000 $的费用。
+3年后, 该资产在资产负债表占$ 0（残值）。
 
-The different types of assets are grouped into "Assets Types" that
-describe how to deprecate an asset. Here are two examples of assets
-types:
+不同类型的资产分为'资产类型', 描述了如何折旧资产。下面是资产类型的两个例子 :
 
--  Building: 10 years, yearly linear depreciation
--  Car: 5 years, monthly linear depreciation
+-  建筑 :10年, 按年直线折旧
+-  汽车 :5年, 按月直线折旧
 
-Configuration
+配置
 =============
 
-Install the Asset module
+安装资产模块
 ------------------------
 
-Start by *installing the Asset module.*
+首先, 安装资产模块。
+一旦模块被安装了, 你应该看到在财务应用程序了两个新的菜单 :
 
-Once the module is installed, you should see two new menus in the
-accounting application:
+-  :menuselection:`顾问 --> 资产`
+-  :menuselection:`配置 --> 管理 --> 资产类型`
 
--  :menuselection:`Adviser --> Assets`
--  :menuselection:`Configuration --> Asset Types`
-
-Before registering your first asset, you must :ref:`define your Asset
+在登记你的第一资产之前, 您必须定义资产类型 :ref:`define your Asset
 Types <accounting/adviser/assets_management/defining>`.
 
 .. _accounting/adviser/assets_management/defining:
 
-Defining Asset Types
+定义资产类型
 --------------------
 
-Asset type are used to configure all information about an assets: asset
-and deprecation accounts, amortization method, etc. That way, advisers
-can configure asset types and users can further record assets without
-having to provide any complex accounting information. They just need to
-provide an asset type on the supplier bill.
+资产类型用于配置资产的所有信息 : 
+资产科目和折旧科目（deprecation accounts）、 折旧方法等。
+这样一来, 顾问可以配置资产类型, 用户可以进一步记录资产, 而无需提供任何复杂的会计信息。
+他们只需要再供应商发票（账单）里设置资产类型。
 
-You should create asset types for every group of assets you frequently
-buy like "Cars: 5 years", "Computer Hardware: 3 years". For all other
-assets, you can create generic asset types. Name them according to the
-duration of the asset like "36 Months", "10 Years", ...
+您应当为每一个资产组你经常买喜欢中创建资产类型'汽车 :5年','计算机硬件: 3年'。
+对于所有其他资产, 你可以创建通用的资产类型。根据资产的期限如'36个月'的名字他们,'10年', ...
 
-To define asset types, go to :menuselection:`Configuration --> Asset
-Types`
+要定义资产类型, 进入 :menuselection:`配置 --> 管理 --> 资产类型`
 
 .. image:: media/image01.png
    :align: center
 
-Create assets manually
+手动创建资产
 ======================
 
-To register an asset manually, go to the menu :menuselection:`Adviser
---> Assets`.
+要手动登记资产, 进入菜单 :menuselection:`顾问 --> 资产`.
 
 .. image:: media/image08.png
    :align: center
 
-Once your asset is created, don't forget to Confirm it. You can also
-click on the Compute Depreciation button to check the depreciation board
-before confirming the asset.
+一旦资产创建, 别忘了确认一下。在确认资产前, 可以单击计算折旧按钮检查折旧。
 
 .. tip::
 
-   if you create asset manually, you still need to create the supplier
-   bill for this asset. The asset document will only produce the
-   depreciation journal entries, not those related to the supplier
-   bill.
+   如果您手动创建的资产, 你仍然需要到供应商账单建立这一资产。
+   资产文件只会产生折旧日记帐分录, 而不涉及到供应商账单。
 
 Explanation of the fields:
 
@@ -87,63 +70,46 @@ Explanation of the fields:
 
    Try creating an *Asset* in our online demonstration
 
-Create assets automatically from a supplier bill
+从供应商账单自动创建资产
 ================================================
 
-Assets can be automatically created from supplier bills. All you need to
-do is to set an asset category on your bill line. When the user will
-validate the bill, an asset will be automatically created, using the
-information of the supplier bill.
+资产可以从供应商账单中自动创建。所有你需要做的是设置您的帐单行上的资产类别。
+当用户将验证账单, 资产将根据供应商帐单的信息被自动创建 。
 
 .. image:: media/image09.png
 
-Depending on the information on the asset category, the asset will be
-created in draft or directly validated\ *.* It's easier to confirm
-assets directly so that you won't forget to confirm it afterwards.
-(check the field *Skip Draft State* on *Asset Category)* Generate assets
-in draft only when you want your adviser to control all the assets
-before posting them to your accounts.
+根据资产类别上的信息, 可直接生成草稿资产或是直接确认。直接生成确认的资产更容易, 这样你不会忘记确认。(在资产类型 --> 额外选项 -> 勾选 “自动确认资产”选项 ). 如果你想要在过账前检查你的资产, 可生成草稿资产.
 
-.. tip:: if you put the asset on the product, the asset category will
-         automatically be filled in the supplier bill.
+.. tip:: 如果你在产品上设置了资产类别, 将自动填入该供应商的账单。
 
-How to deprecate an asset?
+如何折旧资产？
 ==========================
 
-Odoo will create depreciation journal entries automatically at the right
-date for every confirmed asset. (not the draft ones). You can control in
-the depreciation board: a green bullet point means that the journal
-entry has been created for this line.
+Odoo将在合适的日期为每位确认资产自动创建折旧日记帐分录。 （除了草稿状态下资产）。
+您可以在折旧板控制 :绿色圆点表示日记帐分录已经为这行生成。
 
-But you can also post journal entries before the expected date by
-clicking on the green bullet and forcing the creation of related
-depreciation entry.
+但你也可以通过点击绿色符号, 强制建立相关的未到时间的折旧日记帐分录。
 
 .. image:: media/image11.png
    :align: center
 
-.. note:: In the Depreciation board, click on the red bullet to post
-          the journal entry. Click on the :guilabel:`Items` button on
-          the top to see the journal entries which are already posted.
+.. note:: 在折旧板, 点击红色按钮生产日记帐分录。在顶部点击项目, 
+          看看哪些是已经发布的日记帐分录，以及过账操作.
 
-How to modify an existing asset?
+如何修改现有的资产？
 ================================
 
--  Click on :guilabel:`Modify Depreciation`
--  Change the number of depreciation
+-  点击 :guilabel:`修改折旧`
+-  更改折旧次数
 
-Odoo will automatically recompute a new depreciation board.
+Odoo会自动重新计算一个新的折旧板。
 
-How to record the sale or disposal of an asset?
+如何记录出售或处置资产？
 ===============================================
 
-If you sell or dispose an asset, you need to deprecate completly this
-asset. Click on the button :guilabel:`Sell or Dispose`. This action
-will post the full costs of this assets but it will not record the
-sales transaction that should be registered through a customer
-invoice.
+如果您出售或处置资产, 则需要完全地贬低该资产。点击按钮 :guilabel:`销售或是处置`。这一行动将在本资产的全部成本, 但它不会记录应通过客户发票登记的销售交易。
 
-.. todo:: → This has to be changed in Odoo: selling an asset should:
+待办事项： 出售或者处理资产折旧版的状态改变:
 
-   #. remove all "Red" lines
-   #. create a new line that deprecate the whole residual value
+   #. 移除所有的“红色”行
+   #. 创建一个新行替代所有剩余价值的行

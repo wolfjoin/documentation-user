@@ -1,115 +1,100 @@
 ========================================================
-How to manage invoices & payment in multiple currencies?
+如何在多币别环境下管理发票和付款？
 ========================================================
 
-Overview
+概述
 ========
 
-Odoo provides multi-currency support with automatic currency gross or
-loss entry adjustment. There are a few things Odoo has been to ease the
-user's life.
+Odoo提供多种货币汇兑损益的调整。有几件事Odoo将简化用户工作。
 
-All the account transactions will be done using the company currency.
-However you can see two extra fields with the journal entry where
-secondary currency and amount will visible. You can create
-multi-currency journals of force a specific currency.
+所有的账户交易将使用本位币。但是你可以看到两个额外的字段, 原货币和原币值。
+你可以创建多货币账, 定义特殊的货币。
 
-When creating an invoice, the currency can be changed very easily;
-however Odoo takes the company currency as a default assignment. It will
-convert all the amounts automatically using that currency.
+在创建发票时, 改变货币很容易; 然而公司本位币是作为一个默认值。
+Odoo将自动将外币转换成本位币.
 
-Configuration
+配置
 =============
 
-Enable Multi-Currency
+启用多币种
 ---------------------
 
-For information about enabling Multi-Currency, please read the document:
+更多多货币的信息, 请阅读文档 :
 :doc:`how_it_works`
 
-Configure your journal
+配置你的日记账
 ----------------------
 
-In order to register payments in other currencies, you have to remove
-the currency constraint on the journal. Go to the accounting
-application, on the journal, click on :menuselection:`More --> Settings`.
+为了用其他货币登记收付款, 你必须在账上 **删除币种默认值，保留空白** 。
+去会计应用程序, 点击 :menuselection:`更多 --> 设置`.
 
 .. image:: media/invoice01.png
    :align: center
 
-Check if the currency field is empty or in the foreign currency in which
-you will register the payments. If a currency is filled in, it means
-that you can register payments only in this currency.
+检查外币的字段是否为空, 或者需要在哪个货币下登记收付款。
+如果货币已填写, 这意味着你可只能用这种货币登记收付款。
 
 .. image:: media/invoice02.png
    :align: center
 
-Multi-currency invoices & Vendor Bills
+多币别发票和供应商账单
 ======================================
 
-Now that you are working in a multi-currency environment, all
-accountable items will be linked to a currency, domestic or foreign.
+现在你在多种货币环境中, 所有科目将链接一个货币, 国内或国外。
 
-Invoices
+发票
 --------
 
-You are now able to set a different currency than the company one on
-your sale orders and on your invoices. The currency is set for the whole
-document.
+你现在可以设置不同的货币而不是销售订单和发票上的货币。货币设置将应用到整个文档。
 
 .. image:: media/invoice03.png
    :align: center
 
-Vendor Bills
+供应商帐单
 ------------
 
-You are now able to set a different currency than the company one on
-your purchase orders and on your vendor bills. The currency is set for
-the whole document.
+你现在可以设置不同的货币比公司对你的采购订单和供应商的账单。货币被设置为整个文档。
 
 .. image:: media/invoice04.png
    :align: center
 
-Multi-currency Payments
+多币种付款
 =======================
 
-In the accounting application, go to :menuselection:`Sales --> Payments`. Register the
-payment and indicate that it was done in the foreign currency. Then
-click on **Confirm**.
+在会计应用程序中, 至 :menuselection:`销售 --> 付款`. 登记收付款并注明已用外币登记。
+然后点击 确定 。
 
 .. image:: media/invoice05.png
    :align: center
 
-The journal entry has been posted but not allocated.
+会计分录已过账但没有分配。
 
-Go back to your invoice (:menuselection:`Sales --> Customer Invoices`) and click on
-**Add** to allocate the payment.
+回到发票 (:menuselection:`销售 --> 客户发票`) 并点击 **添加** 分配付款。
 
 .. image:: media/invoice06.png
    :align: center
 
-Multi- Currency Bank Statements
+多币种银行对账单
 ===============================
 
-When creating or importing bank statements, the amount is in the company
-currency. But there are now two complementary fields, the amount that
-was actually paid and the currency in which it was paid.
+当创建或导入银行对账单, 是本位币的金额。
+但是现在有两个字段, 实际支付的金额和原币支付的金额。
 
 .. image:: media/invoice07.png
    :align: center
 
-When reconciling it, Odoo will directly match the payment with the right
-invoice. You will get the invoice price in the invoice currency and the
-amount in your company currency.
+调节的时候, Odoo将直接与正确的 **发票** 匹配。
+你会看到的发票货币下的金额及本位币下的总额。
 
 .. image:: media/invoice08.png
    :align: center
 
-Exchange Rate Journal
+汇率分类账
 =====================
 
-Go to :menuselection:`Adviser --> Journal Entries` and look for the **Exchange
-Difference** journal entries. All the exchange rates differences are recorded in it.
+去  :menuselection:`顾问 --> 日记账分录`  , 找到 **汇兑损溢**  日记账分录。
+所有的汇率差异将记录在此。
+
 
 .. image:: media/invoice09.png
    :align: center

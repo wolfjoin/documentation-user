@@ -1,169 +1,130 @@
 ===================================================================
-How to manage prices for B2B (tax excluded) and B2C (tax included)?
+如果管理B2B (不含税) 和 B2C (含税)价格?
 ===================================================================
 
-When working with consumers, prices are usually expressed with taxes
-included in the price (e.g., in most eCommerce). But, when you work in a
-B2B environment, companies usually negotiate prices with taxes excluded.
+销售消耗品的时候, 标价通常都包含税(例如, 大多数的电商场景中)。但是一旦在B2B场景中, 
+公司之间的价格谈判都不包含税
 
-Odoo manages both use cases easily, as long as you register your prices
-on the product with taxes excluded or included, but not both together.
-If you manage all your prices with tax included (or excluded) only, you
-can still easily do sales order with a price having taxes excluded (or
-included): that's easy.
+Odoo能容易地管理两种用例, 不管你在产品的标价上是否包含税。
+如果你对所有产品都标含税价(或者不含税价), 
+你也可以在销售订单上报不含税价(含税价) :就是这么简单。
 
-This documentation is only for the specific use case where you need to
-have two references for the price (tax included or excluded), for the
-same product. The reason of the complexity is that there is not a
-symmetrical relationship with prices included and prices excluded, as
-shown in this use case, in belgium with a tax of 21%:
+本文档只是用在一个产品的价格的两种参照(含税价或者不含税价)特定用例中。
+复杂的理由是含税价和不含税价的不对称, 例如本用例中, 比利时的税率是21% :
 
--  Your eCommerce has a product at **10€ (taxes included)**
+-  电商业务中有一个标价为 10€ (含税) 的产品
 
--  This would do **8.26€ (taxes excluded)** and a **tax of 1.74€**
+-  会做成 8.26€ (不含税) 和 1.74€的税
 
-But for the same use case, if you register the price without taxes on
-the product form (8.26€), you get a price with tax included at 9.99€,
-because:
+但是对于同一个用例, 如果你在产品上的标价不含税(8.26€), 
+但是你却得到了一个含税的价格9.99€, 原因是 :
 
 -  **8.26€ \* 1.21 = 9.99€**
 
-So, depending on how you register your prices on the product form, you
-will have different results for the price including taxes and the price
-excluding taxes:
+所以, 基于你在产品信息中维护的价格, 你将可以得到含税价和不含税价两种不同结果 :
 
--  Taxes Excluded: **8.26€ & 10.00€**
+-  不含税: **8.26€ & 10.00€**
 
--  Taxes Included: **8.26€ & 9.99€**
+-  含税价: **8.26€ & 9.99€**
 
 .. note::
-  If you buy 100 pieces at 10€ taxes included, it gets even more
-  tricky. You will get: **1000€ (taxes included) = 826.45€ (price) +
-  173.55€ (taxes)** Which is very different from a price per piece at
-  8.26€ tax excluded.
+  如果以10€的含税价买了100片, 结果看起来会很有意思。 你会得到 : 
+  **1000€ (含税价) = 826.45€ (不含税价) +
+  173.55€ (税)**  , 这和 不含税价格8.26€明显存在差异。
 
-This documentation explains how to handle the very specific use case
-where you need to handle the two prices (tax excluded and included) on
-the product form within the same company.
+本文档解释了如何处理特定用例下的同一个公司的产品上两种价格处理(含税价和不含税价)。
 
 .. note::
-  In terms of finance, you have no more revenues selling your
-  product at 10€ instead of 9.99€ (for a 21% tax), because your revenue
-  will be exactly the same at 9.99€, only the tax is 0.01€ higher. So, if
-  you run an eCommerce in Belgium, make your customer a favor and set your
-  price at 9.99€ instead of 10€. Please note that this does not apply to
-  20€ or 30€, or other tax rates, or a quantity >1. You will also make you
-  a favor since you can manage everything tax excluded, which is less
-  error prone and easier for your salespeople.
+  在财务方面, 你的产品卖到10€ 比9.99€ (21% 的税)对你的年营收来说并没有增加, 
+  因为对你来说你的营收和你卖9.99€时候是一样的。只是税高了0.01€。
+  所以如果你在比利时营运着一家电子商务, 为了讨好顾客, 
+  你可以把价格定为9.99€而不是10€ 。请注意此种状况对20€ 或者30€不一定适用。
+  或者是别的税率, 或者数量大于1的时候。当然这也帮了你很大忙, 
+  因为你可以对所有的东西都可以价外税管理, 
+  而这能让你的销售人员操作起来更加简单以及出错更少。
 
-Configuration
+配置
 =============
 
-Introduction
+介绍
 ------------
 
-The best way to avoid this complexity is to choose only one way of
-managing your prices and stick to it: price without taxes or price with
-taxes included. Define which one is the default stored on the product
-form (on the default tax related to the product), and let Odoo compute
-the other one automatically, based on the pricelist and fiscal position.
-Negotiate your contracts with customers accordingly. This perfectly
-works out-of-the-box and you have no specific configuration to do.
+要避免此种复杂状况, 最好的办法就是只选择一种方法管理价格并固定下来 :价格含税或者不含税。
+在产品表单中设置为默认的(在产品相关的默认税上), 
+然后让Odoo根据价格表和财政位置自动计算其余的。
+只要专注于和客户谈判。这样就实现了开箱即用, 而你不需要做特别的配置。
 
-If you can not do that and if you really negotiate some prices with tax
-excluded and, for other customers, others prices with tax included, you
-must:
+如果你不能这样做，如果你真的谈判一些价格，不包括税，而对于其他客户，其他价格包含税，你必须：
 
-1.  always store the default price TAX EXCLUDED on the product form, and
-    apply a tax (price included on the product form)
+1.  总是在产品信息中默认的维护不含税价并且维护一个税(产品信息中包含价格)
 
-2.  create a pricelist with prices in TAX INCLUDED, for specific
-    customers
+2.  为特定的客户创建一个含税价的价格表
 
-3.  create a fiscal position that switches the tax excluded to a tax
-    included
+3.  创建一个把不含税价格换位含税价格的财政位置
 
-4.  assign both the pricelist and the fiscal position to customers who
-    want to benefit to this pricelist and fiscal position
+4.  把价格表和财政位置分别设置在需要使用它们的客户上
 
-For the purpose of this documentation, we will use the above use case:
+对于本文当的目的, 我们会使用以上的用例 :
 
--   your product default sale price is 8.26€ price excluded
+-   产品的默认价格是8.26€, 不含税价
 
--   but we want to sell it at 10€, price included, in our shops or
-    eCommerce website
+-   但是我们却想在我们店铺或者电商应用中卖10€, 含税价
 
-Setting your products
+设置你的产品
 ---------------------
 
-Your company must be configured with price excluded by default. This is
-usually the default configuration, but you can check your **Default Sale
-Tax** from the menu :menuselection:`Configuration --> Settings` 
-of the Accounting application.
+你的公司必须要配置为默认不含税价格。通常这是默认的配置, 
+但是你可以会计模块的 :menuselection:`配置 --> 设置` 
 
 .. image:: media/price_B2C_B2B01.png
   :align: center
 
-Once done, you can create a **B2C** pricelist. You can activate the
-pricelist feature per customer from the menu: 
-:menuselection:`Configuration --> Settings` of the Sale application. 
-Choose the option **different prices per customer segment**.
+一旦完成, 你就可以创建 **B2C** 价格表。你可以在以下菜单项激活价格表特性 
+:menuselection:`销售 --> 配置 --> 设置` 中的
+定价-标价选项中选择 **为不同顾客、货币等指定不同价格** 
 
-Once done, create a B2C pricelist from the menu 
-:menuselection:`Configuration --> Pricelists`. 
-It's also good to rename the default pricelist into B2B to avoid confusion.
+一旦完成, 从以下路径创建一个B2C价格表
+:menuselection:`销售 --> 配置 --> 价格表`. 
+当然也可以把默认的价格表更名为B2B。
 
-Then, create a product at 8.26€, with a tax of 21% (defined as tax not
-included in price) and set a price on this product for B2C customers at
-10€, from the :menuselection:`Sales --> Products`
-menu of the Sales application:
+然后, 创建一个标价为8.26€的产品, 税是 21%(不含税价), 并且给该产品的B2C客户设置价格为10€。
+可以通过以下菜单项 :menuselection:`销售 --> 产品` :
 
 .. image:: media/price_B2C_B2B02.png
   :align: center
 
-Setting the B2C fiscal position
+设置B2C的财政状况
 -------------------------------
 
-From the accounting application, create a B2C fiscal position from this
-menu: :menuselection:`Configuration --> Fiscal Positions`. 
-This fiscal position should map the VAT 21% (tax excluded of price) 
-with a VAT 21% (tax included in price)
+在会计模块下创建一个B2C的财务结构: :menuselection:`会计 --> 配置 --> 会计 --> 财政状况`. 
+该财政状况做了VAT 21%(不含税价)和VAT 21%(含税价)的映射
 
 .. image:: media/price_B2C_B2B03.png
   :align: center
 
-Test by creating a quotation
+创建报价单测试
 ============================
 
-Create a quotation from the Sale application, using the 
-:menuselection:`Sales --> Quotations` menu. You should have the 
-following result: 8.26€ + 1.73€ = 9.99€.
+在销售模块下创建一个报价单, 使用菜单项 
+:menuselection:`销售 --> 销售 --> 报价单` menu. 你会得到以下结果 :8.26€ + 1.73€ = 9.99€。
 
 .. image:: media/price_B2C_B2B04.png
   :align: center
 
-Then, create a quotation but **change the pricelist to B2C and the
-fiscal position to B2C** on the quotation, before adding your product.
-You should have the expected result, which is a total price of 10€ for
-the customer: 8.26€ + 1.74€ = 10.00€.
+然后, 创建一个报价单但是在添加产品之前把报价单上的 **价格表更改为B2C并且财政位置
+也更改为B2C** 。你会得到预期的结果 :总价是10€, 对客户就是: 8.26€ + 1.74€ = 10.00€。
 
 .. image:: media/price_B2C_B2B05.png
   :align: center
 
-This is the expected behavior for a customer of your shop.
+这是你的店铺中客户的预期行为。
 
-Avoid changing every sale order
+避免更改每一张销售订单
 ===============================
 
-If you negotiate a contract with a customer, whether you negotiate price
-included or price excluded, you can set the pricelist and the fiscal
-position on the customer form so that it will be applied automatically
-at every sale of this customer.
+如果你和客户谈下来一个合同, 不管谈下来的价格是否含税, 
+你可以在客户的信息中维护价格表和财政位置, 然后该客户的所有订单都会自动带出正确的价格和税。
 
-The pricelist is in the **Sales & Purchases** tab of the customer form,
-and the fiscal position is in the accounting tab.
+价格表在客户的 销售 & 采购 标签页面, 财政位置在客户的会计标签页面
 
-Note that this is error prone: if you set a fiscal position with tax
-included in prices but use a pricelist that is not included, you might
-have wrong prices calculated for you. That's why we usually recommend
-companies to only work with one price reference.
+注意有一个错误的倾向 :如果你要设置一个含税价的财政位置但是使用一个不含税的价格表, 你可能会得出错误的价格。这就是我们建议公司只用一个价格参照

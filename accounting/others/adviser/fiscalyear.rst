@@ -1,90 +1,64 @@
 =====================================================
-How to do a year end in Odoo? (close a fiscal year)
+如何在Odoo中做年末(关闭会计年度)
 =====================================================
 
-Before going ahead with closing a fiscal year, there are a few steps one
-should typically take to ensure that your accounting is correct, up to
-date, and accurate:
+在关闭一个财政年度前, 需要做几步以确保你的会计是正确的, 最新的, 和精确的 :
 
-- Make sure you have fully reconciled your **bank account(s)** up to
-  year end and confirm that your ending book balances agree with
-  your bank statement balances.
+- 确保你完全调节了 **银行账户** 直至年底，并且确认期末账面余额符合银行对账单的余额。
 
--  Verify that all **customer invoices** have been entered and approved.
+-  确认所有 **客户发票** 已输入和批准。
 
--  Confirm that you have entered and agreed all **vendor bills**.
+-  确认您已输入并同意的所有 **供应商账单** 。
 
--  Validate all **expenses**, ensuring their accuracy.
+-  审核所有的 **费用** ，保证其准确性。
 
-- Corroborate that all **received payments** have been entered and
-  recorded accurately.
+- 确认所有 **已收到的付款** 已输入并准确记录。
 
-Year-end checklist
+年终检查表
 ==================
 
-- Run a **Tax report**, and verify that your tax information is correct.
+- 运行 **税报告** , 并验证你的税务信息是正确的。
 
-- Reconcile all accounts on your **Balance Sheet**:
+- 调节 **资产负债表** 上的所有科目；
 
-  - Agree your bank balances in Odoo against your actual bank balances
-    on your statements. Utilize the **Bank Reconciliation** report to
-    assist with this.
+  - 将银行对账单和实际的银行余额一致, 可利用 **银行调节** 报表来辅助。
 
-  - Reconcile all transactions in your cash and bank accounts by
-    running your **Aged Receivables** and **Aged Payables** reports.
+  - 通过运行 到期的业务伙伴余额 **应收账扣和应付账扣** 报表, 调节所有交易中的现金和银行科目。
 
-  - Audit your accounts, being sure to fully understand the
-    transactions affecting them and the nature of the
-    transactions, making sure to include loans and fixed assets.
+  - 检查你的科目, 确定理解所有交易对科目的影响和交易的性质, 确保包括贷款和固定资产。
 
-- Run the optional **Payments Matching** feature, under the **More**
-  dropdown on the dashboard, validating any open **Vendor Bills** and
-  **Customer Invoices** with their payments. This step is optional,
-  however it may assist the year-end process if all outstanding
-  payments and invoices are reconciled, and could lead finding
-  errors or mistakes in the system.
+- 验证任何打开的 **供应商帐单** 和 **客户发票** 及其付款，
+  在仪表板的 **更多** 下拉菜单中，运行可选的 **匹配付款** 功能。
+  此步骤是可选的，但可以帮助年终过程，假如所有未结的付款和发票都已调节，
+  可能会导致系统中发现错误或麻烦。
 
-- Your accountant/bookkeeper will likely verify your balance sheet
-  items and book entries for:
+- 您的会计师/记账员可能会验证您的资产负债表项目，以及为以下交易记账：
 
-  - Year-end manual adjustments, using the **Adviser Journal Entries**
-    menu (For example, the **Current Year Earnings** and **Retained
-    Earnings** reports).
+  - 年底手动调整, 使用 顾问 --> 日记账分录 菜单(例如, **当年收入** 和 **留存收益** 报告)。
 
-  - **Work in Progress**.
+  - **工作正在进行中**.
 
-  - **Depreciation Journal Entries**.
+  - **折旧分类账分录**.
 
-  - **Loans**.
+  - **贷款**.
 
-  - **Tax adjustments**.
+  - **税金调整**.
 
-If your accountant/bookkeeper is going through end of the year auditing,
-they may want to have paper copies of all balance sheet items (such as
-loans, bank accounts, prepayments, sales tax statements, etc...) to
-agree these against your Odoo balances.
+如果您的会计师/记账员正在通过年底审计，他们可能想要所有资产负债表项目（例如贷款，银行帐户，
+预付款，销售税报表等）的纸质副本，这些应该与Odoo余额一致。
 
-During this process, it is good practice to set the **Lock date for
-Non-Advisers** to the last day of the preceding financial year, which is
-set under the accounting configuration. This way, the accountant can be
-confident that nobody is changing the previous year transactions
-while auditing the books.
+在这个过程中，好的做法是将 **非顾问的锁定日期** 设置为会计年度的最后一天，在会计配置下设置。这样，在审计时，会计师可确保没有人能改变前一年的交易。
 
 .. image:: media/fiscalyear01.png  
    :align: center
 
-Closing the fiscal year
+关闭会计年度
 =======================
 
-In Odoo there is no need to do a specific year end closing entry in order to
-close out income statement accounts. The reports are created in
-real-time, meaning that the **Income statement** corresponds directly with
-the year-end date you specify in Odoo. Therefore, any time you generate
-the **Income Statement**, the beginning date will correspond with the
-beginning of the **Fiscal Year** and the account balances will all be 0.
+在Odoo中，没有必要做一个特定的年底结账分录，以关闭损益表科目。
+这些报表实时创建，这意味着 **损益表** 直接对应于您在Odoo中指定的年终日期。
+因此，任何时候你生成 **损益表** ，开始日期将对应于 **财政年度** 的开始，并且 科目余额将全部为0。
 
-Once the accountant/bookkeeper has created the journal entry to allocate
-the **Current Year Earnings**, you should set the **Lock Date** to the last day
-of the fiscal year. Making sure that before doing so, you confirm
-whether or not the current year earnings in the **Balance Sheet** is
-correctly reporting a 0 balance.
+一旦会计师/记账员创建分配 **当年利润** 的日记账分录，你应该将 **锁定日期** 
+设置本财政年度的最后一天 。确保在此之前，您确认**资产负债表** 
+中当年度收入是否正确报告余额为0。

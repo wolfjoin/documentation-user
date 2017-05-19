@@ -1,67 +1,52 @@
 ========================
-How to create new taxes
+如何创造新税
 ========================
 
-Odoo's tax engine is very flexible and support many different type of
-taxes: value added taxes (VAT), eco-taxes, federal/states/city taxes, retention,
-withholding taxes, etc. For most countries, your system is pre-configured with the
-right taxes.
+Odoo的税收引擎是非常灵活的，并且支持许多不同类型的税收：增值税（VAT），生态税，联邦/州/市税，保留税，预扣税等。对于大多数国家，您的系统预配置正确的税收
 
-This section details how you can define new taxes for specific use cases.
+该章节详细的介绍了如何在特定情景中定义新的税。
 
-* Go to :menuselection:`Accounting --> Configuration --> Taxes`. From this menu, you
-  get all the taxes you can use: sales taxes and purchase taxes.
+* 去菜单 :menuselection:`会计 --> 配置 --> 会计 --> 税金`. 从这个菜单中，您可以获得所有可以使用的税款：销售税和购买税。
 
 .. image:: media/create01.png
    :align: center
 
-* Choose a scope: Sales, Purchase or None (e.g. deprecated tax).
+* 选择范围：销售，购买或无（例如已弃税）。
 
-* Select a computation method:
+* 选择一种计算方法：
 
-  * **Fixed**: eco-taxes, etc.
+  * **固定**: 生态税等
 
-  * **Percentage of Price**: most common (e.g. 15% sales tax)
+  * **价格百分比**: 最常见（例如15％的销售税）
 
-  * **Percentage of Price Tax Included**: used in Brazil, etc.
+  * **含税价格百分比**: 巴西等。
 
-  * **Group of taxes**: allows to have a compound tax
+  * **税组**: 允许复合税
 
 .. image:: media/create02.png
    :align: center
 
 
-* If you use Odoo Accounting, set a tax account (i.e. where the tax journal item will be
-  posted). This field is optional, if you keep it empty, Odoo posts
-  the tax journal item in the income account.
+* 果您使用Odoo会计，请设置税务帐户（即税务日记帐项目将在哪里发布）。
+  该字段是可选的，如果保  持为空，Odoo会在收入帐户中发布税务杂志项目。
 
 .. tip::
-    If you want to avoid using a tax, you can not delete it because the tax
-    is probably used in several invoices. So, in order to avoid users to
-    continue using this tax, you should set the field *Tax Scope* to *None*.
+    如果您想避免使用税金，您不能删除税金，因为税金可能在几个发票中使用。因此，为了避免用户继续使用此税，您应该将 *税范围* 设置为无。
 
 .. note::
-    If you need more advanced tax mechanism, you can install the
-    module **account_tax_python** and you will be able to define new taxes
-    with Python code.
+    如果您需要更高级的税收机制，您可以安装模块 **account_tax_python** 您将能够使用Python代码定义新的税金。
 
-Advanced configuration
+高级配置
 ======================
 
-* **Label on Invoices**: a short text on how you want this tax to be
-  printed on invoice line. For example, a tax named "15% on
-  Services" can have the following label on invoice "15%".
+* **发票上的标签**: 关于您希望如何在发票行打印税的简短文本。例如，名为“15％服务”的税款可以在发票上添加以下标签“15％”。
 
-* **Tax Group**: defines where this tax is summed in the invoice footer.
-  All the tax belonging to the same tax group will be grouped on
-  the invoice footer. Examples of tax group: VAT, Retention.
+* **税组**: 定义发票页脚上的税额。所有属于同一个税组的税种将分列在发票页脚上。
+税组的例子：增值税，保留。
 
-* **Include in Analytic Cost**: the tax is counted as a cost and, thus,
-  generate an analytic entry if your invoice uses analytic
-  accounts.
+* **包含在分析成本中**: 税收计入成本，因此，如果您的发票使用分析帐户，则生成分析条目。
 
-* **Tags**: are used for custom reports. Usually, you can keep this field
-  empty.
+* **标签**: 用于自定义报告。通常，您可以将此字段保留为空。
 
 
 .. seealso::

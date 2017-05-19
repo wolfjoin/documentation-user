@@ -1,5 +1,5 @@
 =========================================================
-How to get correct tax rates in the US thanks to TaxCloud
+如何通过TaxCloud在美国获得正确的税率（中国不适合）
 =========================================================
 
 The **TaxCloud** integration allows you to calculate the sales tax for every

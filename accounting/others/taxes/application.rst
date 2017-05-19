@@ -1,80 +1,67 @@
 ==========================================================
-How to adapt taxes to my customer status or localization
+如何适应税收对我的客户状态或本地化
 ==========================================================
 
-Most often sales tax rates depend on your customer status or localization.
-To map taxes, Odoo brings the so-called *Fiscal Positions*. 
+销售税率多半取决于您的客户状况或本地化。为了绘制税收，Odoo带来了所谓的财政职位。 *Fiscal Positions*. 
 
-Create tax mapping
+创建税务图
 ==================
 
-A fiscal position is just a set of rules that maps default taxes (as defined
-on product form) into other taxes. In the screenshot below, foreign customers
-get a 0% tax instead of the default 15%, for both sales and purchases.
+财政状况只是一套规则，将默认税（定义在产品形式）上映射为其他税收。在下面的屏幕截图中，外国客户在销售和购买时都获得0％的税费，而不是默认的15％。
 
 .. image:: media/application02.png
    :align: center
 
-The main fiscal positions are automatically created according to your
-localization. But you may have to create fiscal positions for specific use cases.
-To define fiscal positions, go to
-:menuselection:`Invoicing/Accounting --> Configuration --> Fiscal Positions`.
+根据您的本地化自动创建主要财务状况。但是，您可能需要针对特定​​用例创建财务状况。
+要定义财务状况，请转到
+:menuselection:`会计 --> 配置 --> 会计 --> 财政状况`.
 
 .. note::
-    If you use Odoo Accounting, you can also map the Income/Expense accounts according to the fiscal
-    position. For example, in some countries, revenues from sales are not posted in
-    the same account than revenues from sales in foreign countries.
+    如果您使用Odoo会计，您还可以根据财务状况映射收入/费用科目。例如，在一些国家，销售收入没有在同一个科目上发布，而不是外国销售收入。
 
-Adapt taxes to your customer status
+对您的客户状态征税
 ===================================
 
-If a customer falls into a specific taxation rule, you need to apply a tax-mapping.
-To do so, create a fiscal position and assign it to your customers.
+如果客户符合特定的税收规则，则需要应用税务制图。为此，请创建财务状况并将其分配给您的客户。
 
 .. image:: media/application01.png
    :align: center
 
-Odoo will use this specific fiscal position for any order/invoice recorded for the customer.
+Odoo将使用该特定财政状况为客户记录的任何订单/发票。
 
 .. note:: 
-    If you set the fiscal position in the sales order or invoice manually, it will only
-    apply to this document and not to future orders/invoices of the same customer.
+    如果您手动将销售订单或发票设置为财务状况，则仅适用于此文档，而不适用于同一客户的未来订单/发票。
 
-Adapt taxes to your customer address (destination-based)
+将税收纳入您的客户地址（基于目的地）
 ========================================================
 
-Depending on your localization, sales taxes may be origin-based or destination-based.
-Most states or countries require you to collect taxes at the rate of the destination
-(i.e. your buyer’s address) while some others require to collect them at the rate effective
-at the point of origin (i.e. your office or warehouse).
+根据您的本地化，销售税可能是基于来源或目的地。
+大多数州或国家要求您以目的地税率（即您的买方地址）收取税款，
+而另外一些国家或地区则需要以在起点（即您的办公室或仓库）上有效的收费来收取税款。
 
-If you are under the destination-based rule, create one fiscal position per tax-mapping to apply.
+如果您位于基于目的地的规则下，请根据每个税务绘图创建一个财务状况以应用。
 
-* Check the box *Detect Automatically*.
-* Select a country group, country, state or city to trigger the tax-mapping.
+* 勾选框自动检测。
+* 选择一个国家/地区组，国家，州或城市来触发税务制图。
 
 .. image:: media/application04.png
    :align: center
 
-This way if no fiscal position is set on the customer, Odoo will choose the fiscal position matching the
-shipping address on creating an order.
+这样，如果客户没有设置财务状况，Odoo将在创建订单时选择与发货地址相匹配的财务状况。
 
 .. note::
-    For eCommerce orders, the tax of the visitor's cart will automatically
-    update and apply the new tax after the visitor has logged in or filled
-    in his shipping address.
+    电子商务订单，当访问者登录或填写送货地址后，客人购物车的税收将自动更新生效。
 
-Specific use cases
+
+特殊使用案例
 ==================
 
-If, for some fiscal positions, you want to remove a tax, instead of
-replacing by another, just keep the *Tax to Apply* field empty.
+如果对于某些财政状况而言，您要删除税金，而不是替换为另一个税金，只需将“ 应用税”字段保留为空。
 
 .. image:: media/application03.png
    :align: center
 
-If, for some fiscal positions, you want to replace a tax by two other
-taxes, just create two lines having the same *Tax on Product*.
+如果对于某些财政状况，您要用另外两个税项替代税金，只需创建两条相同的税收税额。
 
 
 .. seealso::

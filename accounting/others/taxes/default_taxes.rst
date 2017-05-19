@@ -1,26 +1,24 @@
 ========================
-How to set default taxes
+如何设定默认税
 ========================
 
-Taxes applied in your country are installed automatically for most localizations.
+所在国家/地区适用的税费自动安装在大多数本地化机构。
 
-Default taxes set in orders and invoices come from each product's Invoicing tab.
-Such taxes are used when you sell to companies that are in the same country/state than you.
+订单和发票中设置的默认税收来自每个产品的“发票”选项卡。
+当您向与您相同的国家/地区的公司销售时，将使用此类税款。
 
 .. image:: media/application05.png
    :align: center
 
-To change the default taxes set for any new product created go to
-:menuselection:`Invoicing/Accounting --> Configuration --> Settings`.
+要更改为创建的任何新产品设置的默认税率，请转至
+:menuselection:`会计 --> 配置 --> 设置` 中开票和付款下的税金选项卡设置.
 
 .. image:: media/create04.png
    :align: center
 
 .. tip::
-    If you work in a multi-companies environment, the sales and 
-    purchase taxes may have a different value according to the 
-    company you work for. You can login into two different companies 
-    and change this field for each company.
+    如果您在多公司环境中工作，根据您所在的公司，销售和采购税可能有不同的价值。
+    您可以登录到两个不同的公司，并为每家公司改变这一字段设置。
 
 .. seealso::
 

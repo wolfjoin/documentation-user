@@ -1,66 +1,50 @@
 ================================
-How to manage withholding taxes?
+如何管理预扣税？
 ================================
 
-A withholding tax, also called a retention tax, is a government
-requirement for the payer of a customer invoice to withhold or deduct
-tax from the payment, and pay that tax to the government. In most
-jurisdictions, withholding tax applies to employment income.
+预扣税,也称为保留税收. 它是政府要求在销售发票上预扣或是从收款中扣除税,并将之支付给政府。
+在大多数地区,预提税用于就业收入。
 
-With normal taxes, the tax is added to the subtotal to give you the
-total to pay. As opposed to normal taxes, withholding taxes are deducted
-from the amount to pay, as the tax will be paid by the customer.
+关于普通税收,税应计入应付款合计。而非正常的税收,预提税从应付款中扣除,税由客户支付。
 
-As, an example, in Colombia you may have the following invoice:
+在哥伦比亚,举个例子,你可能有以下发票:
 
 .. image:: media/retention03.png
    :align: center
 
-In this example, the **company** who sent the invoice owes $20 of taxes to
-the **government** and the **customer** owes $10 of taxes to the **government**.
+在这个示例中,开票 **公司** 欠政府20美元的税, **客户** 欠 **政府**  10美元的税。
 
-Configuration
+配置
 =============
 
-In Odoo, a withholding tax is defined by creating a negative tax. For a
-retention of 10%, you would configure the following tax (accessible
-through :menuselection:`Configuration --> Taxes`):
+在Odoo, 创建一个负的税来定义预提税。保留的10%, 需要一下配置 (会计菜单下 :menuselection:`配置 --> 会计 --> 税金`):
 
 .. image:: media/retention04.png
    :align: center
 
-In order to make it appear as a retention on the invoice, you should set
-a specific tax group **Retention** on your tax, in the **Advanced Options**
-tab.
+为了使税在发票上作为保留税出现,你应该在 **高级选项** 设定一个具体的 **保留** 税组
 
 .. image:: media/retention02.png
    :align: center
 
-Once the tax is defined, you can use it in your products, sales order or
-invoices.
+一旦税率定义完成, 可在产品,销售订单或发票上使用。
 
 .. tip::
-    If the retention is a percentage of a regular tax, create a Tax with a 
-    **Tax Computation** as a **Tax Group** and set the two taxes in this group 
-    (normal tax and retention).
+    如果保留税是普通税的一定比例, **税金** 设置为 **税组** , 并在这组中设置两个税(正常的税和保留税)。
 
-Applying retention taxes on invoices
+在发票上使用保留税
 ====================================
 
-Once your tax is created, you can use it on customer forms, sales order
-or customer invoices. You can apply several taxes on a single customer
-invoice line.
+一旦税建立, 可用于客户界面,销售订单或客户发票。也可在销售发票行应用多个税。
 
 .. image:: media/retention01.png
    :align: center
 
 .. note::
-    When you see the customer invoice on the screen, you get only a 
-    **Taxes line** summarizing all the taxes (normal taxes & retentions). 
-    But when you print or send the invoice, Odoo does the correct 
-    grouping amongst all the taxes.
+    当你看到客户发票, 只能得到一个 **税行** , 这行汇总了的税收(正常的税收和保留税)。但是当你打印或发送发票, Odoo将正确地组合所有的税。
 
-The printed invoice will show the different amounts in each tax group.
+
+打印的发票将显示每个组合的不同合计。
 
 .. image:: media/retention03.png
    :align: center

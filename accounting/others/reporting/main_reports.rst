@@ -1,10 +1,9 @@
 ====================================
-What are the main reports available?
+有哪些可用的主要报表？
 ====================================
 
-Besides the reports created specifically in each localisation module, a
-few very useful **generic** and **dynamic reports** are available for all
-countries :
+除了在每个本地化模块中专门制作的报告外，
+还有一些非常有用的 **通用** 和 **动态报告** 可用于所有国家/地区：
 
 -  **Balance Sheet**
 -  **Profit and Loss**
@@ -17,38 +16,32 @@ countries :
 -  **Tax Report**
 -  **Bank Reconciliation**
 
-You can annotate every reports to print them and report to your adviser.
-Export to xls to manage extra analysis. Drill down in the reports to see
-more details (payments, invoices, journal items, etc.).
+可以标注每个报表, 打印出来并呈报你的顾问。导出xls, 进一步分析管理。
+深入研究, 可看到更多的细节(付款,发票、分录,等等)。
 
-You can also compare values with another period. Choose how many periods
-you want to compare the chosen time period with. You can choose up to 12
-periods back from the date of the report if you don't want to use the
-default **Previous 1 Period** option.
+你可以将当期的值与另一期间的值比较。也可选择多个期间进行比较。
+如果不想使用系统默认的 **前一期间** , 你可以选择之前的12期。
 
-Balance Sheet
+资产负债表
 -------------
 
-The **Balance Sheet** shows a snapshot of the assets, liabilities and equity
-of your organisation as at a particular date.
+在资产负债表显示的资产，负债和您的组织作为一个特定日期的股权的快照。
 
 .. image:: media/main_reports09.png  
    :align: center
 
-Profit and Loss
+收益与损失
 ---------------
 
-The **Profit and Loss** report (or **Income Statement**) shows your
-organisation's net income, by deducting expenses from revenue for the
-report period.
+在利润和损失报告（或损益表）显示您的组织的净收入，从收入中扣除费用，报告期内。
 
 .. image:: media/main_reports10.png  
    :align: center
 
-Chart of account
+科目表(试算表)
 ----------------
 
-A listing of all your accounts grouped by class.
+分类账科目的列表
 
 .. image:: media/main_reports08.png  
    :align: center
@@ -99,57 +92,49 @@ reporting :
 .. image:: media/main_reports01.png  
    :align: center
 
-General Ledger
+总账
 --------------
 
-The **General Ledger Report** shows all transactions from all accounts for a
-chosen date range. The initial summary report shows the totals for each
-account and from there you can view a detailed transaction report or any
-exceptions. This report is useful for checking every transaction that
-occurred during a certain period of time.
+在 **总账报表** 显示所有帐户的一个选择的日期范围的所有交易。初始总结报告显示每个帐户的总计，
+从那里您可以查看详细的交易报告或任何例外。此报告对于检查在一段时间内发生的每笔交易都很有用。
 
 .. image:: media/main_reports05.png  
    :align: center
 
-Aged Payable
+应付账款
 ------------
 
-Run the **Aged Payable Details** report to display information on individual
-bills, credit notes and overpayments owed by you, and how long these
-have gone unpaid.
+运行“付账款明细”报告，显示您所欠的个人账单，信用票据和多付款项的信息以及这些未付款的时间。
 
 .. image:: media/main_reports02.png  
    :align: center
 
-Aged Receivable
+应收账款
 ---------------
 
-The **Aged Receivables** report shows the sales invoices that were awaiting
-payment during a selected month and several months prior.
+“应收账款”报告显示在选定的月份和数月前等待付款的销售发票。
 
 .. image:: media/main_reports07.png  
    :align: center
 
-Cash Flow Statement
+现金流量表
 -------------------
 
-The **Cash Flow Statement** shows how changes in balance sheet accounts and
-income affect cash and cash equivalents, and breaks the analysis down to
-operating, investing and financing activities.
+在 **现金流量表** 显示资产负债表账目和收入的变化如何影响现金及现金等价物，
+并打破了分析到经营，投资和筹资活动。
 
 .. image:: media/main_reports03.png  
    :align: center
 
-Tax Report
+税务报告
 ----------
 
-This report allows you to see the **net** and **tax amounts** for all the taxes
-grouped by type (sale/purchase).
+此报告可让您查看按类型（销售/购买）分组的所有税金的净额和税额。
 
 .. image:: media/main_reports04.png  
    :align: center
 
-Bank Reconciliation
+银行对账
 -------------------
 
 .. image:: media/main_reports06.png  

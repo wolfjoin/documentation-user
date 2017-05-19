@@ -1,98 +1,77 @@
 ==========================================================
-How to create a customized reports with your own formulas?
+用你自己的公式如何创建定制报表？
 ==========================================================
 
-Overview
+概述
 ========
 
-Odoo 9 comes with a powerful and easy-to-use reporting framework.
-Creating new reports (such as a tax report or a balance sheet for a
-specific country) to suit your needs is now easier than ever.
+Odoo 9提供了一个有用且便捷的报告框架。创建新报告(如税收报告或资产负债表, 在指定国家),
+以适应您的需求, 现在比以往更容易。
 
-Activate the developer mode
+激活开发者模式
 ===========================
 
-In order to have access to the financial report creation interface, the
-**developer mode** needs to be activated. To do that, first click on the
-user profile in the top right menu, then **About**.
+进入财务报告创建界面, 需 在设置里点击**激活开发人员模式** 。
 
 .. image:: media/customize01.png
    :align: center
 
-Click on : **Activate the developer mode**.
+点击 : 激活开发者模式 。
 
 .. image:: media/customize03.png
    :align: center
 
-Create your financial report
+创建财务报表
 ============================
 
-First, you need to create your financial report. To do that, go to
+首先, 您需要创建您的财务报告。要做到这一点, 去 
 :menuselection:`Accounting --> Configuration --> Financial Reports`
 
 .. image:: media/customize02.png
    :align: center
 
-Once the name is filled, there are two other parameters that need to be
-configured:
+一旦命名, 还需配置两个参数 :
 
 -  **Show Credit and Debit Columns**
 
 -  **Analysis Period** :
 
-   -  Based on date ranges (eg Profit and Loss)
+   -  基于日期区间(例如损益)
 
-   -  Based on a single date (eg Balance Sheet)
+   -  基于单个日期(例如余额表)
 
-   -  Based on date ranges with 'older' and 'total' columns and last 3
-      months (eg. Aged Partner Balances)
+   -  根据日期范围的“老" 和“总计 "列, 最后的3个月(如. 业务伙伴账龄余额表)
 
-   -  Bases on date ranges and cash basis method (eg Cash Flow
-      Statement)
+   -  基于日期范围，以及现金收付制方法(例如现金流量表)
 
-Add lines in your custom reports
+在定制报表中添加行
 =================================
 
-After you've created the report, you need to fill it with lines. They
-all need a **name**, a **code** (that is used to refer to the line), a 
-**sequence number** and a **level** (Used for the line rendering).
+创建了报告之后, 需要填充行。他们都需要一个 **姓名** , **代码** (用于行), **序列号** 和 **级** (用于补充行)。
 
 .. image:: media/customize04.png
    :align: center
 
-In the **formulas** field you can add one or more formulas to assign a
-value to the balance column (and debit and credit column if applicable –
-separated by ;)
+在 **公式** 字段可以添加一个或多个列公式到余额行 (和借方和贷方列如果适用-隔开;)
 
-You have several objects available in the formula :
+在公式中有几个可用对象 :
 
--  ``Ndays`` : The number of days in the selected period (for reports with a
-   date range).
+-  " Ndays ": 选择的期间的天数 (报表的日期范围)。
 
--  Another report, referenced by its code. Use ``.balance`` to get its
-   balance value (also available are ``.credit``, ``.debit`` and
-   ``.amount_residual``)
+-  另一份报告, 引用的代码。使用“。平衡“获得其余额(也可用" .credit "," .debit "and" .amount_residual ")
 
-A line can also be based on the sum of account move lines on a selected
-domain. In which case you need to fill the domain field with an Odoo
-domain on the account move line object. Then an extra object is
-available in the formulas field, namely ``sum``, the sum of the account
-move lines in the domain. You can also use the group by field to group
-the account move lines by one of their columns.
+一行也来自所选域的科目的总和。在何种情况下, 需要填写域字段. 然后一个额外的对象可以在公式, 即''和'', 科目的总和。您还可以使用group by字段组合科目行。
 
-Other useful fields :
+其余有用的字段 :
 
--  **Type** : Type of the result of the formula.
+-  **类型** : 公式结果的类型.
 
--  **Is growth good when positive** : Used when computing the comparison
-   column. Check if growth is good (displayed in green) or not.
+-  **正增长良好Is growth good when positive** : 计算比较列时使用。检查生长是否良好（以绿色显示）。
 
--  **Special date changer** : If a specific line in a report should not use
-   the same dates as the rest of the report.
 
--  **Show domain** : How the domain of a line is displayed. Can be foldable
-   (``default``, hidden at the start but can be unfolded), ``always``
-   (always displayed) or ``never`` (never shown).
+-  **特别更改日期** : 如果报表中的特定行不应与报表的其余部分使用相同的日期。
+
+-  **显示域** : 如何显示行的域。可以折叠（default隐藏在开始但可以展开），always （总是显示）或never（从未显示）。
 
 .. seealso::
     * :doc:`main_reports`
