@@ -1,64 +1,56 @@
 =========================
-How to import my products
+如何导入我的产品
 =========================
 
-How to start
+如何开始
 ============
 
-Download the following import templates: 
+下载以下导入模板：
 
-1. Partners: customers, vendors (no relation field, can be imported as is)
-2. Products (no relation field, can be imported as is)
-3. Product Website Categories
-4. Product Attributes & Values
-5. Products with Categories & Attributes (3 & 4 must be imported first)
+1. 合作伙伴：客户，供应商（无关联字段，可以直接导入）
+2. 产品 (无关联字段，可以直接导入)
+3. 产品网站类别
+4. 产品属性和价格
+5. 具有类别和属性的产品 (必须先导入3＆4)
 
-Download link: https://drive.google.com/drive/folders/0B1uIL9E_zXrrTEp5eGI2dXJSUjg?usp=sharing
+下载链接: https://drive.google.com/drive/folders/0B1uIL9E_zXrrTEp5eGI2dXJSUjg?usp=sharing
 
-You can open them with any spreadsheets software (Microsoft Office, OpenOffice, Google Drive, etc.).
+您可以使用任何电子表格软件（Microsoft Office，OpenOffice，Google Drive等）打开它们。
 
-How to customize the file
+如何自定义文件
 =========================
 
-* Remove columns you don't need. Don't remove the first one (called *ID*, see
-  why here below).
-* Don't change labels of columns you want to import. Otherwse Odoo won't match
-  the columns automatically.
-* Feel free to add new columns but the fields need to exist in Odoo. If Odoo fails
-  in matching the column name with a field, you can make it manually when importing
-  by browsing a list of available fields.
-* Once modified, keep your file in .csv format.
+* 删除不需要的列。不要删除第一个（称为 *ID* ，请参阅下面为什么）。
+* 不要更改要导入的列的标签。否则doo将不会自动匹配列。
+* 随意添加新的列，但这些字段需要存在于Odoo中。如果Odoo将列名称与字段匹配失败，
+  则可以通过浏览可用字段列表导入时手动进行操作。
+* 修改后，请将文件保存为.csv格式。
 
-How to import the file
-======================
+如何导入文件======================
 
-1. Go to the Products menu in Sales, Purchase, Website Admin, etc.
-2. Switch to list view (top-right corner).
-3. Click the *Import* button (top-left corner).
-4. Make sure all the columns match an existing field. If not select it
-   manually from the drop-down list.
-5. Press * Validate* to test the import.
-6. If you get "Everything seems valid." as result message, press *Import*
-   to process the real import. Otherwise correct the issues spotted during the test.
+1. 转到销售，采购，网站管理等产品菜单
+2. 切换到列表视图（右上角）。
+3. 点击 *导入* 按钮（左上角）。
+4. 确保所有列与现有字段匹配。如果没有从下拉列表中手动选择它。
+5. 按 *验证* 以测试导入。
+6. 如果你得到“一切似乎有效”。作为结果消息，按 **导入** 以处理真正的导入。
+   否则纠正测试期间发现的问题。
 
-Why an “ID” column
+为什么是“ID”列
 ==================
 
-The ID is an unique identifier for the line item. Feel free to use the one of your
-previous software to ease the transition to Odoo.
+ID是订单项的唯一标识符。随时使用您之前的软件轻松过渡到Odoo。
 
-Setting an ID is not mandatory when importing but it helps in many cases:
+在导入时设置ID不是强制性的，但在许多情况下有助于：
 
-* Update imports: you can import the same file several times without creating duplicates;
-* Import relation fields (see here below).
+* 更新导入：您可以多次导入相同的文件，而不创建重复项;
+* 导入关系字段（见下文）。
 
-How to import relation fields
+如何导入关系字段
 =============================
 
-An Odoo object is always related to many other objects (e.g. a product is linked
-to product categories, attributes, vendors, etc.). To import those relations you need to
-import the records of the related object first from their own list menu.
+Odoo对象总是与许多其他对象（例如产品链接到产品类别，属性，供应商等）相关。
+要导入这些关系，您需要先从其列表菜单中导入相关对象的记录。
 
-You can do it using either the name of the related record or its ID. The ID is expected when
-two records have the same name. In such a case add " / ID" at the end of the column title
-(e.g. for product attributes: Product Attributes / Attribute / ID).
+您可以使用相关记录的名称或其ID来执行此操作。当两个记录具有相同的名称时,使用该ID。
+在这种情况下，在列标题的末尾添加“/ ID”（例如，对于产品属性：产品属性/属性/ ID）。

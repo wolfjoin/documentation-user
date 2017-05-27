@@ -1,145 +1,127 @@
 =============================================
-How to re-invoice expenses to your customers?
+如何为你的客户重开费用发票?
 =============================================
 
-It often happens that your employees have to spend their personal money
-while working on a project for your client. Let's take the example of an
-employee paying a parking spot for a meeting with your client. As a
-company, you would like to be able to invoice that expense to your
-client.
+如果你的员工在为您的客户的项目工作时经常花自己的个人的钱。比如, 在与您的客户开会时
+我们的员工支付了停车位费用。作为一家公司, 你希望能够将此花费开票给你的客户。
 
-In this documentation we will see two use cases. The first, very basic,
-consists of invoicing a simple expense to your client like you would do
-for a product. The second, more advanced, will consist of invoicing
-expenses entered in your expense system by your employees directly to
-your customer.
+在该文档中, 我们将看到两个用例。
+第一, 非常基本的, 一个简单的费用的开票给您的客户就像为一个产品所做的那样。
+第二个, 更先进, 由您的员工进入你的费用系统直接开票给你的客户。
 
-Use case 1: Simple expense invoicing
+用例 1 :简单的费用开票
 ====================================
 
-Let's take the following example. You are working on a promotion
-campaign for one of your customers (``Agrolait``) and you have to print a
-lot of copies. Those copies are an expense for your company and you
-would like to invoice them.
+以下作为示例, 你正在给其中的一个客户(``Agrolait``)升级并且你需要打印很多复印件, 
+这些复印件作为公司的费用并且需要为之开票
 
-Configuration
+配置
 -------------
 
-In order to sell services and to send invoices, you need to install the
-**Sales** application, from the **Apps** icon.
+为了销售服务和发送发票, 你需要从 **Apps** 图标安装 **销售** 模块。
 
 .. image:: media/reinvoice01.png
     :align: center
 
-Create product to be expensed
+创建费用产品
 -----------------------------
 
-You will need now to create a product called ``Copies``.
+那么现在你就需要创建一个命名为“复印" 的产品
 
-From your **Sales** module, go to :menuselection:`Sales --> Products` 
-and create a product as follows:
+在 **销售** 模块下, 进入 :menuselection:`销售 --> 产品`  并创建一个如下产品 :
 
--   **Product type**: consumable
+-   **产品类型  **: 可消耗
 
--   **Invoicing policy**: on delivered quantities (you will manually
-    set the quantities to invoice on the sale order)
+-   **开票策略**: 已交货数量(您将手动将数量设置为销售订单上的发票)
 
 .. image:: media/reinvoice02.png
     :align: center
 
-Create a sale order
+创建销售订单
 -------------------
 
 Now that your product is correctly set up, you can create a sale order
-for that product (from the menu :menuselection:`Sales --> Sales Orders`) 
+for that product (from the menu :menuselection:`销售 --> 销售订单`) 
 with the ordered quantities set to 0. 
 Click on **Confirm the Sale** to create the sale
 order. You will be able then to manually change the delivered quantities
 on the sale order to reinvoice the copies to your customer.
+现在产品已经设置好了, 就可以创建该产品的销售订单(从 :menuselection:`销售 --> 销售订单` ), 
+数量设置为0。点击 **确认订单** 确认为销售订单。
+随后你可以手工的在销售订单上更改产品数量在同一张发票单上给客户重复开票
 
 .. image:: media/reinvoice03.png
     :align: center
 
-Invoice expense to your client
+费用开票给客户
 ------------------------------
 
-At the end of the month, you have printed ``1000`` copies on behalf of your
-client and you want to re-invoice them. From the related sale order,
-click on **Delivered Quantities**, manually enter the correct amount of
-copies and click on **Save**. Your order line will turn blue, meaning that
-it is ready to be invoiced. Click on **Create invoice**.
+到了月末, 你已经为客户打印了 ``1000`` 份并且你想要对他们重新开票。
+就可以从相关的销售订单上点击 **订单数量** , 手工的输入复印件数量并点击 **保存** 。
+点击 **交货** 验证数量，订单行就变为蓝色, 意味着可以开票。然后点击 **创建发票**
 
 .. note::
-    The total amount on your sale order will be of 0 as it is computed on 
-    the ordered quantities. It is your invoice which will compute the 
-    correct amount due by your customer.
+    销售订单上的总数量是0因为发票是基于发货数量的。
+    发票会根据发给该客户的正确的数量进行计算
 
-The invoice generated is in draft, so you can always control the
-quantities and change the amount if needed. You will notice that the
-amount to be invoiced is based here on the delivered quantities.
+生成的发票是草稿状态, 所以你总是可以控制数量并且变更总量。
+你能注意到要开票的数量是基于发货的数量
 
 .. image:: media/reinvoice04.png
     :align: center
 
-Click on validate to issue the payment to your customer.
+点击确认让客户付款
 
-Use case 2: Invoice expenses via the expense module
+用例2 :通过报销模块给费用开票
 ===================================================
 
-To illustrate this case, let's imagine that your company sells some
-consultancy service to your customer ``Agrolait`` and both parties agreed
-that the distance covered by your consultant will be re-invoiced at
-cost.
+要解释这个, 让我们假设你的公司卖给你的顾客 ``Agrolait``一些咨询服务
+并且双方都同意贵司顾问的路费作为成本来开票
 
-Configuration
+配置
 -------------
 
-Here, you will need to install two more modules:
+现在, 你需要再安装两个模块
 
--   Expense Tracker
+-   费用追踪
 
--   Accounting, where you will need to activate the analytic accounting
-    from the settings
+-   需要在会计模块的设置中激活分析会计
 
 .. image:: media/reinvoice05.png
     :align: center
 
-Create a product to be expensed
+创建一个费用类别的产品
 -------------------------------
 
-You will now need to create a product called ``Kilometers``.
+现在你需要创建一个称之为 ``公里`` 的产品。
 
-From your **Sales** module, go to :menuselection:`Sales --> Products` 
-and create a product as follows:
+在 **销售** 模块下, 进入 :menuselection:`销售 --> 产品`  并创建一个如下产品 :
 
--   Product can be expensed
+-   可用于费用
 
--   Product type: Service
+-   产品类型 : 服务
 
--   Invoicing policy: invoice based on time and material
+-   开票策略 :基于时间和材料开票(invoice based on time and material)
+    社区版，没有这个选项，选择已交货数量，试一下
 
--   Expense invoicing policy: At cost
+-   费用类的开票原则 :基于成本(Expense invoicing policy: At cost)
 
--   Track service: manually set quantities on order
+-   追踪服务 :手工的在订单上设置数量(Track service: manually set quantities on order)
 
 .. image:: media/reinvoice06.png
     :align: center
 
-Create a sales order
+创建销售订单
 --------------------
 
-Still from the Sales module, go to :menuselection:`Sales --> Sales Orders` 
-and add your product **Consultancy** on the order line.
+仍是从销售模块, 进入菜单项 :menuselection:`销售 --> 销售订单`  并在订单行上添加产品 **咨询** 。
 
 .. tip::
-    If your product doesn't exist yet, you can configure it on the fly 
-    from the SO. Just type the name on the **product** field and click 
-    on **Create and edit** to configure it.
+    如果您的产品尚不存在，您可以从SO中即时配置。只需在 **产品** 字段中输入名称，
+    然后单击 **创建并编辑** 即可对其进行配置。
 
-Depending on your product configuration, an **Analytic Account** may have
-been generated automatically. If not, you can easily create one in order
-to link your expenses to the sale order. Do not forget to confirm the
-sale order.
+
+根据产品的配置, 一个 **分析科目** 可以自动的生成, 如果没有的话, 你也可以容易的创建一个, 用来在销售订单上链接费用（社区版：点击 **其他信息** 标签，分析窗户，创建）。不要忘了确认销售订单
 
 .. image:: media/reinvoice07.png
     :align: center
@@ -148,35 +130,32 @@ sale order.
     Refer to the documentation :doc:`../../../accounting/others/analytic/usage` 
     to learn more about that concept.
 
-Create expense and link it to SO
---------------------------------
+创建相关费用单据并关联到销售订单(SO)
+-------------------------------------
 
-Let's assume that your consultant covered ``1.000km`` in October as part
-of his consultancy project. We will create a expense for it and link
-it to the related sales order thanks to the analytic account.
+假设你们公司的顾问在十月份在咨询项目上的路程是" 1.000公里 "。
+你就可以创建一个费用并且通过分析账户和相关的销售订单关联起来
 
-Go to the **Expenses** module and click on **Create**. Record your expense
-as follows:
+进入 **费用** 模块并点击 **创建** 。输入以下费用 :
 
--   **Expense description**: Kilometers October 2015
+-   **费用说明**: 公里2015年10月
 
--   **Product**: Kilometers
+-   **产品**: 公里
 
--   **Quantity**: 1.000
+-   **数量**: 1.000
 
--   **Analytic account**: SO0019 - Agrolait
+-   **分析账户**: SO0019 - Agrolait
 
 .. image:: media/reinvoice08.png
     :align: center
 
-Click on **Submit to manager**. As soon as the expense has been validated
-and posted to the journal entries, a new line corresponding to the
-expense will automatically be generated on the sale order.
+点击 **提交给经理** 。只要费用被批准并登录到日记账分录, 
+一个和费用一致的分录记录就会咋订单上自动生成
 
-Invoice expense to your client
+费用开票给客户
 ------------------------------
 
-You can now invoice the invoiceable lines to your customer.
+现在就可以把所有发票行开票给你的客户了
 
 .. image:: media/reinvoice09.png
     :align: center

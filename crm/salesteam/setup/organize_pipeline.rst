@@ -1,40 +1,32 @@
 =======================================
-Set up and organize your sales pipeline
+设置和管理您的销售漏斗
 =======================================
 
-A well structured sales pipeline is crucial in order to keep control of
-your sales process and to have a 360-degrees view of your leads,
-opportunities and customers.
+一个结构良好的销售管道是为了保持对你销售过程的控制, 并有对您的线索, 
+机会和客户有360度视图。
 
-The sales pipeline is a visual representation of your sales process,
-from the first contact to the final sale. It refers to the process by
-which you generate, qualify and close leads through your sales cycle.
-In Odoo CRM, leads are brought in at the left end of the sales
-pipeline in the Kanban view and then moved along to the right from one
-stage to another.
+销售管道是销售过程的可视化表示, 从第一次接触到最终成交。它是指由您生成的, 
+通过你的销售周期和资格结束线索的过程。在Odoo CRM中, 线索在看板视图销售管道的左端, 
+再沿向右从一个阶段移动到另一个。
 
-Each stage refers to a specific step in the sale cycle and
-specifically the sale-readiness of your potential customer. The number
-of stages in the sales funnel varies from one company to another. An
-example of a sales funnel will contain the following stages:
-*Territory, Qualified, Qualified Sponsor, Proposition, Negotiation,
-Won, Lost*.
+每个阶段指在销售周期中的具体步骤和特别是你的潜在客户的销售准备。
+阶段数量在销售漏斗中各个公司是不同的。比如一个销售漏斗包含下列阶段 : 领域, 
+资格认证, 资格认证的保证, 主张, 谈判, 赢得, 丢失 。
 
 .. image:: ./media/team_kanban.jpg
    :align: center
 
-Of course, each organization defines the sales funnel depending on their
-processes and workflow, so more or fewer stages may exist.
+当然, 每个组织对销售渠道的定义取决于它们的流程和工作流, 
+所以多点或少一点的阶段都有可能。
 
-Create and organize your stages
+创建和组织你的阶段
 ===============================
 
-Add/ rearrange stages
+增加/重新安排阶段
 ---------------------
 
-From the sales module, go to your dashboard and click on the
-**PIPELINE** button of the desired sales team. If you don't have any
-sales team yet, you need to create one first.
+从销售模块, 进入你的仪表板和点击选中的销售团队的**漏斗** 按钮.
+如果你没有任何销售队伍, 你需要首先创建一个。
 
 .. todo:: link to the create salesteam page
 
@@ -43,114 +35,96 @@ sales team yet, you need to create one first.
 
 .. todo:: ***Kanban view*** link to the CRM terminologies page
 
-From the Kanban view of
-your pipeline, you can add stages by clicking on **Add new column.**
-When a column is created, Odoo will then automatically propose you to
-add another column in order to complete your process. If you want to
-rearrange the order of your stages, you can easily do so by dragging and
-dropping the column you want to move to the desired location.
+从你的漏斗看板视图中, 您可以通过点击 **增加新列** 添加阶段。当创建一个列, 
+Odoo将自动建议你为了完成你的过程而添加另一列。如果你想重新排列阶段的顺序, 
+你可以很容易地通过拖放移动列到所需位置。
 
 .. image:: ./media/add_column.png
    :align: center
 
 .. tip::
 
-    You can add as many stages as you wish, even if we advise you not having
-    more than 6 in order to keep a clear pipeline
+    你可以增加任意多的阶段, 但我们建议为了保持清楚的漏斗最好不要超过6列。
 
-Activate the lead stage
+激活线索阶段
 -----------------------
 
-Some companies use a pre qualification step to manage their leads before
-to convert them into opportunities. To activate the lead stage, go to
-:menuselection:`Configuration --> Settings` and select the radio button as shown
-below. It will create a new submenu **Leads** under **Sales** that
-gives you access to a listview of all your leads.
+有些公司使用一个预先验证步骤来管理他们的线索, 在将它们转换成机会之前。
+要激活领先阶段, 请访问菜单 :menuselection:`配置 --> 设置` 
+并选择"如果你想在创建商机或者客户之前需要资格步骤，那么就用线索", 
+如下图所示。这将在 **销售** 下面创造一个新的子菜单 **线索** , 让您可以访问所有的线索列表视图。
 
 .. image:: ./media/image01.jpg
    :align: center
 
-Set up stage probabilities
+设置阶段概率
 ==========================
 
-What is a stage probability?
+什么是阶段概率
 ----------------------------
 
-To better understand what are the chances of closing a deal for a given
-opportunity in your pipe, you have to set up a probability percentage
-for each of your stages. That percentage refers to the success rate of
-closing the deal.
+为了更好地了解什么是完成交易对于在你管道中一个给定的机会, 你必须为每个阶段设置概率百分比。
+这一比例是指完成交易的成功率。
 
-.. note:: Setting up stage probabilities is essential if you want to estimate the expected revenues of your sales cycle
+.. note:: 建立阶段的概率是至关重要的, 如果你想估计你销售周期的预期收入。
 
 .. todo:: estimate the expected revenues of your sales cycle (*link to the related topic*)
 
-For example, if your sales cycle contains the stages *Territory,
-Qualified, Qualified Sponsor, Proposition, Negotiation, Won and Lost,*
-then your workflow could look like this :
+比如, 如果你的销售周期包含阶段 *新建, 验证, 意向, 报价, 谈判, 赢得 和丢失,*
+然后你的工作流就可以这样 :
 
-- **Territory** : opportunity just received from Leads Management or
-  created from a cold call campaign. Customer's Interest is not
-  yet confirmed.
+- **新建** : 刚从领导管理层收到的机会，或是从冷呼叫活动中创造的机会。
+  客户的利益尚未确认。
 
-  *Success rate : 5%*
+  *成功率 : 5%*
 
-- **Qualified** : prospect's business and workflow are understood,
-  pains are identified and confirmed, budget and timing are known
+- **验证** : 潜在客户的业务和工作流程被理解，疼痛被识别和确认，预算和时间已知
   
-  *Success rate : 15%*
+  *成功率 : 15%*
 
-- **Qualified sponsor**: direct contact with decision maker has been
+- **意向**: 与决策者的直接联系已经完成
   done
   
-  *Success rate : 25%*
+  *成功率 : 25%*
 
-- **Proposition** : the prospect received a quotation
+- **报价** : 潜在客户收到报价
   
-  *Success rate : 50%*
+  *成功率 : 50%*
 
-- **Negotiation**: the prospect negotiates his quotation
+- **谈判**: 客户谈判他的报价
   
-  *Success rate : 75%*
+  *成功率 : 75%*
 
-- **Won** : the prospect confirmed his quotation and received a sales
-  order. He is now a customer
+- **赢得** : 确认了他的报价并收到了销售订单。他现在是客户
  
-  *Success rate : 100%*
+  *成功率 : 100%*
 
-- **Lost** : the prospect is no longer interested
+- **失败** : 潜在客户不再感兴趣
   
-  *Success rate : 0%*
+  *成功率 : 0%*
 
 .. tip:: 
 
-      Within your pipeline, each stage should correspond to a defined goal with
-      a corresponding probability. Every time you move your opportunity to the
-      next stage, your probability of closing the sale will automatically adapt.
+      在你的漏斗中，每个阶段应该对应一个具有相应概率的定义的目标。
+      每次你把机会转移到下一个阶段，你的关闭销售概率就会自动适应。
 
-      You should consider using probability value as **100** when the deal is
-      closed-won and **0** for deal closed-lost.
+      当交易被关闭时，您应考虑使用概率值为 **100** ，交易闭合时为 **0** 。
 
-How to set up stage probabilities? 
+如何设置阶段概率？
 -----------------------------------
 
-To edit a stage, click on the **Settings** icon at the right of the
-desired stage then on EDIT
+编辑一个阶段, 点击 **设置** 在选定的阶段的编辑上。
 
 .. image:: ./media/image08.jpg
    :align: center
 
-Select the Change probability automatically checkbox to let Odoo adapt
-the probability of the opportunity to the probability defined in the
-stage. For example, if you set a probability of 0% (Lost) or 100% (Won),
-Odoo will assign the corresponding stage when the opportunity is marked
-as Lost or Won.
+自动选择更改概率复选框让Odoo适应机会在阶段中中定义的几率。
+例如, 如果设置为0％(丢失)或100％(赢得)的概率, 
+Odoo分配相应的阶段当机会被标记为丢失或赢得。
 
 .. tip::
 
-    Under the requirements field you can enter the internal requirements for
-    this stage. It will appear as a tooltip when you place your mouse over the
-    name of a stage.
+    在需求字段可以输入这一阶段的内在要求。当您将鼠标移到阶段的名字就会出现一个提示。
 
 .. todo:: Read more
 

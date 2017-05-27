@@ -1,60 +1,47 @@
 ================================================================
-Automate lead assignation to specific sales teams or salespeople
+自动分配线索给特定的销售团队或销售员(社区版无此功能)
 ================================================================
 
-Depending on your business workflow and needs, you may need to dispatch
-your incoming leads to different sales team or even to specific
-salespeople. Here are a few example:
+根据您的业务流程和需求, 您可能需要分派您的进来的线索到不同的销售团队, 
+甚至具体的销售人员。这里有几个例子 :
 
-- Your company has several offices based on different geographical
-  regions. You will want to assign leads based on the region;
+- 你的公司有位于不同地区的办公室。你需要基于地区分配线索。
 
-- One of your sales teams is dedicated to treat opportunities from
-  large companies while another one is specialized for SMEs. You
-  will want to assign leads based on the company size;
+- 您的一个销售团队, 致力于大型企业到的机会而另一个是专门为中小型企业。
+  您将要根据公司的大小分配线索;
 
-- One of your sales representatives is the only one to speak foreign
-  languages while the rest of the team speaks English only.
-  Therefore you will want to assign to that person all the leads
-  from non-native English-speaking countries.
+- 您的一个销售代表的是讲外语, 而团队的其他成员只能讲母语。
+  因此, 你会想分配给那个人所有来自非母语国家的线索。
 
-As you can imagine, manually assigning new leads to specific individuals
-can be tedious and time consuming - especially if your company generates
-a high volume of leads every day. Fortunately, Odoo CRM allows you to
-automate the process of lead assignation based on specific criteria such
-as location, interests, company size, etc. With specific workflows and
-precise rules, you will be able to distribute all your opportunities
-automatically to the right sales teams and/or salesman.
+你可以想像, 手动分配新的线索给特定个人可能是乏味且耗时的 - 尤其是如果你的公司
+每天产生引线的高容量。幸运的是, Odoo CRM可以让你根据特定要求自动分配线索, 
+比如地点, 兴趣, 公司规模等, 在具体工作流程和精确的规则的过程中, 
+您将能够自动重新分配所有的机会给正确的销售团队和/或推销员。
 
-Configuration
+配置
 =============
 
-If you have just started with Odoo CRM and haven't set up your sales
-team nor registered your salespeople, :doc:`read this documentation first <../../overview/started/setup>`.
+如果你刚刚开始Odoo CRM而且没有设置您的销售团队, 也没有注册您的销售人员,  :doc:`先阅读本文档 。 <../../overview/started/setup>`.
 
 .. note::
-    You have to install the module **Lead Scoring**. Go to 
-    :menuselection:`Apps` and install it if it's not the case already.
+    你必须安装模块 **Lead Scoring线索评分** 。转到 **应用** , 如果没有安装，安装它。
 
-Define rules for a sales team
+为销售团队定义规则
 =============================
 
-From the sales module, go to your dashboard and click on the **More**
-button of the desired sales team, then on **Settings**. If you don't
-have any sales team yet, :doc:`you need to create one first <../../salesteam/setup/create_team>`.
+从销售模块, 进入你的仪表板和在期望的销售团队上点击 **更多** 按钮, 然后在 **设定** 。
+如果你没有任何的销售团队呢, :doc:`你需要先创建一个 <../../salesteam/setup/create_team>`
 
 .. image:: ./media/automatic01.jpg
    :align: center
 
 
-On your sales team menu, use in the **Domain** field a specific domain
-rule (for technical details on the domain refer on the
+在您的销售团队菜单, **域** 字段使用特定的域规则(关于域的技术细节, 参考构建模块教程
 `Building a Module tutorial <https://www.odoo.com/documentation/9.0/howtos/backend.html#domains>`__
 or `Syntax reference guide <https://www.odoo.com/documentation/9.0/reference/orm.html#reference-orm-domains>`__)
-which will allow only the leads matching the team domain.
+将只允许线索匹配团队域。
 
-For example, if you want your *Direct Sales* team to only receive leads
-coming from United States and Canada, your domain will be as following :
+例如, 如果你希望你的 **直接销售团队** 只接收从美国和加拿大来的线索, 你的 domain 将如下 :
 
 ``[[country_id, 'in', ['United States', 'Canada']]]``
 
@@ -63,35 +50,28 @@ coming from United States and Canada, your domain will be as following :
 
 .. note::
 
-	you can also base your automatic assignment on the score attributed to your
-	leads. For example, we can imagine that you want all the leads with a score
-	under 100 to be assigned to a sales team trained for lighter projects and
-	the leads over 100 to a more experienced sales team. Read more on :doc:`how to score leads here <lead_scoring>`.
+  您还可以基于您的线索评分进行自动分配。例如, 我们可以想像, 
+  你希望所有100下得分的线索分配给普通的销售团队和超过100分给更有经验销售团队。
+  了解更多关于 :doc:`这里怎么得分线索<lead_scoring>`.
 
-Define rules for a salesperson
+为销售员定义规则
 ==============================
 
-You can go one step further in your assignment rules and decide to
-assign leads within a sales team to a specific salesperson. For example,
-if I want Toni Buchanan from the *Direct Sales* team to receive only
-leads coming from Canada, I can create a rule that will automatically
-assign him leads from that country.
+你可以一步完成你的分配规则, 决定一个销售团队内部线索分配给特定的销售人员。
+例如, 如果我希望托尼·布坎南从 直接销售 只接受来自加拿大的线索, 我可以创建一个规则将自动分配他从该国来的线索的规则。
 
-Still from the sales team menu (see here above), click on the
-salesperson of your choice under the assignment submenu. Then, enter
-your rule in the *Domain* field.
+依然从销售团队菜单(见本文上面), 分配子菜单下点击您所选择的销售人员。
+然后, 在 *域* 字段中输入您的规则。
 
 .. image:: ./media/automatic03.jpg
    :align: center
 
 .. note::
 
-	In Odoo, a lead is always assigned to a sales team before to be assigned to
-	a salesperson. Therefore, you need to make sure that the assignment rule of
-	your salesperson is a child of the assignment rule of the sales team.
+	在Odoo, 线索总是先被分配到一个销售团队再分配给销售人员。因此, 你需要确保你的销售人员的分配规则是销售团队的分配规则的子类。
 
 .. seealso::
-
+s
 	* :doc:`../../overview/started/setup`
 
 	.. todo:: * How to assign sales activities into multiple sales teams?

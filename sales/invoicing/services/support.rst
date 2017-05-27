@@ -1,27 +1,22 @@
 ==================================================
-How to invoice a support contract (prepaid hours)?
+如何给支持合同开票(预付小时数)？
 ==================================================
 
-There are different kinds of service sales: prepaid volume of hours/days
-(e.g. support contract), billing based on time and material (e.g.
-billing consulting hours) and a fixed price contract (e.g. a project).
+有不同种类的销售服务 :预付小时数／天数(例如支持合同), 
+基于记工单的开票(例如咨询顾问时间)以及固定价格合同(例如一个项目)。
 
-In this section, we will have a look at how to sell and keep track of a
-pre-paid support contract.
+在本章节, 我们来看一下如何销售和追踪预支付的支持合同
 
-As an example, you may sell a pack of ``50 Hours`` of support at ``$25,000``.
-The price is fixed and charged initially. But you want to keep track of
-the support service you did for the customer.
+例如, 你可以销售一个价格为 ``$25,000`` 的 ``50小时`` 支持包。
+价格是固定的并且已经预先付款。但是你想跟踪你给客户的支持服务
 
-Configuration
+配置
 =============
 
-Install the Sales and Timesheet applications
+安装销售和工时表应用
 --------------------------------------------
 
-In order to sell services, you need to install the **Sales** application,
-from the **Apps** icon. Install also the **Timesheets** application if you want
-to track support services you worked on every contract.
+为了能销售服务, 你需要从 **APP** 图标安装 **销售** 模块, 并且安装从 **工时表** 应用
 
 .. image:: media/support01.png
     :align: center
@@ -29,131 +24,106 @@ to track support services you worked on every contract.
 .. image:: media/support02.png
     :align: center
 
-Create Products
+创建产品
 ---------------
 
-By default, products are sold by number of units. In order to sell
-services ``per hour``, you must allow using multiple unit of measures.
-From the **Sales** application, go to the menu 
-:menuselection:`Configuration --> Settings`.
-From this screen, activate the multiple **Unit of Measures** option.
+默认状况下, 产品是根据单位数量销售的, 为了能按 ``每小时`` 销售服务, 必须使用产品的多种计量单位, 
+在销售模块下, 进入菜单选项 :menuselection:`配置 --> 设置` , 
+在本页面激活 **多种计量单位** 选项。
 
 .. image:: media/support03.png
     :align: center
 
-In order to sell a support contract, you must create a product for every
-support contract you sell. From the **Sales** application, use the menu
-:menuselection:`Sales --> Products`, create a new product with the following setup:
+为了能够销售支持合同, 必须创建一个所有支持合同都能销售的产品。从 **销售** 应用下, 
+进入菜单选项 :menuselection:`销售 --> 产品`, 用以下步骤创建新的产品 :
 
--   **Name**: Technical Support
+-   **名称**: 技术支持
 
--   **Product Type**: Service
+-   **产品类型**: 服务
 
--   **Unit of Measure**: Hours
+-   **度量单位**: Hours
 
--   **Invoicing Policy**: Ordered Quantities, since the service is
-    prepaid, we will invoice the service based on what has been
-    ordered, not based on delivered quantities.
+-   **开票政策**: 订单数量，因为服务已预付，我们将根据已订购的订单发票，而不是基于交货数量。
 
--   **Track Service**: Timesheet on contracts. An analytic account will
-    automatically be created for every order containing this service
-    so that you can track hours in the related account.
+-   **跟踪服务**: 项目的工时表。将为包含此服务的每个订单自动创建分析帐户，以便跟踪相关帐户中的小时数。
 
 .. image:: media/support04.png
     :align: center
 
 .. tip:: 
-    There are different ways to track the service related to a sale 
-    order or product sold. With the above configuration, you can only 
-    sell one support contract per order. If your customer orders 
-    several service contracts on timesheet, you will have to split 
-    the quotation into several orders.
+    跟踪销售订单或销售产品相关服务有不同的方法。通过上述配置，
+    您只能按订单销售一个支持合同。如果您的客户在时间表上订购
+    多个服务合约，您将不得不将报价分成几个订单。
 
-Note that you can sell in different unit of measure than hours, example:
-days, pack of 40h, etc. To do that, just create a new unit of measure in
-the **Unit of Measure** category and set a conversion ratio compared to
-**Hours** (example: ``1 day = 8 hours``).
+请注意，您可以在不同的计量单位不是几小时，例如卖：天，40小时的包装等。
+要做到这一点，只是在衡量创建一个新的单位计量单位类别相比，并设置了转化率
+**时间** （例如：``1 day = 8 hours``）。
 
-Managing support contract
+管理支持合同
 =========================
 
-Quotations and Sale Orders
+报价单和销售订单
 --------------------------
 
-Once the product is created, you can create a quotation or a sale order
-with the related product. Once the quotation is confirmed and
-transformed into a sale order, your users will be able to record
-services related to this support contract using the timesheet
-application.
+创建产品后，您可以使用相关产品创建报价单或销售订单。
+一旦报价确认并转换成销售订单，您的用户将能够使用工时表
+应用程序记录与此支持合同相关的服务。
 
 .. image:: media/support05.png
     :align: center
 
-Timesheets
+工时表
 ----------
 
-To track the service you do on a specific contract, you should use the
-timesheet application. An analytic account related to the sale order has
-been automatically created (``SO009 - Agrolait`` on the screenshot here
-above), so you can start tracking services as soon as it has been sold.
+要跟踪一个特定合同上的服务, 需要使用记工单应用 。一个和销售订单关联的
+分析账户自动创建, (屏幕上的" SO009 - Agrolait "), 然后只要服务被销售掉就可以对之进行跟踪。
 
 .. image:: media/support06.png
     :align: center
 
 Control delivered support on the sale order
+在销售订单上控制已完成服务
 -------------------------------------------
 
-From the **Sales** application, use the menu 
-:menuselection:`Sales --> Sales Orders`  to control
-the progress of every order. On the sales order line related to the
-support contract, you should see the **Delivered Quantities** that are
-updated automatically, based on the number of hours in the timesheet.
+从销售应用程序中，使用菜单 :menuselection:`销售 --> 销售订单` 来控制每个订单的进度。
+在与支持合同相关的销售订单行中，您将看到根据时间表中的小时数自动更新的交货数量。
 
 .. image:: media/support07.png
     :align: center
 
-Upselling and renewal
----------------------
+向上销售和更新（Upselling and renewal）
+--------------------------------------
 
-If the number of hours you performed on the support contract is bigger
-or equal to the number of hours the customer purchased, the sale order
-**Invoicing Status** is automatically set to **Upselling**. This means you
-have an opportunity to sell an extra contract to the customer since he
-used all his quota of service.
+如果您在支持合同上执行的小时数大于或等于客户购买的小时数，
+则销售订单 **发票状态** 将自动设置为 **超售（Upselling）** 。
+这意味着您有机会向客户出售额外的合同，因为他使用了所有的服务配额。
 
-Periodically (ideally once every two weeks), you should check the sales
-order that are in an upselling status. To do this, go to the 
-:menuselection:`Sales --> Sales Order` menu and use the **Upselling** 
-filter to get all orders that are in upselling.
+定期（理想情况下每两周一次），您应该检查处于加售状态的销售订单。要执行此操作，
+请转到 :menuselection:`销售 --> 销售订单` ,并使用 **超售Upselling** 过滤器来获取所有订单。
 
 .. tip::
-    If you use Odoo CRM, a good practice is to create an opportunity for 
-    every sale order in upselling invoice status so that you easily track 
-    your upselling effort.
+    如果你使用Odoo CRM, 最好的方式就是为每个在超售销售开票状态的销售订单创建一个商机, 这样你就可以容易追踪超售销售
 
-If you sell an extra support contract, you can either add a new line on
-the existing sale order (thus, you continue to timesheet on the same
-order) or create a new order (thus, people will timesheet their hours on
-the new contract). To unmark the sale order as **Upselling**, you can set
-the sale order as done and it will disappear from your upselling list.
 
-Special Configuration
+如果您出售额外的支持合同，您可以在现有的销售订单上修改为新的数字。
+（因此，您继续按同一订单进行时间表）或创建新订单（因此，人们将在新合同上计时） 。
+要解除销售 **超售** ，你可以将销售订单的完成，它会从你的超售销售列表中消失。
+
+特殊配置
 =====================
 
-When creating the product form, you may set a different approach to
-track the service:
+创建产品表单时，您可以设置不同的方法来跟踪服务：
 
--   **Create task and track hours**: in this mode, a task is created for
-    every sale order line. Then when you do the timesheet, you don't
-    record hours on a sale order/contract, but you record hours on a
-    task (that represents the contract). The advantage of this
-    solution is that it allows to sell several service contracts
-    within the same sale order.
+-   **创建任务和跟踪时间**: 在此模式下，为每个销售订单行创建一个任务。然后，当您执行时间表时，
+    您不要在销售订单/合同上记录小时数，而是记录任务（代表合同）的时间。这个解决方案的优点是
+    允许在相同的销售订单中销售多个服务合同。
 
--   **Manually**: you can use this mode if you don't record timesheets in
-    Odoo. The number of hours you worked on a specific contract can
-    be recorded manually on the sale order line directly, in the
-    delivered quantity field.
+-   **手动**: 如果您不在Odoo中记录时间表，您可以使用此模式。您在特定合同上工作的小时数可以
+    直接在交货数量字段中在销售订单行手动记录。
+
+-   **项目的工时表** ：该属性下一个订单只能包含一个产品，
+    工时表在同一销售订单中你只能在工时表用一个产品。
+    如果多个服务的，只能创建多个销售单来解决。
 
 .. seealso::
     * :doc:`../../../inventory/settings/products/uom`

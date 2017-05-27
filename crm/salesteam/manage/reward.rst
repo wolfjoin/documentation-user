@@ -1,103 +1,84 @@
 ==========================================
-How to motivate and reward my salespeople?
+如何激励和奖励我的销售人员？
 ==========================================
 
-Challenging your employees to reach specific targets with goals and
-rewards is an excellent way to reinforce good habits and improve your
-salespeople productivity. The **Gamification** app of Odoo gives you simple
-and creative ways to motivate and evaluate your employees with real-time
-recognition and badges inspired by game mechanics.
+用目标和奖励来挑战你的员工达到具体的目的是加强好习惯和提高您的销售人员工作效率的好方法。 
+**游戏化Gamification**  的Odoo应用程序, 使用实时认证和徽章激励的游戏机制, 
+给您提供了简单和创造性的方式来激励评估员工。
 
-Configuration
+配置
 =============
 
-From the **Apps** menu, search and install the **Gamification** module.
-You can also install the **CRM gamification** app, which will add some
-useful data (goals and challenges) that can be used related to the
-usage of the **CRM/Sale** modules.
+从 **应用** 菜单, 搜搜并安装 **游戏化Gamification** 模块.
+这将增加一些可用于涉及到 CRM/销售 模块使用的有用数据(目标和挑战)。
 
 .. image:: media/reward01.png
     :align: center
 
-Create a challenge
+创建一个挑战
 ==================
 
-You will now be able to create your first challenge from the menu 
-:menuselection:`Settings --> Gamification Tools --> Challenges`.
+现在, 您可以从菜单中创建您的第一个挑战 ，销售菜单
+:menuselection:`设置 --> 游戏化工具 --> 挑战`.
 
 .. note::
-    As the gamification tool is a one-time technical setup, 
-    you will need to activate the technical features in order 
-    to access the configuration. In order to do so, click on 
-    the interrogation mark available from any app (upper-right) 
-    and click on **About** and then **Activate the developer mode**.
+    由于游戏化工具是一次性的技术设置, 您需要激活技术特点才能访问配置。
+    为了做到这一点, ODOO9请单击上任何应用程序(右上)的 关于 再 激活开发者模式 。
+    ODOO10,点击设置菜单，右下角点击
 
 .. image:: media/reward02.png
     :align: center
 
-A challenge is a mission that you will send to your salespeople. It can
-include one or several goals and is set up for a specific period of
-time. Configure your challenge as follows:
+一个挑战是你将发送到您的销售人员的任务。它可包括一个或多个目标, 
+并设置了一个特定的时间段。配置您的挑战如下 :
 
--   Assign the salespeople to be challenged
+-   分配要接受挑战的销售。
 
--   Assign a responsible
+-   分配责任人
 
--   Set up the periodicity along with the start and the end date
+-   用开始和结束日期建立周期性
 
--   Select your goals
+-   选择你的目标
 
--   Set up your rewards (badges)
+-   设置奖励(奖章)
 
 .. note::
-    Badges are granted when a challenge is finished. This is either 
-    at the end of a running period (eg: end of the month for a 
-    monthly challenge), at the end date of a challenge 
-    (if no periodicity is set) or when the challenge is manually closed.
+    当挑战完成时授予奖章，这是在一个运行周期关闭时（如：最后的每月挑战月），
+    在一个挑战的结束日期（如果没有周期性设置）或挑战时的手动关闭。
 
-For example, on the screenshot below, I have challenged 2 employees with
-a **Monthly Sales Target**. The challenge will be based on 2 goals: the
-total amount invoiced and the number of new leads generated. At the end
-of the month, the winner will be granted with a badge.
+例如, 在下面的截图, 我用 **月度销售目标** 挑战了2名员工。我们面临的挑战将基于2个目标 :总金额开具发票, 产生新的线索的数量。在月底, 获胜者将被授予徽章。
 
 .. image:: media/reward03.png
     :align: center
 
-Set up goals
+设立目标
 ------------
 
-The users can be evaluated using goals and numerical objectives to
-reach. **Goals** are assigned through **challenges** to evaluate (see
-here above) and compare members of a team with each others and through
-time.
+用户可使用的目标和达到数值目标进行评估。 分配 **目标** 并通过 **挑战** 评估(见本文上面)
+在团队成员之间进行比较及通过的时间。
 
-You can create a new goal on the fly from a **Challenge**, by clicking on
-**Add new item** under **Goals**. You can select any
-business object as a goal, according to your company's needs, such as :
+你可以一步建立一个 **挑战** , 通过点击在 **目标** 下 添加项目 。
+你可以选择任何业务作为一个目标, 按您公司的需要, 比如 :
 
--   number of new leads,
+-   新线索的数量
 
--   time to qualify a lead or
+-   验证线索的时间
 
--   total amount invoiced in a specific week, month or any other time
-    frame based on your management preferences.
+-   发票总量在特定的一周, 一个月或根据您的喜好管理其他任何时间框架。
 
 .. image:: media/reward04.png
     :align: center
 
 .. note::
-    Goals may include your database setup as well (e.g. set your 
-    company data and a timezone, create new users, etc.).
+    目标也包括你的数据库设立(比如 设定你的公司数据, 一个时区, 建立一个新用户, 等等)
 
-Set up rewards
+建立奖励
 --------------
 
-For non-numerical achievements, **badges** can be granted to users.
-From a simple *thank you* to an exceptional achievement, a badge is an
-easy way to exprimate gratitude to a user for their good work.
+对于非数值的成绩, **徽章** 可以授给用户。从一个简单的 *谢谢* 为一个特殊的成就, 
+徽章是感激用户优秀工作一个简单的方法。
 
-You can easily create a grant badges to your employees based on their
-performance under :menuselection:`Gamification Tools --> Badges`.
+您可以轻松创建一个授予徽章基于你的员工的表现 :菜单选择 :menuselection:`游戏化工具 --> 徽章`.
 
 .. image:: media/reward05.png
     :align: center

@@ -1,100 +1,79 @@
 =================================
-Overview of the invoicing process
+开票流程概述
 =================================
 
-Depending on your business and the application you use, there are
-different ways to automate the customer invoice creation in Odoo.
-Usually, draft invoices are created by the system (with information
-coming from other documents like sales order or contracts) and
-accountant just have to validate draft invoices and send the invoices in
-batch (by regular mail or email).
+基于你的业务场景以及你所使用的模块, 在Odoo中有几种不同的方式去自动触发客户发票。
+通常, 系统创建草稿发票(发票信息从其他单据例如销售订单或者合同)并且会计只需要确认
+草稿发票并且批量的发送即可(快递或者电子邮件)
 
-Depending on your business, you may opt for one of the following way to
-create draft invoices:
+基于你的业务场景, 可以选择以下方式的其中之一创建草稿发票 :
 
-:menuselection:`Sales Order --> Invoice`
+:menuselection:`销售订单 --> 开票`
 ----------------------------------------
 
-In most companies, salespeople create quotations that become sales order
-once they are validated. Then, draft invoices are created based on the
-sales order. You have different options like:
+在大多数公司，销售人员创建报价，一旦验证成为销售订单。然后，根据销售订单创建草稿发票。
+你有不同的选择，如：
 
--  Invoice on ordered quantity: invoice the full order before
-   triggering the delivery order
+-  基于订单数量开票 :在触发交货单之前给整张订单开票
 
--  Invoice based on delivered quantity: see next section
+-  基于交货数量开票 :见下一部分
 
-Invoice before delivery is usually used by the eCommerce application
-when the customer pays at the order and we deliver afterwards.
-(pre-paid)
+发货之前开票通常用于电商应用中, 通常都是客户先付钱之后我们发货给他们(预付)。
 
-For most other use cases, it's recommended to invoice manually. It
-allows the salesperson to trigger the invoice on demand with options:
-invoice ready to invoice line, invoice a percentage (advance), invoice a
-fixed advance.
+对于其余大多数用例, 建议手工开票。这能让销售人员有选择地开票 :基于订单行开票, 
+基于百分比开票(预付), 基于固定价格开票。
 
-This process is good for both services and physical products.
+该过程适用与服务类型的产品和实物类产品
 
 .. todo:: Read more: *Invoice based on sales orders.*
 
-:menuselection:`Sales Order --> Delivery --> Invoice`
+:menuselection:`销售订单 --> 交货 --> 开票`
 -----------------------------------------------------
 
-Retailers and eCommerce usually invoice based on delivered quantity ,
-instead of sales order. This approach is suitable for businesses where
-the quantities you deliver may differs from the ordered quantities:
-foods (invoice based on actual Kg).
+零售和电商通常根据交货数量开票, 而不是基于销售订单。
+此种方法适用于业务场景中实际发货数量和订单数量不一致的情况 :食品(根据实际发出的公斤数开票)。
 
-This way, if you deliver a partial order, you only invoice for what you
-really delivered. If you do back orders (deliver partially and the rest
-later), the customer will receive two invoices, one for each delivery
-order.
+该方法下, 如果你部分发货, 只需要为实际发出的数量开票。
+如果需要未完成订单的话(部分发货和稍晚剩余发出), 客户会收到基于两次发货生成的两个发票。
 
 .. todo::
     Read more: *Invoice based on delivery orders.*
 
-:menuselection:`Recurring Contracts (subscriptions) --> Invoices`
+:menuselection:`定期合同（订阅） --> 开票`
 -----------------------------------------------------------------
 
-For subscriptions, an invoice is triggered periodically, automatically.
-The frequency of the invoicing and the services/products invoiced are
-defined on the contract.
+对于订阅, 发票会定期地, 自动地生成。生成发票频率以及服务／产品已经在合同上定义好了。
 
 .. todo::
     Read more: *Subscription based invoicing.*
 
-:menuselection:`eCommerce Order --> Invoice`
+:menuselection:`电商订单 --> 开票`
 --------------------------------------------
 
-An eCommerce order will also trigger the creation of the order when it
-is fully paid. If you allow paying orders by check or wire transfer,
-Odoo only creates an order and the invoice will be triggered once the
-payment is received.
+电子商务订单还将在完全付款时触发订单的创建。如果您允许通过支票或电汇支付订单，
+doo只会创建一个订单，一旦收到付款，发票将被触发。
 
-Creating an invoice manually
+手工创建发票
 ----------------------------
 
-Users can also create invoices manually without using contracts or a
-sales order. It's a recommended approach if you do not need to manage
-the sales process (quotations), or the delivery of the products or
-services.
+用户也可以不通过合同或者销售订单手工的创建发票。
+如果没有使用销售模块(报价)以及仓库模块, 建议使用手工创建发票。
 
-Even if you generate the invoice from a sales order, you may need to
-create invoices manually in exceptional use cases:
+及时可以从销售订单中创建发票, 在一些特殊场景中还是需要手工创建发票 :
 
--  if you need to create a refund
+-  如果需要创建退款
 
--  If you need to give a discount
+-  如果需要折扣
 
--  if you need to change an invoice created from a sales order
+-  如果需要变更为从销售订单开票
 
--  if you need to invoice something not related to your core business
+-  如果需要对不是主营业务的交易开票
 
-Others
+其它
 ------
 
-Some specific modules are also able to generate draft invoices:
+一些特定的模块还能够生成草稿发票 :
 
--  membership: invoice your members every year
+-  会员 :每年向会员开票
 
--  repairs: invoice your after-sale services
+-  维修 :售后服务的开票

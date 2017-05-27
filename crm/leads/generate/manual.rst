@@ -1,65 +1,55 @@
 ======================================
-How to create a contact into Odoo CRM?
+如何在ODOO CRM中创建客户联系人?
 ======================================
 
-Odoo CRM allows you to manually add contacts into your pipeline. It can
-be either a lead or an opportunity.
+Odoo CRM可让在你的漏斗手动添加联系。它可以是线索或机会。
 
-Activate the lead stage
+激活线索阶段
 =======================
 
-By default, the lead stage is not activated in Odoo CRM. To activate it,
-go to :menuselection:`Sales --> Configuration --> Settings`, select the option ""use leads
-if…** as shown below and click on **Apply**.
+默认情况下, 线索阶段在Odoo CRM. 里是不激活的. 要激活它的话, 
+去 :menuselection:`销售 --> 配置 --> 设置`, 
+如下所示选择选项 **如果你想在创建商机或者客户之前需要资格步骤，那么就用线索** 并点击 **应用** 。
 
 .. image:: ./media/manual01.jpg
 	:align: center
 
-This activation will create a new submenu **Leads** under
-**Sales** that gives you access to a list of all your leads from
-which you will be able to create a new contact.
+这个激活会在 **销售** 里产生一个新的子菜单 **线索** ,使你可以访问所有你的线索并创建新的联系人。
 
 .. image:: ./media/manual02.jpg
 	:align: center
 
-Create a new lead
+创建新线索
 =================
 
-Go to :menuselection:`Sales --> Leads` and click the **Create** button.
+进入菜单 :menuselection:`销售 --> 线索` ,并点击 **创建** 按钮.
 
 .. image:: ./media/manual03.jpg
 	:align: center
 
-From the contact form, provide all the details in your possession
-(contact name, email, phone, address, etc.) as well as some additional
-information in the **Internal notes** field. You can also link the
-lead to an existing company by editing the**Customer** field. Click
-on save and the contact will be visible as a lead in your pipeline .
+从联系表格中，提供您拥有的所有细节（联系人姓名，电子邮件，电话，地址等）以及内部备注字段
+中的一些其他信息。您还可以通过编辑 **客户** 字段将潜在客户链接到现有公司。
+点击保存，联系人将作为您的漏斗中的潜在客户看到。
 
 .. note::
 
-	your lead can be directly handed over to specific sales team and salesperson
-	by clicking on **Convert to Opportunity** on the upper left corner of the screen.
+	你的线索可以直接交给指定的销售团队和销售人员通过点击在屏幕左上角的 **转换成商机**
 
-Create a new opportunity
+
+创建新商机
 ========================
 
-You can also directly add a contact into a specific sales team without
-having to convert the lead first. On the Sales module, go to your
-dashboard and click on the **Pipeline** button of the desired sales
-team. If you don't have any sales team yet, :doc:`you need to create one first <../../salesteam/setup/create_team>`.
-Then, click on **Create** and fill in the contact details as shown here
-above. By default, the newly created opportunity will appear on the
-first stage of your sales pipeline.
+您也可以直接将联系添加到特定的销售团队, 而无需先转换成线索。在销售模块,
+进入你的仪表板和点击所需的销售团队的 **漏斗** 按钮。如果你没有任何的销售团队呢,
+:doc:`you need to create one first <../../salesteam/setup/create_team>`。
+然后, 点击 **创建** 并如上图所示的方法填写联系情况。
+默认情况下, 新创建的机会将出现在您的销售管道的第一个阶段。
 
-Another way to create an opportunity is by adding it directly on a
-specific stage. For example, if you have have spoken to Mr. Smith at a
-meeting and you want to send him a quotation right away, you can add his
-contact details on the fly directly into the **Proposition** stage. From
-the Kanban view of your sales team, just click on the **+** icon
-at the right of your stage to create the contact. The new opportunity
-will then pop up into the corresponding stage and you can then fill in
-the contact details by clicking on it.
+
+另一个创建机会的方式是直接在特定阶段添加。比如, 如果你已经和史密斯先生在会议上
+说过并且你马上要发一个报价给他。你可以直接添加他的联系细节在“主张" 阶段. 
+从你的销售团队的看板视图, 点击在你的阶段的右侧的 **+** 图标以生成联系情况。
+新的机会会在相对应的阶段显示, 然后你可以点击它填写具体的联系情况
 
 .. image:: ./media/manual04.png
 	:align: center

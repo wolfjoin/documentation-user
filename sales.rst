@@ -1,7 +1,7 @@
 :banner: banners/sales.jpg
 
 =====
-Sales
+销售
 =====
 
 .. toctree::

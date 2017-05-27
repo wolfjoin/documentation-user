@@ -1,129 +1,127 @@
 ==============================================================
-How to adapt your prices to your customers and apply discounts
+如何使您的价格适应您的客户并应用折扣
 ==============================================================
 
-Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
-A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
-You can set several critarias to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
-As pricelists only suggest prices, they can be overridden by users completing sales orders.
-Choose your pricing strategy from :menuselection:`Sales --> Settings`.
+Odoo具有强大的价格表功能，可支持针对您的业务定制的定价策略。价目表是Odoo搜索确定
+建议价格的价格或价格规则清单。您可以设置几个批判使用特定的价格：期间，最小。
+销售数量（满足最低订购量并获得价格突破）等。价格表仅提供价格，可以由完成
+销售订单的用户覆盖。从 :menuselection:`销售 --> 设置` 中选择您的定价策略。
 
 
 .. image:: ./media/pricing_options.png
    :align: center
 
-Several prices per product 
+产品价格有几个
 ==========================
 
-To apply several prices per product, select *Different prices per customer
-segment* in :menuselection:`Sales --> Settings`. Then open the *Sales* tab
-in the product detail form. You can settle following strategies.
+要为每个产品应用几个价格，请在 :menuselection:`销售 --> 设置` 中选中每个客户不同价格的选项。
+然后在产品详细信息表单中打开销售选项卡。您可以解决以下策略。
 
-Prices per customer segment 
+每个客户群的价格
 ---------------------------
 
-Create pricelists for your customer segments: e.g. registered, premium, etc.
+为您的客户群创建价目表：例如注册，保费等
 
 .. image:: ./media/pricing_customer.png
    :align: center
 
-The default pricelist applied to any new customer is *Public Pricelist*. To
-segment your customers, open the customer detail form and change the *Sale
-Pricelist* in the *Sales & Purchases* tab.
+适用于任何新客户的默认价目表是 **公开价格表**。
+要分配客户，请打开客户详细信息表单，并在销售和采购选项卡中更改销售价格表。
 
 .. image:: ./media/customer_pricelist.png
    :align: center
 
-Temporary prices
+临时价格
 ----------------
 
-Apply deals for bank holidays, etc. Enter start and end dates dates.
+申请银行假期等交易。输入开始和结束日期。
 
 .. image:: ./media/pricing_period.png
    :align: center
 
 .. tip::
-    Make sure you have default prices set in the pricelist outside of the
-    deals period. Otherwise you might have issues once the period over.
+    确保您在交易期限之外的价格表中设置了默认价格。否则你可能会有一个问题一旦结束。
 
-Prices per minimum quantity
+最小数量价格
 ---------------------------
 
 .. image:: ./media/pricing_quantity.png
    :align: center
 
 .. note::
-    The prices order does not matter. The system is smart and applies
-    first prices that match the order date and/or the minimal quantities.
+    价格顺序并不重要。该系统是智能的，并应用与订单日期和/或最小数量匹配的第一个价格。
 
-Discounts, margins, roundings
+折扣，边际，四舍五入
 =============================
 
-The third option allows to set price change rules. 
-Changes can be relative to the product list/catalog price, the product cost price, 
-or to another pricelist. Changes are calculated via discounts or surcharges and can be 
-forced to fit within floor (minumum margin) and ceilings (maximum margins). 
-Prices can be rounded to the nearest cent/dollar or multiple of either 
-(nearest 5 cents, nearest 10 dollars). 
+定价第三个选项基于公式允许设定价格变动规则。更改可能与产品列表/目录价格，
+产品成本价格或其他价格表相关。
+更改是通过折扣或附加费计算的，并且可能被迫适应楼层（最小限度）和最高限额（最大利润）。
+价格可以四舍五入到最接近的美元或美元，或者是最近的5美分，最接近10美元。
 
-Once installed go to
-:menuselection:`Sales --> Configuration --> Pricelists`
-(or :menuselection:`Website Admin --> Catalog --> Pricelists` if you
-use e-Commerce).
+一旦安装，去菜单
+:menuselection:`销售 --> 配置 --> 价格表`
+(或者 如果您使用电子商务 ，去菜单 :menuselection:`网站管理员 --> 分类 --> 价格表` 
 
 .. image:: ./media/pricing_formula.png
    :align: center
 
-Each pricelist item can be associated to either all products, to a product internal category (set of products) or to a specific product. Like in second option, you can set dates and minimum quantities.
+每个价目表项可以与所有产品，产品内部类别（产品组）或特定产品相关联。
+像第二个选项一样，您可以设置日期和最小数量。
 
 .. image:: ./media/pricelist_apply.png
    :align: center
 
 .. note::
 
-    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item. 
+    * 再次说明系统是智能的。如果为特定项目设置了规则，而为其类别设置了另一个规则，
+    则Odoo将采用该项目的规则。
 
-    * Make sure at least one pricelist item covers all your products.
+    * 确保至少一个价目表项目涵盖您的所有产品。
   
-There are 3 modes of computation: fix price, discount & formula.
+有三种计算方式：固定价格，折扣和公式。
 
 .. image:: ./media/price_computation.png
    :align: center
 
-Here are different price settings made possible thanks to formulas.
+这里是不同的价格设置，由于公式可能。
 
-Discounts with roundings
+折扣优惠
 ------------------------
 
-e.g. 20% discounts with prices rounded up to 9.99.
+例如20％的折扣，价格上涨到9.99。
 
 .. image:: ./media/formula_discount.png
    :align: center
 
-Costs with markups (retail)
+加价（零售）
 ---------------------------
 
-e.g. sale price = 2*cost (100% markup) with $5 of minimal margin.
+例如售价= 2 *成本（100％加价），最低毛利为5美元。e
 
 .. image:: ./media/formula_cost.png
    :align: center
 
-Prices per country
+每个国家的价格
 ==================
-Pricelists can be set by countries group.
-Any new customer recorded in Odoo gets a default pricelist, i.e. the first one in the list matching the country. In case no country is set for the customer, Odoo takes the first pricelist without any country group.
 
-The default pricelist can be replaced when creating a sales order.
+每个国家的价格价目表可由国家组设定。在Odoo记录的任何新客户都会获得默认的价格表，
+即列表中匹配该国家的第一个。如果没有为客户设置任何国家，
+Odoo将不会有任何国家组的第一个价格表。
 
-.. tip:: You can change the pricelists sequence by drag & drop in list view. 
 
-Compute and show discount % to customers
+
+创建销售订单时，可以替换默认的价格表。
+
+.. tip:: 您可以通过在列表视图中拖放来更改价格表序列。 
+
+计算并显示折扣％给客户
 ========================================
 
-In case of discount, you can show the public price and the computed discount % on printed sales orders and in your eCommerce catalog. To do so:
+在折扣的情况下，您可以显示公开价格和打印销售订单和电子商务目录中的计算折扣％。这样做：
 
-* Check *Allow discounts on sales order lines* in :menuselection:`Sales --> Configuration --> Settings --> Quotations & Sales --> Discounts`.
-* Apply the option in the pricelist setup form.
+* 检查 *允许销售订单行中的折扣* in :menuselection:`销售 --> 配置 --> 设置 --> Quotations & Sales --> Discounts`.
+* 在价格表设置表单中 **开票策略** 应用 *给客户显示公开的价格和折扣* 该选项。
 
 .. image:: ./media/discount_options.png
    :align: center

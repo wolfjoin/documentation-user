@@ -1,46 +1,41 @@
 ================================================
-How to display optional products on a quotation?
+如何在报价显示可选产品？
 ================================================
 
-Overview
+概述
 ========
 
-The use of suggested products is a marketing strategy that attempts 
-to increase the amount a customer spends once they begin the buying 
-process. For instance, a customer purchasing a cell phone could be 
-shown accessories like a protective case, a screen cover, and headset. 
-In Odoo, a customer can be presented with additional products that are 
-relevant to their chosen purchase in one of several locations.
+建议产品的使用是一种营销策略, 能够吸引客户在购买过程中花费更多。
+例如, 当客户购买手机的时候, 一些配件, 例如保护盖, 保护屏, 耳机等可
+以作为配套出现。在Odoo中, 客户可以和额外的产品一并呈现出来。
 
-Configuration
+配置
 =============
 
-Suggested products can be added to quotations directly, or to the ecommerce 
-platform via each product form. In order to use suggested products, you will
-need to have the **Ecommerce** app installed:
+建议产品能被直接加到报价中, 或者通过每个产品界面到电商平台。
+为了使用建议产品, 你需要安装 **电商 Ecommerce** 模块。
 
-Quotations
+报价单
 ----------
 
-To add suggested products to quotations, you must first enable online quotations 
-in the Sales app from :menuselection:`Configuration --> Settings`. Doing so will 
-prompt you to install the Website app if you haven't already.
+要添加建议产品到报价单, 您必须首先从销售
+:menuselection:`配置 --> 设置`，启用 **客户** 分组中的 **在线报价单** 中的 **
+发送顾客可以在线批准和支付的报价单(高级功能)** .
+这样做会提示你安装的网站应用程序, 如果你还没装的话。
 
 .. image:: media/optional01.png
     :align: center
 
-You will then be able to add suggested products to your individual quotations and 
-quotation templates under the **Suggested Products** tab of a quotation.
+然后你可以添加建议产品到你的各个报价或在 **建议产品** 标签页的报价模板中。
 
 .. image:: media/optional02.png
     :align: center
 
-Website Sales
+网站销售
 -------------
 
-You can add suggested products to a product on its product form, under the Website 
-heading in the **Sales** tab. **Suggested products** will appear on the *product* 
-page, and **Accessory Products** will appear on the *cart* page prior to checkout.
+你可以添加推荐产品到产品的界面, 在网站的 **销售** 页签下。 **推荐产品** 会显示在 **产品** 页, 
+**配套产品** 会在结账前显示在 购物车 页。
 
 .. image:: media/optional06.png
     :align: center

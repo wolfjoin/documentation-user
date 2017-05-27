@@ -1,63 +1,54 @@
 ===========================================
-How to create and edit an online quotation?
+如何创建并编辑一个网上报价？
 ===========================================
 
-Configuration
+配置
 =============
 
-Enable Online Quotations
+激活网上报价
 ------------------------
 
-To send online quotations, you must first enable online quotations in the Sales app
-from :menuselection:`Configuration --> Settings`. Doing so will prompt you to install 
-the Website app if you haven't already.
+为了发送网上报价, 您必须首先从销售 :menuselection:`配置 --> 设置`，
+启用 **客户** 分组中的 **在线报价单** 中的 **发送顾客可以在线批准和支付的报价单(高级功能)** .
+这样做会提示你安装的网站应用程序, 如果你还没装的话。
 
 .. image:: media/creation01.png
     :align: center
 
-You can view the online version of each quotation you create after enabling this setting
-by selecting **Preview** from the top of the quotation.
+在报价的顶部选择 **预览** 后, 你可以查看每个报价的网站版本。
 
 .. image:: media/creation02.png
     :align: center
 
-Edit Your Online Quotations
+编辑您的在线报价
 ---------------------------
 
-The online quotation page can be edited for each quotation template in the Sales app
-via :menuselection:`Configuration --> Quotation Templates`. From within any quotation 
-template, select **Edit Template** to be taken to the corresponding page of your website. 
+通过菜单选项 :menuselection:`配置 --> 销售 --> 报价模板(Quotation Templates)`, 
+可以编辑网上报价。在报价模板中选择和你的网上报价相关的模板。
 
 .. image:: media/creation03.png
     :align: center
 
-You can add text, images, and structural elements to the quotation page by dragging 
-and dropping blocks from the pallet on the left sidebar menu. A table of contents 
-will be automatically generated based on the content you add.
+您可以从左侧边栏菜单上的托盘拖动, 放置模块来添加文本, 图像, 结构元素到报价页中。
+表的内容会根据你添加的内容自动生成。
 
-Advanced descriptions for each product on a quotation are displayed on the online quotation 
-page. These descriptions are inherited from the product page in your eCommerce Shop, and 
-can be edited directly on the page through the inline text editor.
+每个产品的进一步的描述显示在网页的报价上。这些描述继承于你的电子商店的产品页, 
+并且可以直接通过内嵌文本编辑器的页面上被编辑
 
 .. image:: media/creation04.png
     :align: center
 
-You can choose to allow payment immediately after the customer validates the quote by selecting 
-a payment option on the quotation template.
+你可以选择允许立即支付, 当客户通过在报价模板上选择付费模式验证这个报价后。
 
-You can edit the webpage of an individual quotation as you would for any web page by clicking 
-the **Edit** button. Changes made in this way will only affect the individual quotation.
+您可以通过点击 **编辑** 按钮, 为任何网页编辑单个报价。以这种方式进行的更改只会影响个别报价。
 
-Using Online Quotations
+使用网上报价
 =======================
 
-To share an online quotation with your customer, copy the URL of the online quotation, 
-then share it with customer.
+让你的客人分享你的网上报价, 复制这个网上报价的链接, 然后共享给你的客户。
 
 .. image:: media/creation05.png
     :align: center
 
-Alternatively, your customer can access their online quotations by logging into your 
-website through the customer portal. Your customer can accept or reject the quotation, 
-print it, or negotiate the terms in the chat box. You will also receive a notification 
-in the chatter within Odoo whenever the customer views the quotation.
+此外, 客户可以通过客户门户网站登录到您的网站访问他们的网上报价。您的客户可以接受或拒绝的报价,
+打印, 或在聊天框中协商条款。您也可在内部Odoo聊天工具收到通知, 当客户查看报价时。

@@ -1,124 +1,98 @@
 =======================================
-How to invoice milestones of a project?
+如何给项目里程碑开票？
 =======================================
 
-There are different kind of service sales: prepaid volume of hours/days
-(e.g. support contract), billing based on time and material (e.g.
-billing consulting hours) or a fixed price contract (e.g. a project).
+有各种不同的销售服务 :按小时/天数预付(比如 支持合同), 基于时间和物料的账单(例如 
+顾问小时数的账单)或者一个固定价格的合同(比如, 一个项目).
 
-In this section, we will have a look at how to invoice milestones of a
-project.
+在本节中, 我们将看看如何按项目的里程碑开发票。
 
-Milestone invoicing can be used for expensive or large scale projects,
-with each milestone representing a clear sequence of work that will
-incrementally build up to the completion of the contract. For example, a
-marketing agency hired for a new product launch could break down a
-project into the following milestones, each of them considered as one
-service with a fixed price on the sale order :
+按里程碑开票可以用在昂贵的或大型项目上, 每个里程碑代表了一个明确的工作序列号并将逐步建立来完成合同。
+例如, 聘请的营销机构把一个产品的发布分解成以下的里程碑, 
+其中每一个在销售订单中都被作为一个固定价格的服务：
 
--  Milestone 1 : Marketing strategy audit - 5 000 euros
+-  里程碑1 :市场营销战略审计 - 5000欧元
 
--  Milestone 2 : Brand Identity - 10 000 euros
+-  里程碑2 :品牌识别 - 10000欧元
 
--  Milestone 3 : Campaign launch & PR - 8 500 euros
+-  里程碑3 :活动启动及公关 - 8500欧元
 
-In this case, an invoice will be sent to the customer each time a
-milestone will be successfully reached. That invoicing method is
-comfortable both for the company which is ensured to get a steady cash
-flow throughout the project lifetime and for the client who can monitor
-the project's progress and pay in several times.
+在这种情况下, 每当一个里程碑将成功地达到目标时发票被发送给客户。
+这种开票的方法对于想通过项目周期确保得到稳定的现金流的公司和想监控
+项目进度分几次付款的客户都觉得很舒服。
 
 .. note::
-    You can also use milestones to invoice percentages of the entire 
-    project. For example, for a million euros project, your company 
-    might require a 15% upfront payment, 30% at the midpoint and the 
-    balance at the contract conclusion. In that case, each payment will 
-    be considered as one milestone.
+    你也可以使用里程碑的方式按项目的百分比开票。比如, 对于一个百万欧元的项目, 
+    你的公司也许需要预付15%的款项, 在中点再付30%, 合同结束时付余清余款。
+    在这种情况下, 每个付款都被看作一个里程碑。
 
-Configuration
+配置
 =============
 
-Install the Sales application
+安装销售模块
 -----------------------------
 
-In order to sell services and to send invoices, you need to install the
-**Sales** application, from the **Apps** icon.
+为了销售服务和发送发票，您需要从Apps图标安装 **销售** 模块。
 
 .. image:: media/milestones01.png
     :align: center
 
-Create products
+创建产品
 ---------------
 
-In Odoo, each milestone of your project is considered as a product. From
-the **Sales** application, use the menu :menuselection:`Sales --> Products`, 
-create a new product with the following setup:
+在Odoo，您的项目的每个里程碑被认为是一个产品。从销售应用程序，
+使用销售菜单 :menuselection:`销售 --> 产品`, ，创建一个新产品与以下设置：
 
--   **Name**: Strategy audit
+-   **名称** ：策略审核
 
--   **Product Type**: Service
+-   **产品类型** ：服务
 
--   **Invoicing Policy**: Delivered Quantities, since you will invoice
-    your milestone after it has been delivered
+-   **开票策略** ：交付数量，因为您将在发货后发送里程碑
 
--   **Track Service**: Manually set quantities on order, as you
-    complete each milestone, you will manually update their quantity
-    from the **Delivered** tab on your sale order
+-   **跟踪服务**：手动设置订单数量，当您完成每个里程碑时，您将从销售订单上的“ 已发送 ”选项卡手动更新其数量
 
 .. image:: media/milestones02.png
     :align: center
 
 .. note::
-    Apply the same configuration for the others milestones.
+    对其他里程碑应用相同的配置。
 
-Managing your project
+管理项目
 =====================
 
-Quotations and sale orders
+报价单及销售订单
 --------------------------
 
-Now that your milestones (or products) are created, you can create a
-quotation or a sale order with each line corresponding to one milestone.
-For each line, set the **Ordered Quantity** to ``1`` as each milestone is
-completed once. Once the quotation is confirmed and transformed into a
-sale order, you will be able to change the delivered quantities when the
-corresponding milestone has been achieved.
+现在你的里程碑(或产品)生成了, 你能创建一个报价或者订单, 每行对应一个里程碑。
+每行设置 **订购量** 为1当每个里程碑完成时。当报价被确认并转化成一个销售订单, 你可以更改发货数量当对应的里程碑达到目标时。
 
 .. image:: media/milestones03.png
     :align: center
 
-Invoice milestones
+里程碑开票
 ------------------
 
-Let's assume that your first milestone (the strategy audit) has been
-successfully delivered and you want to invoice it to your customer. On
-the sale order, click on **Edit** and set the **Delivered Quantity** of the
-related product to ``1``.
+让我们假设你的第一个里程碑(战略审计)已成功交付并要其开具发票给客户。在销售订单, 
+点击 **编辑** , 并设置相关产品的 **交货数量** 为 ``1`` 。
 
 .. tip::
-    As soon as the above modification has been saved, you will notice 
-    that the color of the line has changed to blue, meaning that the 
-    service can now be invoiced. In the same time, the invoice status 
-    of the SO has changed from **Nothing To Invoice** to **To Invoice**
+    当上述修改已经保存, 你会发现, 线的颜色变为蓝色, 这意味着该服务现在可以开具发票。
+    在同一时间, 所以发票的状态已经从 **没有可开发票** 到 **可开票**
 
-Click on **Create invoice** and, in the new window that pops up, select
-**Invoiceable lines** and validate. It will create a new invoice (in draft
-status) with only the **strategy audit** product as invoiceable.
+点击 **创建发票** , 并在新的弹出窗口中选择 **可开票的明细行** 并 **创建并查看**。
+这将创建一个新的发票(处于草案状态), 发票明细只包含 **里程碑1 :市场营销战略审计**。
 
 .. image:: media/milestones04.png
     :align: center
 
 .. note::
-    In order to be able to invoice a product, you need to set up the 
-    **Accounting** application and to configure an accounting journal 
-    and a chart of account. Click on the following link to learn more:
+    为了能够为产品开票, 你需要设置 **会计** 模块和配置会计日记账和科目表。点击以下链接了解详情 
     :doc:`../../../accounting/overview/getting_started/setup`
 
-Back on your sale order, you will notice that the **Invoiced** column of
-your order line has been updated accordingly and that the **Invoice
-Status** is back to **Nothing to Invoice**.
+回到您的销售订单上, 你会发现, 你的订单行的 **已开发票** 的列进行了相应的更新, 
+而且销售订单列表中的 **发票状态** 字段回到了 **没有要开发票的** 。
 
-Follow the same workflow to invoice your remaining milestones.
+按一样的流程为你剩下的里程碑开票
 
 .. seealso::
     * :doc:`reinvoice`

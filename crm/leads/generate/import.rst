@@ -1,88 +1,68 @@
 ==================================
-How to import contacts to the CRM?
+如何导入联系人到CRM?
 ==================================
 
-In Odoo CRM, you can import a database of potential customers, for
-instance for a cold emailing or cold calling campaign, through a CSV
-file. You may be wondering if the best option is to import your contacts
-as leads or opportunities. It depends on your business specificities and
-workflow:
+在Odoo CRM, 您可以通过CSV文件导入潜在客户的数据库, 例如陌生的电子邮件或陌生的电话拜访活动。
+你可能会想, 如果最好的选择是导入你的联系情况作为线索或机会。
+这取决于你的业务特点和工作流程 :
 
--  Some companies may decide to not use leads, but instead to keep all
-   information directly in an opportunity. For some companies, leads
-   are merely an extra step in the sales process. You could call
-   this extended (start from lead) versus simplified (start from
-   opportunity) customer relationship management.
+-  一些公司可能决定不使用线索, 而是直接保持所有信息作为机会。对于一些公司, 
+   线索仅仅是在销售过程中的额外步骤。你可以称之为扩展(从开始线索)与简化的客户
+   关系管理(从机会开始).
 
--  Odoo perfectly allows for either one of these approaches to be
-   chosen. If your company handles its sales from a pre
-   qualification step, feel free to activate first the lead stage as
-   described below in order to import your database as leads
+-  Odoo完全允许这些方法中的选择任何一个。如果你的公司处理从一个预先验证步骤的销售, 
+   如下面顺序描述首先激活线索阶段以便可以作为线索导入数据库。
 
-Activate the lead stage
+激活线索阶段
 =======================
 
-By default, the lead stage is not activated in Odoo CRM. If you want to
-import your contacts as leads rather than opportunities, go to
-:menuselection:`Configuration --> Settings`, select the option **use leads
-if…** as shown below and click on **Apply**.
+默认情况下, 线索阶段在Odoo CRM. 里是不激活的. 要激活它的话, 
+去 :menuselection:`销售 --> 配置 --> 设置`, 
+如下所示选择选项 **如果你想在创建商机或者客户之前需要资格步骤，那么就用线索** 并点击 **应用** 。
 
 .. image:: ./media/import01.jpg
    :align: center
 
-This activation will create a new submenu :menuselection:`Sales --> Leads`
-from which you will be able to import your contacts from the
-**Import** button (if you want to create a lead manually, :doc:`click here <manual>`)
+这种激活将创建一个新的子菜单 :menuselection:`销售 --> 线索`
+从中你将能够从**导入** 按钮, 导入联系人(如果你想手动创建一个线索,, :doc:`点击这里 <manual>`)
 
 .. image:: ./media/import02.jpg
    :align: center
 
-Import your CSV file
+导入 CSV 文件
 ====================
 
-On the new submenu :menuselection:`Sales --> Leads`, click on **Import** and select your
-Excel file to import from the **Choose File** button. Make sure its
-extension is **.csv** and don't forget to set up the correct File format
-options (**Encoding** and **Separator**) to match your local
-settings and display your columns properly.
+在新的子菜单 :menuselection:`销售 --> 线索`, 点击 **导入** 并选择您的Excel文件, 
+从 **加载文件** 按钮导入。确保它的扩展名是 **.csv** 文件（ODOO10开始支持EXCEL), 不要忘记设置正确的文件格式选项( **编码** 和 **分隔符** ), 以配合您的本地设置和正确显示你的列。
 
 .. note::
-	If your prospects database is provided in another format than CSV, you can
-	easily convert it to the CSV format using Microsoft Excel, OpenOffice /
-	LibreOffice Calc, Google Docs, etc.
+	如果您的潜在客户数据库是以另一种格式而非CSV提供的, 你可以使用Microsoft Excel, 
+	OpenOffice/ LibreOffice, 谷歌文档等很容易地将其转换为CSV格式。
 
 .. image:: ./media/import03.jpg
    :align: center
 
-Select rows to import
+选择行以导入
 =====================
 
-Odoo will automatically map the column headers from your CSV file to the
-corresponding fields if you tick *The first row of the file contains the
-label of the column* option. This makes imports easier especially when
-the file has many columns. Of course, you can remap the column headers
-to describe the property you are importing data into (First Name, Last
-Name, Email, etc.).
+如果你勾选 **文件的第一行包含列的表头** 的选项,从CSV文件中的列标题将自动映射到相应的字段。
+这使得导入更加容易, 特别是当文件有很多列。当然, 你可以重新映射列标题来描述你要导入的
+数据属性(姓, 名, 电子邮件等).
 
 .. image:: ./media/import04.jpg
    :align: center
 
 .. tip::
 
-	If you want to import your contacts as opportunities rather than leads, make
-	sure to add the *Type* column to your csv. This column is used to indicate
-	whether your import will be flagged as a Lead (type = Lead) or as an
-	opportunity (type = Opportunity).
+	如果你要导入你的联系作为机会而不是线索, 确信增加 **类型Type** 列到你的CSV.
+	这列用来表明你的导入是作为一个线索(类型=线索)还是作为一个机会(类型=机会)。
 
-Click the **Validate** button if you want to let Odoo verify that
-everything seems okay before importing. Otherwise, you can directly
-click the Import button: the same validations will be done.
+点击 **验证** 按钮, 如果你要在导入前让Odoo校验一切看上去就可以了。
+除此以外, 你可以直接按导入按钮 :相同的验证也会被执行。
 
 .. note::
 
-	For additional technical information on how to import contacts into Odoo CRM,
-	read the **Frequently Asked Questions** section located below the Import tool
-	on the same window.
+	其他关于如何导入联系情况到Odoo CRM的技术信息, 可以阅读统一窗口中导入工具下的 **常见问题**
 
 .. seealso::
 

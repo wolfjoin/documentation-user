@@ -1,47 +1,36 @@
 ==========================================================
-Impact on the average price valuation when returning goods
+产品退货时使用移动平均计算成本
 ==========================================================
 
-As stated in the `*inventory valuation
-page* <https://www.odoo.com/documentation/functional/valuation.html>`__,
-one of the possible costing method you can use in perpetual stock
-valuation, is the average cost.
+作为 `*inventory valuation
+page* <https://www.odoo.com/documentation/functional/valuation.html>`__ 状态,
+一个可能的成本方式是你可以使用永恒的库存成本估值方式, 平均成本。
 
-This document answers to one recurrent question for companies using that
-method to make their stock valuation: how does a shipping returned to
-its supplier impact the average cost and the accounting entries? This
-document is **only** for the specific use case of a perpetual valuation (as
-opposed to the periodic one) and in average price costing method (as
-opposed to standard of FIFO).
+本文档能解决一个经常性的问题, 使用这种方法使他们的库存估价 : 
+退还给供应商的货将如何影响平均成本和会计凭证吗? 本文档 **只** 具体定义了永恒估值
+(而不是周期性)和平均价格成本核算方法(而不是标准的FIFO)。
 
-Definition of average cost
+平均成本的定义
 ==========================
 
-The average cost method calculates the cost of ending inventory and cost
-of goods sold on the basis of weighted average cost per unit of
-inventory.
+平均成本法, 在计算期末存货和销货成本的基础上, 计算存货的加权平均单位成本。
 
-The weighted average cost per unit is calculated using the following
-formula:
+加权平均单位成本计算使用以下公式 :
 
-- When new products arrive in a warehouse, the new average cost is
-  recomputed as:
+- 新产品到达仓库时, 重新计算新的平均成本为 :
 
 .. image:: media/avg01.png
    :align: center
 
-- When products leave the warehouse: the average cost **does not** change
+- 当产品离开仓库 :平均成本 不 变化
 
-Defining the purchase price
+定义采购价格
 ---------------------------
 
-The purchase price is estimated at the reception of the products (you
-might not have received the vendor bill yet) and reevaluated at the
-reception of the vendor bill. The purchase price includes the cost you
-pay for the products, but it may also includes additional costs, like
-landed costs.
+购买价格是接收产品时的暂估 (您可能没有收到供应商发票)和评估单据。
+购买价格包括支付产品成本, 但它也可能包括额外的成本, 像到岸成本。
 
-Average cost example
+平均成本示例
 ====================
 
 +-----------------------------+---------------+-------------------+---------------+------------+
@@ -57,26 +46,20 @@ Average cost example
 +-----------------------------+---------------+-------------------+---------------+------------+
 +-----------------------------+---------------+-------------------+---------------+------------+
 
-At the beginning, the Avg Cost is set to 0 set as there is no product in
-the inventory. When the first reception is made, the average cost
-becomes logically the purchase price.
+起初, 平均成本设置为0, 因为产品没有库存. 当收到第一个货时, 平均成本成为逻辑上购买价格。
 
-At the second reception, the average cost is updated because the total
-inventory value is now ``$80 + 4*$16 = $144``. As we have 12 units on
-hand, the average price per unit is ``$144 / 12 = $12``.
+在接收第二单货时, 平均成本更新, 因为库存总额现在 ``$80 + 4*$16 = $144``. 
+我们手头有12件, 平均价格每单位是 ``$144 / 12 = $12``.
 
-By definition, the delivery of 10 products does not change the average
-cost. Indeed, the inventory value is now $24 as we have only 2 units
-remaining of each ``$24 / 2 = $12``.
+根据定义, 交付的10个产品并不改变平均成本。
+的确, 现在库存价值24美元, 因为我们只剩下2件, 每件为“ ``$24 / 2 = $12``.
 
-Purchase return use case
+采购退货使用案例
 ========================
 
-In case of a product returned to its supplier after reception, the
-inventory value is reduced using the average cost formulae (not at the
-initial price of these products!).
+如果收到货后退货, 将使用平均成本公式减少库存成本(不是在这些产品的最初价格!)。
 
-Which means that the above table will be updated as follow:
+意味着以上表格将会按照如下更新 :
 
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 | Operation                                     | Delta Value   | Inventory Value   | Qty On Hand   | Avg Cost   |
@@ -86,16 +69,13 @@ Which means that the above table will be updated as follow:
 | Return of 1 Product initially bought at $10   | -1\*$12       | $12               | 1             | $12        |
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 
-Explanation: counter example
+解释：计数器示例
 ----------------------------
 
-Remember the definition of **Average Cost**, saying that we do not update
-the average cost of a product leaving the inventory. If you break this
-rule, you may lead to inconsistencies in your inventory.
+记得 **平均成本** 的定义, 说出库时不更新产品的平均成本。
+如果你打破这个规则, 你可能会导致库存不一致。
 
-As an example, here is the scenario when you deliver one piece to the
-customer and return the other one to your supplier (at the cost you
-purchased it). Here is the operation:
+作为一个例子, 当你向客户交货并退货给供应商(购买的成本)。这是操作 :
 
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 | Operation                                     | Delta Value   | Inventory Value   | Qty On Hand   | Avg Cost   |
@@ -107,11 +87,9 @@ purchased it). Here is the operation:
 | Return of 1 Product initially bought at $10   | -1\*$10       | **$2**            | **0**         | $12        |
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 
-As you can see in this example, this is not correct: an inventory
-valuation of $2 for 0 pieces in the warehouse.
+正如你所看到的在这个例子中, 这是不正确的 :0件产品2美元的存货估价在仓库里。
 
-The correct scenario should be to return the goods at the current
-average cost:
+正确的场景应该是返回货物目前的平均成本 :
 
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 | Operation                                     | Delta Value   | Inventory Value   | Qty On Hand   | Avg Cost   |
@@ -123,22 +101,15 @@ average cost:
 | Return of 1 Product initially bought at $10   | -1\*$12       | **$0**            | **0**         | $12        |
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
 
-On the other hand, using the average cost to value the return ensure a
-correct inventory value at all times.
+另一方面, 利用平均成本估值退货, 确保正确的库存价值。
 
-Further thoughts on anglo saxon mode
+anglo saxon 模式的深究
 ------------------------------------
 
-For people in using the **anglo saxon accounting** principles, there is
-another concept to take into account: the stock input account of the
-product, which is intended to hold at any time the value of vendor bills
-to receive. So the stock input account will increase on reception of
-incoming shipments and will decrease when receiving the related vendor
-bills.
+人们在使用 **anglo saxon accounting** 会计原则, 还有另一个概念需考虑 :
+产品的入库科目, 这是为了保存收票时的价值。所以这个账户在收货时会增加, 收到发票时会减少.
 
-Back to our example, we see that when the return is valued at the
-average price, the amount booked in the stock input account is the
-original purchase price:
+回到我们的例子中, 我们看到, 当退货时按平均价格, 输入的价格是原购买价格 :
 
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
 | Operation                                     | stock input   | price diff   | Inventory Value   | Qty On Hand   | Avg Cost   |
@@ -160,8 +131,7 @@ original purchase price:
 | Receive vendor refund $10                     | $0            | $2           | $12               | 1             | $12        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
 
-This is because the vendor refund will be made using the original
-purchase price, so to zero out the effect of the return in the stock
-input in last operation, we need to reuse the original price. The price
-difference account located on the product category is used to book the
-difference between the average cost and the original purchase price.
+供应商退款将使用原始的购买价格, 所以退货时会零差异, 我们需要重用原来的价格。
+产品类别上的价格差异, 用于记录平均成本和原购买价格之间的差异。
+
+这里出库原则，是先进后出

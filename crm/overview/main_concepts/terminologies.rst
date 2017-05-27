@@ -1,77 +1,52 @@
 ======================
-Odoo CRM Terminologies
+Odoo CRM术语
 ======================
 
--  **CRM (Customer relationship management)**: 
-        System for managing a
-        company's interactions with current and future customers. It
-        often involves using technology to organize, automate, and
-        synchronize sales, marketing, customer service, and technical
-        support.
+-  **CRM (客户关系管理)**: 
+        用于管理公司与当前和未来客户的互动的系统。它经常涉及使用技术组织，
+        自动化和同步销售，营销，客户服务和技术支持。
 
--  **Sales cycle** : 
-        Sequence of phases used by a company to convert a
-        prospect into a customer.
+-  **销售周期Sales cycle** : 
+        公司通过使用阶段顺序把潜在客户转换成客户。
 
--  **Pipeline :** 
-        Visual representation of your sales process, from the
-        first contact to the final sale. It refers to the process by
-        which you generate, qualify and close leads through your sales
-        cycle.
+-  **管道Pipeline :** 
+        你的销售过程, 从第一次接触到最终成交的可视化呈现。
+        它是指通过你的销售周期 :生成, 资格审核, 结束线索的过程。
 
--  **Sales stage** : 
-        In Odoo CRM, a stage defines where an opportunity
-        is in your sales cycle and its probability to close a sale.
+-  **销售阶段Sales stage** : 
+        在Odoo CRM中，一个阶段定义了您的销售周期中的机会以及关闭销售的概率。
 
--  **Lead :** 
-        Someone who becomes aware of your company or someone who
-        you decide to pursue for a sale, even if they don't know about
-        your company yet.
+-  **线索Lead :** 
+        有人知道你的公司或者你决定追求销售的人，即使他们不知道你的公司。
 
--  **Opportunity :** 
-        A lead that has shown an interest in knowing more
-        about your products/services and therefore has been handed over
-        to a sales representative
+-  **机会Opportunity :** 
+        有兴趣了解更多关于您的产品/服务的领导者，因此已被移交给销售代表
 
--  **Customer :** 
-        In Odoo CRM, a customer refers to any contact within
-        your database, whether it is a lead, an opportunity, a client or
-        a company.
+-  **客户Customer :** 
+        在Odoo CRM中，客户指的是数据库中的任何联系人，
+        无论是领导，机会，客户还是公司。
 
--  **Key Performance Indicator (KPI)** : 
-        A KPI is a measurable value
-        that demonstrates how effectively a company is achieving key
-        business objectives. Organizations use KPIs to evaluate their
-        success at reaching targets.
+-  **关键绩效指标Key Performance Indicator (KPI)** : 
+        KPI是衡量公司实现关键业务目标的有效措施。
+        公司使用KPI来评估其达成目标的成功率。
 
 -  **Lead scoring** : 
-        System assigning a positive or negative score to
-        prospects according to their web activity and personal
-        informations in order to determine whether they are "ready for
-        sales" or not.
+        系统会根据他们的网络活动和个人信息对潜在客户分配正分或负分,
+        以确定他们是否“准备销售" 。
 
--  **Kanban view :** 
-        In Odoo, the Kanban view is a workflow
-        visualisation tool halfway between a `list
+-  **看板视图Kanban view** ： 
+        在Odoo中，看板视图是在 `list
         view <https://www.odoo.com/documentation/8.0/reference/views.html#reference-views-list>`__
-        and a non-editable `form
+        和不可编辑的 `form
         view <https://www.odoo.com/documentation/8.0/reference/views.html#reference-views-form>`__
-        and displaying records as "cards". Records may be grouped in
-        columns for use in workflow visualisation or manipulation (e.g.
-        tasks or work-progress management), or ungrouped (used simply to
-        visualize records).
+        之间的一个工作流可视化工具 ，并将记录显示为“卡”。记录可以分组在列中，以用于工作流可视化或操纵（例如任务或工作进度管理）或未分组（仅用于可视化记录）。
 
--  **List view :** 
-        View allowing you to see your objects (contacts,
-        companies, tasks, etc.) listed in a table.
+-  **列表视图List view :** 
+        视图让你看到你的对象(联系人, 公司, 任务等)在表中列出。
 
--  **Lead generation:** 
-        Process by which a company collects relevant
-        datas about potential customers in order to enable a relationship
-        and to push them further down the sales cycle.
+-  **下一步活动Lead generation:** 
+        通过公司收集潜在客户的相关数据, 建立关系并进一步推动销售周期。
 
--  **Campaign:** 
-        Coordinated set of actions sent via various channels to
-        a target audience and whose goal is to generate leads. In Odoo
-        CRM, you can link a lead to the campaign which he comes from in
-        order to measure its efficiency.
+-  **活动Campaign:** 
+        通过不同的渠道协调发送一系列动作给目标受众来建立线索。
+        在Odoo CRM, 您可以在链接一个线索到营销活动来衡量它的效率。

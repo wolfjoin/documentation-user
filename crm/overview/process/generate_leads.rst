@@ -1,59 +1,48 @@
 ==============================
-Generating leads with Odoo CRM
+用Odoo CRM 生成线索
 ==============================
 
-What is lead generation?
+什么是线索生成？
 ========================
 
-Lead generation is the process by which a company acquires leads and
-collects relevant datas about potential customers in order to enable a
-relationship and to turn them into customers.
+潜在客户是企业获取潜在客户并收集有关潜在客户的相关数据以实现关系并将其转变为客户的过程。
 
-For example, a website visitor who fills in your contact form to know
-more about your products and services becomes a lead for your company.
-Typically, a Customer Relationship Management tool such as Odoo CRM is
-used to centralize, track and manage leads.
+例如，填写您的联系表单以了解更多关于您的产品和服务的网站访问者成为贵公司的线索。
+通常，客户关系管理工具（如Odoo CRM）用于集中管理，跟踪和管理潜在客户。
 
-Why is lead generation important for my business?
+为什么线索生成器对于我的业务很重要？
 =================================================
 
-Generating a constant flow of high-quality leads is one of the most
-important responsibility of a marketing team. Actually, a well-managed
-lead generation process is like the fuel that will allow your company to
-deliver great performances - leads bring meetings, meetings bring sales,
-sales bring revenue and more work.
+生成高品质的潜在的稳定客户流是营销团队的最重要的职责之一。
+事实上, 一个管理良好的线索生成过程就像是燃料, 
+这将使你的公司提供出色的成就 - 线索带来的会议, 
+会议带来销量, 销售收入带来更多的工作。
 
-How to generate leads with Odoo CRM?
+如何生成Odoo CRM线索？
 ====================================
 
-Leads can be captured through many sources - marketing campaigns,
-exhibitions and trade shows, external databases, etc. The most common
-challenge is to successfully gather all the data and to track any lead
-activity. Storing leads information in a central place such as Odoo CRM
-will release you of these worries and will help you to better automate
-your lead generation process, share information with your teams and
-analyze your sales processes easily.
+信息可以通过多种来源捕获 - 营销活动, 展览展销, 外部数据库等。
+最常见的挑战是成功地收集所有数据, 并跟踪任何线索的活动。
+把线索集中存储在一个地方, 如Odoo CRM将解放你的这些忧虑, 
+并会帮助你更好地自动化您的线索生成过程, 与你的团队共享信息,
+并轻松地分析你的销售过程中的线索信息。
 
-Odoo CRM provides you with several methods to generate leads:
+Odoo CRM提供了几种方法来生成线索 :
 
 * :doc:`../../leads/generate/emails`
 
-  An inquiry email sent to one of your company's generic email addresses
-  can automatically generate a lead or an opportunity.
+  发送到您公司的一般电子邮件地址的查询邮件可以自动产生潜在客户或机会
 
 * :doc:`../../leads/generate/manual`
 
-  You may want to follow up with a prospective customer met briefly at an
-  exhibition who gave you his business card. You can manually create a new
-  lead and enter all the needed information.
+  您可能要跟进一个在展览见过一面并给了你他的名片的潜在客户。
+  您可以手动创建一个新的线索和输入所有需要的信息。
 
 * :doc:`../../leads/generate/website`
 
-  A website visitor who fills in a form automatically generates a lead or
-  an opportunity in Odoo CRM.
+  网站访问者填写表单自动在Odoo CRM 里生成线索或机会。
 
 * :doc:`../../leads/generate/import`
 
-  You can provide your salespeople lists of prospects - for example for a
-  cold emailing or a cold calling campaign - by importing them from any
-  CSV file.
+  您可以提供潜在机会清单给您的销售人员- 例如陌生的电子邮件或电话推销活动 
+  或者从CSV文件导入它们。

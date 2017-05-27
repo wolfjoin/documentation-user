@@ -1,126 +1,99 @@
 ===========================================================================
-How to analyze the sales performance of your team and get customize reports
+如何分析你的团队的销售业绩, 并获得定制的报告
 ===========================================================================
 
-As a manager, you need to constantly monitor your team's performance
-in order to help you take accurate and relevant decisions for the
-company. Therefore, the **Reporting** section of **Odoo Sales** represents a
-very important tool that helps you get a better understanding of where
-your company's strengths, weaknesses and opportunities are, showing
-you trends and forecasts for key metrics such as the number of
-opportunities and their expected revenue over time , the close rate by
-team or the length of sales cycle for a given product or service.
+作为管理者, 你需要不断的监测团队的表现, 以帮助您为公司得到准确的相关决策。
+因此, Odoo销售 的 **报告** 部分是一个非常重要的工具, 
+可以帮助你得到更好地了解您的企业的优势, 劣势和机会, 并向您展示趋势和预测的关键指标, 
+如机遇数量和他们的预期收入, 团队的成交率或者对于一个产品或服务销售周期。
 
-Beyond these obvious tracking sales funnel metrics, there are some
-other KPIs that can be very valuable to your company when it comes to
-judging sales funnel success.
+除了这些显而易见的跟踪销售漏斗的指标, 还有一些其他的关键绩效指标, 
+当用来判断销售漏斗是否成功时对您的公司是非常有价值的。
 
-Review pipelines 
+检查销售漏斗 
 =================
 
-You will have access to your sales funnel performance from the **Sales**
-module, by clicking on :menuselection:`Sales --> Reports --> Pipeline analysis`. 
-By default, the report groups all your opportunities by stage (learn more on how to
-create and customize stage by reading :doc:`../salesteam/setup/organize_pipeline`)
-and expected revenues for the current month. This report is perfect for
-the **Sales Manager** to periodically review the sales pipeline with the
-relevant sales teams. Simply by accessing this basic report, you can get
-a quick overview of your actual sales performance.
+您可以从 **销售** 模块中获得您的销售渠道业绩, 
+通过点击 :menuselection:`Sales --> Reports --> Pipeline analysis`。
+默认情况下, 报告组合了所有的机会, 通过阶段(了解更多关于如何创建和
+自定义阶段阅读  :doc:`../salesteam/setup/organize_pipeline`)和当月的预期收入。这份报告对 销售经理 定期审查销售渠道与相关销售团队是很完善的。通过访问这个基本的报告, 你可以得到的实际销售业绩的快速概述。
 
-You can add a lot of extra data to your report by clicking on the
-**measures** icon, such as :
 
--  Expected revenue.
+您可以通过点击 **测量** 图标, 添加很多额外的数据到您的报告 :
 
--  overpassed deadline.
+-  预期收入
 
--  Delay to assign (the average time between lead creation and lead
-   assignment).
+-  超过截止日期
 
--  Delay to close (average time between lead assignment and close).
+-  延迟分配(创建线索和线索分配之间的平均时间)。
 
--  the number of interactions per opportunity.
+-  延迟关闭(线索分配和关闭之间的平均时间)
 
--  etc.
+-  每个机会相互作用的次数。
+
+-  等等
 
 .. image:: media/analysis02.png
    :align: center
 
 .. tip:: 
-    By clicking on the **+** and **-** icons, you can drill up and down your report
-    in order to change the way your information is displayed. For example, if I 
-    want to see the expected revenues of my **Direct Sales** team, I need to click 
-    on the **+** icon on the vertical axis then on **Sales Team**.
+    通过点击 **+** 和 **-** 图标, 可以向上和向下追溯您的报告, 以改变显示信息的方式。
+    例如, 如果我想看到我的 **直接销售** 团队的预期收入, 我需要点击 **+** 图标在垂直
+    轴上加上 **销售团队** 。
 
-Depending on the data you want to highlight, you may need to display
-your reports in a more visual view. Odoo **CRM** allows you to transform
-your report in just a click thanks to 3 graph views : **Pie Chart**, **Bar
-Chart** and **Line Chart**. These views are accessible through the icons
-highlighted on the screenshot below.
+根据你想突出的数据, 你可能需要在一个更直观的视图来显示您的报告。 
+Odoo CRM 可以让你通过简单的点击来改变你的报告为3种图形视图 : **饼图** , **条形图** 
+和 **线图** 。这些视图可以通过下面的截图中显示的高亮图标进行访问。
 
 .. image:: media/analysis03.png
    :align: center
 
-Customize reports
+定制报表
 =================
 
-You can easily customize your analysis reports depending on the
-**KPIs** (see :doc:`../overview/main_concepts/terminologies`)
-you want to access. To do so, use the **Advanced search view** located in
-the right hand side of your screen, by clicking on the magnifying glass
-icon at the end of the search bar button. This function allows you to
-highlight only selected data on your report. The **filters** option is
-very useful in order to display some categories of opportunities, while
-the **Group by** option improves the readability of your reports according
-to your needs. Note that you can filter and group by any existing field
-from your CRM, making your customization very flexible and powerful.
+您可以根据您要访问的 **KPI** 轻松地自定义您的分析报告
+(see :doc:`../overview/main_concepts/terminologies`)。要做到这一点, 使用 高级搜索视图 
+位于屏幕的右侧, 通过点击搜索栏结尾处的放大镜图标按钮。此功能可以在你的报告上突出选定的数据。
+该 **过滤** 选项, 显示某些类别的机遇时非常有用, 同时通过 **分组** 选项提高您需要的报表的可读性。
+请注意, 您可以通过任何现有的CRM字段进行过滤和分组, 使您的自定义非常灵活和强大。
 
 .. image:: media/analysis01.png
    :align: center
 
 .. tip::
-    You can save and reuse any customized filter by clicking on 
-    **Favorites** from the **Advanced search view** and then on 
-    **Save current search**. The saved filter will then be accessible 
-    from the **Favorites** menu.
+    您可以保存并再次使用定制的过滤, 从 **高级搜索视图** 中点击 **收藏** , 
+    然后 **保存当前的搜索** 。保存的过滤器将从 **收藏** 菜单访问。
+    （筛选、分组没有发现可以删除的按钮）
 
-Here are a few examples of customized reports that you can use to
-monitor your sales' performances :
+这里是一些定制报告的例子, 你可以用来监控你的销售业绩。
 
-Evaluate the current pipeline of each of your salespeople
+衡量你的每个销售员的现在的销售漏斗
 ---------------------------------------------------------
 
-From your pipeline analysis report, make sure first that the
-**Expected revenue** option is selected under the **Measures** drop-down
-list. Then, use the **+** and **-** icons and add **Salesperson** and
-**Stage** to your vertical axis, and filter your desired salesperson. Then
-click on the **graph view** icon to display a visual representation of
-your salespeople by stage. This custom report allows you to easily
-overview the sales activities of your salespeople.
+从您的漏斗分析报告, 首先要确保的 **预期收益** 选项是从 **测量** 下拉列表下选择。
+然后, 使用 **+** 和 **-** 图标, 并添加 **销售员** 和 **阶段** 做为你的垂直轴,
+并筛选所需的销售人员。然后在 **图形视图**中单击图标通过阶段来显示你的销售人员的可视化表示。
+这种定制的报告可以让您轻松一览你的销售人员的销售活动。
 
 .. image:: media/analysis05.png
    :align: center
 
-Forecast monthly revenue by sales team
+按销售组预计月度收入
 --------------------------------------
 
-In order to predict monthly revenue and to estimate the short-term
-performances of your teams, you need to play with two important metrics :
-the **expected revenue** and the **expected closing**.
+为了预计月度收入和衡量你的团队的短期业绩。你需要使用两个重要的指标 : 
+**预期收入** 和 **预期结束** 。
 
-From your pipeline analysis report, make sure first that the
-**Expected revenue** option is selected under the **Measures** drop-down
-list. Then click on the **+** icon from the vertical axis and select
-**Sales team**. Then, on the horizontal axis, click on the **+** icon and
-select **Expected closing.**
+从您的漏斗分析报告, 首先要确保的 **预期收益** 选项是从 **测量** 下拉列表下选择。
+然后, 使用 **+** 和 **-** 图标, 并添加 **销售员** 和 **阶段** 做为你的垂直轴, 
+并选择所需的销售组。然后在横向轴上, 点击 **+** , 选择 **预期关闭** 。
 
 .. image:: media/analysis04.png
    :align: center
 
 .. tip::
-    In order to keep your forecasts accurate and relevant, 
-    make sure your salespeople correctly set up the expected closing
-    and the expected revenue for each one of their opportunities
+    为了保证你的预测的准确性和相关性, 要确保你的销售人员为每个机会正确
+    建立了预期关闭和预期收入。
 
 .. seealso::
     * :doc:`../salesteam/setup/organize_pipeline`

@@ -1,120 +1,91 @@
 ======================================================
-How to setup your teams, sales process and objectives?
+如何建立你的团队, 销售过程和目标
 ======================================================
 
-This quick step-by-step guide will lead you through Odoo CRM and help
-you handle your sales funnel easily and constantly manage your sales
-funnel from lead to customer.
+这种快速的一步一步的指南将引导您完成Odoo CRM, 帮助您轻松处理您的销售渠道, 
+时刻从线索到客户管理您的销售渠道。
 
-Configuration
+
+
+配置
 =============
 
-Create your database from `www.odoo.com/start <http://www.odoo.com/start>`__, select the CRM
-icon as first app to install, fill in the form and click on *Create
-now*. You will automatically be directed to the module when the database
-is ready.
+应用 --> 选择CRM模块安装。
 
 .. image:: media/setup01.png
   :align: center
 
 .. tip::
 
-        You will notice that the installation of the CRM module has created the
-        submodules Chat, Calendar and Contacts. They are mandatory so that every
-        feature of the app is running smoothly.
+        你会发现, 客户关系管理模块的安装创造了子模块即时通讯, 日历和联系人。
+        为了使应用程序的每一个功能平稳运行, 他们是强制安装的。
 
-Introduction to the Sales Planner
+销售计划介绍
 =================================
 
-The Sales Planner is a useful step-by-step guide created to help you
-implement your sales funnel and define your sales objectives easier. We
-strongly recommend you to go through every step of the tool the first
-time you use Odoo CRM and to follow the requirements. Your input are
-strictly personal and intended as a personal guide and mentor into your
-work. As it does not interact with the backend, you are free to adapt
-any detail whenever you feel it is needed.
+销售计划是一个有用的一步一步的指导, 帮您实现您的销售渠道, 并方便的确定自己的销售目标。
+我们强烈建议您首次使用Odoo CRM时遵循要求按指南的每一步走。您的输入定制是完全个人的, 
+并准备引导你的工作。因为它不与后端交互, 你可以自由适应任何你觉得需要的细节。
 
-You can reach the Sales Planner from anywhere within the CRM module by
-clicking on the progress bar located on the upper-right side of your
-screen. It will show you how far you are in the use of the Sales
-Planner.
+您可以从CRM模块内的任何地方通过点击位于右上侧屏幕进度条使用销售计划。
+它会告诉你, 你离你的销售计划有多远。
 
 .. image:: ./media/setup02.png
    :align: center
 
-Set up your first sales team
+建立你的第一个销售团队
 ============================
 
-Create a new team
+创建一个新团队
 -----------------
 
-A Direct Sales team is created by default on your instance. You can
-either use it or create a new one. Refer to the page :doc:`../../salesteam/setup/create_team`
-for more information.
+一个直接销售团队在一开始时就默认被建立了。你可以使用它或建一个新的。参照 :doc:`../../salesteam/setup/create_team` .
 
-Assign salespeople to your sales team
+分配销售人员到你的销售团队
 -------------------------------------
 
-When your sales teams are created, the next step is to link your
-salespeople to their team so they will be able to work on the
-opportunities they are supposed to receive. For example, if within your
-company Tim is selling products and John is selling maintenance
-contracts, they will be assigned to different teams and will only
-receive opportunities that make sense to them.
+当你的销售团队被建好后, 下一步是链接你的销售人员到你的团队, 以便他们能够处理他们应该收到的机会。
+比如, 在你的公司里, Tim卖产品, John 卖维护合同, 
+他们会被分配到不同的团队并且只收到对他们有意义的机会。
 
-In Odoo CRM, you can create a new user on the fly and assign it directly
-to a sales team. From the **Dashboard**, click on the button **More** of
-your selected sales team, then on **Settings**. Then, under the
-**Assignation** section, click on **Create** to add a new salesperson to
-the team.
+在Odoo CRM 里, 你能快速生成一个新用户并直接分配给一个销售团队.
+从 **仪表盘** , 点击你选择的销售团队的 **更多** , 然后点击 **设置** 。
+在 **销售** 中, 点击 **添加** 来增加一个新的销售成员给这个团队。
 
-From the **Create: salesman** pop up window (see screenshot below),
-you can assign someone on your team:
+从跳出窗口(如下截屏) **创建** , 你可以分配某人到你的团队。
 
-- Either your salesperson already exists in the system and you will
-  just need to click on it from the drop-down list and it will be
-  assigned to the team
-- Or you want to assign a new salesperson that doesn't exist into the
-  system yet - you can do it by creating a new user on the fly from
-  the sales team. Just enter the name of your new salesperson and
-  click on Create (see below) to create a new user into the system
-  and directly assign it to your team. The new user will receive an
-  invite email to set his password and log into the system. Refer
-  to :doc:`../../salesteam/manage/create_salesperson`
-  for more information about that process
+- 或者你的销售人员已经存在于系统中, 你只需在下拉框中点击它, 他会被分配到团队中。
+- 或者你还想分配一个不在系统中的新的销售人员 - 可以从销售团队中快速建立一个新的用户。
+  只需输入你的新销售人员的名称, 然后单击创建(见下文), 以创建一个新用户进入系统, 然后直接将其分配给你的团队。新用户将收到一封电子邮件邀请来设置自己的密码, 
+  登录到系统中。参见 :doc:`../../salesteam/manage/create_salesperson`
 
 .. image:: ./media/setup03.png
    :align: center
 
-Set up your pipeline
+建立你的销售管道
 --------------------
 
-Now that your sales team is created and your salespeople are linked to
-it, you will need to set up your pipeline -create the process by which
-your team will generate, qualify and close opportunities through your
-sales cycle. Refer to the document :doc:`../../salesteam/setup/organize_pipeline`
-to define the stages of your pipeline.
+现在已经创建了您的销售团队并把您的销售人员都链接到它, 
+你将需要设置您的管道 -通过你的销售周期创建你的团队生成, 资格及关闭机会的过程。
+请参阅文档 :doc:`../../salesteam/setup/organize_pipeline` 来定义管道的阶段。
 
-Set up incoming email to generate opportunities
+设置传入的电子邮件以产生机会
 -----------------------------------------------
 
-In Odoo CRM, one way to generate opportunities into your sales team is
-to create a generic email address as a trigger. For example, if the
-personal email address of your Direct team is
+在Odoo CRM中，为销售团队创造机会的一种方法是创建一个通用的电子邮件地址作为触发器。
+例如，如果您的直接团队的个人电子邮件地址为
 `direct@mycompany.example.com <mailto:direct@mycompany.example.com>`__\, 
-every email sent will automatically create a new opportunity into the
-sales team.
+则发送的每封电子邮件将自动为销售团队创建新的机会。
 
-Refer to the page :doc:`../../leads/generate/emails` to set it up.
+参考页面 :doc:`../../leads/generate/emails` 设置它
 
-Automate lead assignation
+自动引导分配
 -------------------------
 
-If your company generates a high volume of leads every day, it could
-be useful to automate the assignation so the system will distribute
-all your opportunities automatically to the right department.
+如果您的公司每天产生大量潜在客户，那么自动化分配可能会很有用，
+因此系统会将所有的机会自动分配到正确的部门。
 
-Refer to the document :doc:`../../leads/manage/automatic_assignation` for more information.
+有关详细信息，请参阅 :doc:`../../leads/manage/automatic_assignation` for more information.
 
 .. todo::
     

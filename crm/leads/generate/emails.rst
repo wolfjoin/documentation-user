@@ -1,63 +1,56 @@
 ===========================================
-How to generate leads from incoming emails?
+如何通过邮件收取生成相关线索?
 ===========================================
 
-There are several ways for your company to :doc:`generate leads with Odoo CRM <manual>`.
-One of them is using your company's generic email address as a trigger
-to create a new lead in the system. In Odoo, each one of your sales
-teams is linked to its own email address from which prospects can reach
-them. For example, if the personal email address of your Direct team is
-**direct@mycompany.example.com**, every email sent will automatically create a new
-opportunity into the sales team.
+有几种方式为你的公司使用Odoo CRM 生成线索。
+一种是使用你公司的公共邮箱地址作为触法生成一个新的线索。
+在Odoo中, 每个销售团队被链接到他们自己的邮箱地址以便潜在客户能联系上他们。
+比如, 如果你的Direct团队的个人邮件地址是 **direct@mycompany.example.com** , 
+每个发送的邮件会自动生成一个新的机会在销售团队中。
 
-Configuration
+配置
 =============
 
-The first thing you need to do is to configure your **outgoing email
-servers** and **incoming email gateway** from the :menuselection:`Settings module --> General Settings`.
+你需要做的第一件事是配置你的 **发信邮件服务器** 和 **收信邮件网关** ,
+:menuselection:`设置 --> 通用设置`.
 
-Then set up your alias domain from the field shown here below and
-click on **Apply**.
+
+然后从这里下图所示的字段设置您的别名域, 然后点击 **应用** 。
 
 .. image:: ./media/emails01.jpg
    :align: center
 
-Set up team alias
+建立团队别名
 =================
 
-Go on the Sales module and click on **Dashboard**. You will see that the
-activation of your domain alias has generated a default email alias for
-your existing sales teams.
+转到销售模块上, 然后点击 **仪表板** 。
+您将看到您的域别名的激活产生了一个默认的电子邮件别名为您现有的销售团队。
 
 .. image:: ./media/emails02.jpg
    :align: center
 
-You can easily personalize your sales teams aliases. Click on the More
-button from the sales team of your choice, then on **Settings** to access
-the sales team form. Into the **Email Alias** field, enter your email
-alias and click on **Save**. Make sure to allow receiving emails from
-everyone.
 
-From there, each email sent to this email address will generate a new
-lead into the related sales team.
+您可以轻松地个性化您的销售团队的别名。点击销售团队所选择的 **更多** 按钮, 
+然后在 **设定** 进入销售团队的形式。进入 **Email别名** 字段中输入您的电子邮件别名, 
+然后点击 **保存** 。确保允许从所有人接收电子邮件。
+
+从那里, 发送到这个电子邮件地址的每个电子邮件将生成一个新的线索进入相关的销售团队。
 
 .. image:: ./media/emails03.jpg
    :align: center
 
-Set up catch-all email domain
-=============================
+设置 catch-all（获取所有） 邮件域名
+====================================
 
-Additionally to your sales team aliases, you can also create a generic
-email alias (e.g. *contact@* or *info@* ) that will also generate a new
-contact in Odoo CRM. Still from the Sales module, go to
-:menuselection:`Configuration --> Settings` and set up your catch-all email domain.
+除了您的销售团队别名之外，您还可以创建一个通用的电子邮件别名(例如  *contact@* or *info@* ),
+也将产生Odoo CRM新的联系。仍然在销售模块, 去 :menuselection:`配置 --> 设置`，
+并设置捕获所有电子邮件域。
 
 .. tip::
 
-	You can choose whether the contacts generated from your catch-all email
-	become leads or opportunities using the radio buttons that you see on the
-	screenshot here below. Note that, by default, the lead stage is not
-	activated in Odoo CRM.
+	您可以在这里看到下面的截图单选按钮选择从 catch-all（发送到别名的每一封电子邮件都将
+	创建一个新的商机。）
+	需要注意的是, 默认情况下, 线索阶段在Odoo CRM没有激活。
 
 .. image:: ./media/emails04.jpg
    :align: center

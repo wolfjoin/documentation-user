@@ -1,41 +1,35 @@
 ================================================
-How to link terms and conditions to a quotation?
+如何将条款和条件链接到报价单？
 ================================================
 
-Overview
+概述
 --------
 
-Specifying Terms and Conditions is essential to ensure a good
-relationship between customers and sellers. Every seller has to declare
-all the formal information which include products and company policy so
-customer can read all those terms before committing to anything.
+指定条款和条件对于确保客户和卖家之间的良好关系至关重要。
+每个卖家必须声明所有包含产品和公司政策的正式信息，以便客户在提交任何内容之前，
+可以阅读所有这些条款。
 
-Thanks to Odoo you can easily include your default terms and conditions
-on every quotation, sales order and invoice.
+感谢Odoo，您可以轻松地在每个报价，销售订单和发票上包含默认条款和条件。
 
-Let's take the following example: Your company sells water bottles to
-restaurants and you would like to add the following standard terms and
-conditions on all your quotations:
+我们举出以下例子：您的公司将水瓶卖给餐馆，您想在所有报价中添加以下标准条款和条件：
 
-*Safe storage of the products of MyCompany is necessary in order to
-ensure their quality, MyCompany will not be held accountable in case of
-unsafe storage of the products.*
+*为保证质量，我公司产品的安全储存是必要的，如果产品不安全存放，我公司将不负责任。*
 
-General terms and conditions
+默认条款和条件
 ----------------------------
 
-General terms and conditions can be specified in the Sales settings.
-They will then automatically appear on every sales document from the
-quotation to the invoice.
+默认条款和条件可以在销售设置中指定。然后，他们将自动出现在从报价到发票每一个销售文件。
 
-To specify your Terms and Conditions go into : :menuselection:`Sales --> Configuration --> Settings --> Default Terms and Conditions`.
+要指定您的条款和条件进入：:menuselection:`销售 --> 配置 --> 设置 --> 默认条款和条件`.
 
 .. image:: media/terms_conditions01.png
     :align: center
 
-After saving, your terms and conditions will appear on your new
-quotations, sales orders and invoices (in the system but also on your
-printed documents).
+保存后，您的条款和条件将出现在您的新的报价单，销售订单和发票（在系统中，而且在打印出来的文档）。
+在设置之前的报价单/销售订单的 **默认条款和条件** 保持不变，只有新创建的
+询价单会自动带上该默认条款。当然，可以直接修改该条款与订单相适应，
+比如添加其他订单中无法编辑的内容说明。
+
 
 .. image:: media/terms_conditions02.png
     :align: center

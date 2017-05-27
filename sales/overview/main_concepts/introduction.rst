@@ -1,5 +1,5 @@
 ==========================
-Introduction to Odoo Sales
+ODOO 销售管理介绍
 ==========================
 
 .. youtube:: VMuCr5_arsY
@@ -7,57 +7,45 @@ Introduction to Odoo Sales
     :width: 700
     :height: 394
 
-Transcript
+副本
 ==========
 
-As a sales manager, closing opportunities with Odoo Sales is 
-really simple.
+作为一个销售经理, 使用Odoo销售关闭商机非常简单
 
-I selected a predefined quotation for a new product line offer. 
-The products, the service details are already in the quotation. 
-Of course, I can adapt the offer to fit my clients needs. 
+我选择了一个预先定义好的一个产品的报价单。产品以及详细的服务已经在报价单中,
+当然我可以根据客户的需求调整报价
 
-The interface is really smooth. I can add references, some 
-catchy phrases such as closing triggers (*here, you save $500 
-if you sign the quote within 15 days*). I have a beautiful and 
-modern design. This will help me close my opportunities more 
-easily. 
+界面很用起来很顺手, 我可以添加参照, 一些朗朗上口的语句例如关闭触发器
+( *如果在15天内签掉报价单, 就能为你省下$500* )。
+我有一个漂亮且时尚的设计, 这些能让我容易关闭商机。
 
-Plus, reviewing the offer from a mobile phone is easy. 
-Really easy. The customer got a clear quotation with a 
-table of content. We can communicate easily. I identified an 
-upselling opportunity. So, I adapt the offer by adding more 
-products. When the offer is ready, the customer just need to sign 
-it online in just a few clicks. 
-Odoo Sales is integrated with major shipping services: UPS, Fedex, 
-USPS and more. The signed offer creates a delivery order automatically.
+还有, 从手机端查看报价非常容易。真的非常容易。客户得到带有清晰表格的报价单。
+我们可以清晰的交流。我标记了一个向上销售的商机。
+所以我通过在报价单上添加更多产品调整报价。当报价单准备好,
+客户只是需要轻轻点几下鼠标就可以在线签核。
+销售和主要的货代服务商都有集成, 例如UPS FedEx, US PS以及更多, 
+签核的报价单会子自动创建发货单。
 
-That's it, I sucesfully sold my products in just a few clicks.
+就是这样简单, 我只是点击了几下鼠标就把产品卖掉了
 
-Oh, I also have the transaction and communication history 
-at my fingertips. It's easy for every stakeholder to know 
-clearly the past interaction. And any information related 
-to the transaction.
+只要指尖轻轻一点, 我也可以得到事务和交流沟通的历史记录。
+这能让每一个股东都能清楚的了解过去的交易, 以及与之关联的所有信息
 
--   If you want to show information, I would do it from a customer 
-    form, something like:
+-   如果想要显示信息, 我会从客户表单中来做, 例如 :
         
-    - Kanban of customers, click on one customer
+    - 在 " 客户"看板视图上, 点击相应客户
         
-    - Click on opportunities, click on quotation
+    - 点击商机, 点击报价单
         
-    - Come back to customers (breadcrum)
+    - 回到客户（Breadcrum）
      
-    - Click on customer statement letter
+    - 点击客户账单信件
 
-Anytime, I can get an in-depth report of my sales activity. 
-Revenue by salespeople or department. Revenue by category of 
-product, drill-down to specific products, by quarter or month,... 
-I like this report: I can add it to my dashboard in just a click. 
+任何时候, 我都可以得到基于我的销售活动的深度挖掘的报表。根据部门中销售人员的营收,
+更具产品种类的营收, 甚至每月或者每季度卖出的每一样产品。我超级喜欢这些报表, 
+我只需要点几下鼠标就可以加到我的仪表盘中
 
-Odoo Sales is a powerful, yet easy-to-use app. At first, I used 
-the sales planner. Thanks to it, I got tips and tricks to boost 
-my sales performance. 
+销售是一个强大并且易用的APP, 首先我使用销售planer（向导） 
+在这里我得到有趣的提示用来提高我的销售业绩
 
-Try Odoo Sales now and get beautiful quotations, amazing dashboards 
-and increase your success rate.
+现在就开始你的Odoo销售并且创建漂亮的报价单, 神奇的仪表盘然后增加成功几率

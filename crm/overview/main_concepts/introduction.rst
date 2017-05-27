@@ -1,5 +1,5 @@
 ========================
-Introduction to Odoo CRM
+Odoo CRM介绍
 ========================
 
 .. youtube:: fgdz8MH2YHY
@@ -7,109 +7,75 @@ Introduction to Odoo CRM
     :width: 700
     :height: 394
 
-Transcript
+副本
 ==========
 
-Hi, my name is Nicholas, I'm a business manager in the 
-textile industry. I sell accessories to retailers. Do you 
-know the difference between a good salesperson and an 
-excellent salesperson? The key is to be productive and 
-organized to do the job. That's where Odoo comes in. Thanks 
-to a well structured organization you'll change a good 
-team into an exceptional team. 
+嗨, 我的名字叫尼古拉, 我是纺织行业的业务经理。我是配件零售商。
+你知道一个好的销售人员和优秀的销售人员的区别吗？
+关键是要富有成效的和有组织来完成这项工作。这就是Odoo用武之地。
+由于一个良好的组织结构, 你会改变一个团队使之成为一个出色的团队。
 
-With Odoo CRM, the job is much easier for me and my entire 
-team. When I log in into Odoo CRM, I have a direct overview 
-of my ongoing performance. But also the activity of the next 
-7 days and the performance of the last month. I see that I 
-overachieved last month when compared to my invoicing target 
-of $200,000. I have a structured approach of my performance. 
+随着Odoo CRM, 这份工作对于我和我的整个团队变得容易的多。
+当我登录到Odoo CRM, 我对于我进行中的表现有一个直接的大概了解。
+对于未来7天的活动, 及在上个月的表现。对比发票, 
+我看到上个月我超额完成了我的$200, 000的目标。
+我的绩效有结构化的方法呈现。
 
-If I want to have a deeper look into the details, I click 
-on next actions and I can see that today I have planned a 
-call with Think Big Systems. Once I have done my daily 
-review, I usually go to my pipeline. The process is the 
-same for everyone in the team. Our job is to find resellers 
-and before closing any deal we have to go through different 
-stages. We usually have a first contact to qualify the 
-opportunity, then move into offer & negotiation stage, and 
-closing by a 'won'..Well, that's if all goes well.
+如果我想更深入地了解细节, 我点击下一步行动, 
+我可以看到, 今天我已经计划与Think Big Systems 通电话。
+我通常会去我的销售管道做我每天的回顾。这个过程对于团队中每个人是一样的。
+我们的工作是找到分销商, 在任何交易结束之前我们必须经历不同阶段。
+我们通常首先联系客户来验证机会, 然后由“获得" 进入报价和协商阶段, 
+最终以‘赢得’结束..嗯, 这是如果一切顺利。
 
-The user interface is really smooth, I can drag and drop 
-any business opportunity from one stage to another in just 
-a few clicks. 
+用户界面很平顺, 我可以拖放任何业务机会从一个阶段到另一个阶段只需点击几下。
 
-Now I'd like to go further with an interesting contact: 
-a department store. I highlighted their file by changing 
-the color. For each contact, I have a form view where I can 
-access to all necessary information about the contact. I see 
-here my opportunity Macy's has an estimated revenue of $50,000 
-and a success rate of 10%. I need to discuss about this 
-partnership, so I will schedule a meeting straight from the 
-contact form: Macy's partnership meeting. It's super easy 
-to create a new meeting with any contact. I can as well send 
-an email straight from the opportunity form and the answer 
-from the prospect will simply pop up in the system too. Now, 
-let's assume that the meeting took place, therefore I can 
-mark it as done. And the system automatically suggests a 
-next activity. Actually, we configured Odoo with a set of 
-typical activities we follow for every opportunity, and it's 
-great to have a thorough followup. The next activity will 
-be a follow-up email. Browsing from one screen to the other 
-is really simple and adapting to the view too! I can see my 
-opportunitities as a to-do list of next activities for example.
+现在, 对一个有趣的接触可以走得更远点 :有一家百货公司。
+我通过改变颜色高亮显示他们的文件。对于每个联系人, 
+我有我可以访问有关联系人的所有必要的信息的表单视图。
+我在这里看到我的机会, 梅西有$ 50, 000的估计收入和10％的成功率。
+我需要有关此次合作进行讨论, 所以我安排直接的会议: 梅西的合作伙伴会议。
+这可以很轻松地和任何联系人创建一个新的会议。我也可以从机会界面直接发送电子邮件, 
+回复也会在系统中弹出显示。现在, 让我们假设, 这次会议发生了, 
+所以我可以将其标记为已完成。系统自动显示下一个活动。
+其实, 我们配置Odoo进行了一组处理每一个机会的典型活动, 一个很棒的彻底跟进。
+下一个活动将是一个后续的电子邮件。从一个屏幕到另一个的浏览也是是非常简单和友好的！
+我可以看到我机会作为下一个活动在待办事项列表中。
 
-With Odoo CRM I have a sales management tool that is really 
-efficient and me and my team can be well organized. I have 
-a clear overview of my sales pipeline, meetings, revenues, 
-and more.
+使用Odoo CRM, 我有一个真正有效销售管理工具, 我和我的团队能够很好地被组织起来。
+我对我销售渠道, 会议, 收入等一目了然。
 
-I go back to my pipeline. Macy's got qualified successfully, 
-which mean I can move their file to the next step and I will 
-dapt the expected revenue as discussed. Once I have performed 
-the qualification process, I will create a new quotation 
-based on the feedback I received from my contact. For my 
-existing customers, I can as well quickly discover the activity 
-around them for any Odoo module I use, and continue to 
-discuss about them. It's that simple.
+回到我的销售管道。梅西的业务成功取得到了资格, 这意味着我可以将他们的文件移动到下一步,
+我会调整预期的收入。一旦, 我已经完成资格审查程序, 
+我将基于从我的接触得到的反馈创建一个新的报价。
+对于我的老客户, 我也能通过使用Odoo模块的活动, 快速发现和他们的活动, 
+并继续和他们进行讨论。就这么简单。
 
-We have seen how I can manage my daily job as business 
-manager or salesperson. At the end of the journey I would 
-like to have a concrete view of my customer relationships
-and expected revenues. If I go into the reports in Odoo 
-CRM, I have the possibility to know exactly what's the 
-evolution of the leads over the past months, or have a look 
-at the potential revenues and the performance of the 
-different teams in terms of conversions from leads to 
-opportunities for instance. So with Odoo I can have a 
-clear reporting of every activity based on predefined 
-metrics or favorites. I can search for other filters 
-too and adapt the view. If I want to go in the details, 
-I choose the list view and can click on any item
+我们已经看到了作为业务经理或销售人员, 我如何管理我的日常工作。
+最后, 我希望有我的客户关系和预期收入的具体情况。
+如果我去到Odoo CRM的报告, 我可以确切地知道在过去几个月里线索的演变,
+或者看看潜在的收入和不同团队在从线索到机会转换方面的表现。
+因此, 所以用Odoo我可以根据预定指标或收藏的每一次活动得到一个明确的报告。
+我可以搜索其它过滤器及相关的视图。
+如果我想查找细节, 我选择列表视图, 并可以点击项目
 
-Odoo CRM is not only a powerful tool to achieve our sales 
-goals with structured activities, performance dashboard, 
-next acitivities and more, but also allows me to:
+Odoo CRM不仅是一个通过强大结构化的活动, 性能仪表板, 
+下一个活动等来实现与结构化我们的销售目标的强大工具, 同时也可以让我 :
 
--   Use leads to get in the system unqualified but targeted 
-    contacts I may have gathered in a conference or through 
-    a contact form on my website. Those leads can then be 
-    converted into opportunities.
 
--   Manage phone calls from Odoo CRM by using the VoIP app. 
-    Call customers, manage a call queue, log calls, schedule 
-    calls and next actions to perform.
 
--   Integrate with Odoo Sales to create beautiful online or 
-    PDF quotations and turn them into sales orders.
+-   使用那些从会议或通过网站收集得到的有目标的, 
+    但没有进行资格审核的线索, 这些线索可以被转化为机遇。
 
--   Use email marketing for marketing campaigns to my customers 
-    and prospects.
+-   通过Odoo CRM VoIP 功能来管理电话。比如 :呼叫客户, 管理呼叫队列, 
+    通话记录, 日程安排电话和进行下一步行动。
 
--   Manage my business seamlessly, even on the go. Indeed, 
-    Odoo offers a mobile app that lets every business 
-    organize key sales activities from leads to quotes.
+-   与Odoo销售集成, 创建漂亮的网络报价或是PDF报价, 使他们成为销售订单。
 
-Odoo CRM is a powerful, yet easy-to-use app. I firstly used 
-the sales planner to clearly state my objectives and set up 
-our CRM. It will help you getting started quickly too.
+-   使用电子邮件营销对我的客户和潜在客户进行营销活动。
+
+-   无缝连接得管理我的业务, 即使在旅途中。事实上, Odoo提供了一个手机应用程序, 
+    让每一笔生意可以组织从线索到报价的销售活动。
+
+Odoo CRM是一个功能强大, 易于使用的应用程序。
+我首先使用销售计划来清楚地说明我的目标, 并建立我们的CRM。这将帮助你快速入门了。

@@ -1,35 +1,31 @@
 =========================
-How to create a new team?
+如何创建新的销售团队?
 =========================
 
-In the Sales module, your sales teams are accessible from the
-**Dashboard** menu. If you start from a new instance, you will find a
-sales team installed by default : Direct sales. You can either start
-using that default sales team and edit it (refer to the section
-*Create and Organize your stages* from the page :doc:`organize_pipeline`)
-or create a new one from scratch.
+在销售模块, 您的销售团队从 **仪表盘** 菜单访问。如果从一个新的实例启动, 
+你会发现一个销售团队被默认安装 :直接销售。您可以开始使用默认的销售团队和
+编辑它(请参考  :doc:`organize_pipeline`)之 创建及组织维护阶段 ), 
+或者从头开始创建一个新的。
 
-To create a new team, go to :menuselection:`Configuration --> Sales Teams` and
-click on **Create**.
+建立一个新团队, 去销售模块 :menuselection:`配置 --> 销售团队` 然后点击 **创建**.
 
 .. image:: ./media/create01.png
   :align: center
 
-Fill in the fields :
+填写字段 :
 
--  Enter the name of your team
+-  输入你的团队名字
 
--  Select your team leader
+-  选择你的团队领导
 
--  Select your team members
+-  选择你的团队成员
 
-Don't forget to tick the "Opportunities" box if you want to manage
-opportunities from it and to click on SAVE when you're done. Your can
-now access your new team from your Dashboard.
+不要忘记选择“商机" 选择如果你要管理机会, 点击保存。
+现在你可以从你的仪表盘上访问新团队。
 
 .. image:: ./media/create02.png
   :align: center
 
 .. note:: 
 
-	If you started to work on an empty database and didn't create new users, refer to the page :doc:`../manage/create_salesperson`.
+	如果你要开始在空的数据库上工作, 没有创建新用户。参考页面e :doc:`../manage/create_salesperson`.
